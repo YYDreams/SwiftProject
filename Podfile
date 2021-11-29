@@ -14,9 +14,10 @@ target 'SwiftProject' do
     # 约束库
   pod 'SnapKit'
     # 动画
-#  pod 'lottie-ios'
+  pod 'lottie-ios'
     # 网络图片库
-  pod 'SDWebImage'
+#  pod 'SDWebImage'
+  pod 'Kingfisher'
   
   pod 'MJRefresh'
   
@@ -26,9 +27,11 @@ target 'SwiftProject' do
   
   pod 'JXCategoryView'
   
+  pod 'Moya'
+  pod 'PGPickerView'
   
-#  https://github.com/pujiaxin33/JXCategoryView
   
+
 #============================== 基础组件 ==================================#
 #  pod 'BaseUI', :git => 'https://github.com/YYDreams/BaseUI.git'
     

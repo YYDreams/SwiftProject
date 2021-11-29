@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		27B013A95D6308050B943DAC /* Pods_SwiftProject_SwiftProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B243A71FB72A154E23CED /* Pods_SwiftProject_SwiftProjectUITests.framework */; };
 		511383AA27112BCB00D98BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383A927112BCB00D98BC9 /* AppDelegate.swift */; };
-		511383AE27112BCB00D98BC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383AD27112BCB00D98BC9 /* ViewController.swift */; };
+		511383AE27112BCB00D98BC9 /* SPDeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383AD27112BCB00D98BC9 /* SPDeveloperViewController.swift */; };
 		511383B127112BCB00D98BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511383AF27112BCB00D98BC9 /* Main.storyboard */; };
 		511383B327112BCE00D98BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511383B227112BCE00D98BC9 /* Assets.xcassets */; };
 		511383B627112BCE00D98BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511383B427112BCE00D98BC9 /* LaunchScreen.storyboard */; };
@@ -33,12 +33,24 @@
 		5113849C27130F4F00D98BC9 /* SPAudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113849B27130F4F00D98BC9 /* SPAudioPlayerManager.swift */; };
 		5113849E271310EE00D98BC9 /* SPAudioPresenter+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113849D271310EE00D98BC9 /* SPAudioPresenter+Cache.swift */; };
 		511384A12713115400D98BC9 /* SPAudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511384A02713115400D98BC9 /* SPAudioModel.swift */; };
+		5155E599274C7BEB000B9D89 /* SPAlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */; };
 		51919473271BC573006DB03E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51919472271BC573006DB03E /* Config.swift */; };
 		51919475271BC89B006DB03E /* BasePopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51919474271BC89B006DB03E /* BasePopView.swift */; };
 		51919477271BC910006DB03E /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51919476271BC910006DB03E /* EmptyView.swift */; };
 		51919479271BCEDE006DB03E /* PopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51919478271BCEDE006DB03E /* PopView.swift */; };
 		5191947B271BDA2B006DB03E /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191947A271BDA2B006DB03E /* Show.swift */; };
+		51B0AFCC2748AEE5003548E4 /* SPTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B0AFCB2748AEE5003548E4 /* SPTestViewController.swift */; };
 		51B7C8B3271FC557009953D3 /* SPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B7C8B2271FC557009953D3 /* SPHomeViewController.swift */; };
+		51C493B82721252E00F7A961 /* SPDeveloperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C493B72721252E00F7A961 /* SPDeveloperCell.swift */; };
+		51F1A9AC2750D53000D7F679 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1A9A32750D52F00D7F679 /* UIViewExtension.swift */; };
+		51F1A9AD2750D53000D7F679 /* DispatchQueueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1A9A42750D52F00D7F679 /* DispatchQueueExtension.swift */; };
+		51F1A9AE2750D53000D7F679 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1A9A52750D52F00D7F679 /* ArrayExtensions.swift */; };
+		51F1A9AF2750D53000D7F679 /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1A9A62750D52F00D7F679 /* UIBarButtonItemExtension.swift */; };
+		51F1A9B02750D53000D7F679 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1A9A72750D53000D7F679 /* DictionaryExtension.swift */; };
+		51F1A9B12750D53000D7F679 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1A9A82750D53000D7F679 /* StringExtension.swift */; };
+		51F1A9B22750D53000D7F679 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1A9A92750D53000D7F679 /* UIDeviceExtension.swift */; };
+		51F1A9B42750D53000D7F679 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1A9AB2750D53000D7F679 /* UIImageExtensions.swift */; };
+		51F1A9B72750D80B00D7F679 /* BaseNavgationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1A9B62750D80B00D7F679 /* BaseNavgationView.swift */; };
 		6FFB02A173B7AAE5851A08C4 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549D4D73C6F8CEAEC83940E5 /* Pods_SwiftProject.framework */; };
 		A410595A1885290557B3C286 /* Pods_SwiftProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A03013BA0241B7669B29E2CA /* Pods_SwiftProjectTests.framework */; };
 /* End PBXBuildFile section */
@@ -66,7 +78,7 @@
 		234B243A71FB72A154E23CED /* Pods_SwiftProject_SwiftProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject_SwiftProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		511383A627112BCB00D98BC9 /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		511383A927112BCB00D98BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		511383AD27112BCB00D98BC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		511383AD27112BCB00D98BC9 /* SPDeveloperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDeveloperViewController.swift; sourceTree = "<group>"; };
 		511383B027112BCB00D98BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		511383B227112BCE00D98BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		511383B527112BCE00D98BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,12 +107,24 @@
 		5113849B27130F4F00D98BC9 /* SPAudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioPlayerManager.swift; sourceTree = "<group>"; };
 		5113849D271310EE00D98BC9 /* SPAudioPresenter+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SPAudioPresenter+Cache.swift"; sourceTree = "<group>"; };
 		511384A02713115400D98BC9 /* SPAudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioModel.swift; sourceTree = "<group>"; };
+		5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAlgorithmViewController.swift; sourceTree = "<group>"; };
 		51919472271BC573006DB03E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		51919474271BC89B006DB03E /* BasePopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePopView.swift; sourceTree = "<group>"; };
 		51919476271BC910006DB03E /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		51919478271BCEDE006DB03E /* PopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopView.swift; sourceTree = "<group>"; };
 		5191947A271BDA2B006DB03E /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		51B0AFCB2748AEE5003548E4 /* SPTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTestViewController.swift; sourceTree = "<group>"; };
 		51B7C8B2271FC557009953D3 /* SPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPHomeViewController.swift; sourceTree = "<group>"; };
+		51C493B72721252E00F7A961 /* SPDeveloperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDeveloperCell.swift; sourceTree = "<group>"; };
+		51F1A9A32750D52F00D7F679 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		51F1A9A42750D52F00D7F679 /* DispatchQueueExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtension.swift; sourceTree = "<group>"; };
+		51F1A9A52750D52F00D7F679 /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		51F1A9A62750D52F00D7F679 /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		51F1A9A72750D53000D7F679 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		51F1A9A82750D53000D7F679 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		51F1A9A92750D53000D7F679 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		51F1A9AB2750D53000D7F679 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		51F1A9B62750D80B00D7F679 /* BaseNavgationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavgationView.swift; sourceTree = "<group>"; };
 		549D4D73C6F8CEAEC83940E5 /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE01036AC98AF759F8360E2 /* Pods-SwiftProject-SwiftProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject-SwiftProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		88588F624138E779CC8B13ED /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,7 +191,10 @@
 				511383F42711359B00D98BC9 /* Expand */,
 				511383F52711359C00D98BC9 /* LearnApp */,
 				511383F62711359C00D98BC9 /* Resourse */,
-				511383AD27112BCB00D98BC9 /* ViewController.swift */,
+				51B7C9002720F3B9009953D3 /* ShopApp */,
+				511383AD27112BCB00D98BC9 /* SPDeveloperViewController.swift */,
+				5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */,
+				51B0AFCB2748AEE5003548E4 /* SPTestViewController.swift */,
 				511383AF27112BCB00D98BC9 /* Main.storyboard */,
 				511383B227112BCE00D98BC9 /* Assets.xcassets */,
 				511383B427112BCE00D98BC9 /* LaunchScreen.storyboard */,
@@ -240,6 +267,7 @@
 		511383F92711359C00D98BC9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				51F1A9A22750D51000D7F679 /* Extension */,
 				5113840C27113F9500D98BC9 /* Classes */,
 				511383FA2711359C00D98BC9 /* AppDelegate */,
 				511383FB2711359C00D98BC9 /* Base */,
@@ -258,6 +286,7 @@
 		511383FB2711359C00D98BC9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				51F1A9B52750D7FB00D7F679 /* BaseView */,
 				511383FC271135CD00D98BC9 /* BaseViewController */,
 			);
 			path = Base;
@@ -476,6 +505,37 @@
 			children = (
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		51B7C9002720F3B9009953D3 /* ShopApp */ = {
+			isa = PBXGroup;
+			children = (
+				51C493B72721252E00F7A961 /* SPDeveloperCell.swift */,
+			);
+			path = ShopApp;
+			sourceTree = "<group>";
+		};
+		51F1A9A22750D51000D7F679 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				51F1A9A52750D52F00D7F679 /* ArrayExtensions.swift */,
+				51F1A9A72750D53000D7F679 /* DictionaryExtension.swift */,
+				51F1A9A42750D52F00D7F679 /* DispatchQueueExtension.swift */,
+				51F1A9A82750D53000D7F679 /* StringExtension.swift */,
+				51F1A9A62750D52F00D7F679 /* UIBarButtonItemExtension.swift */,
+				51F1A9A92750D53000D7F679 /* UIDeviceExtension.swift */,
+				51F1A9AB2750D53000D7F679 /* UIImageExtensions.swift */,
+				51F1A9A32750D52F00D7F679 /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		51F1A9B52750D7FB00D7F679 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				51F1A9B62750D80B00D7F679 /* BaseNavgationView.swift */,
+			);
+			path = BaseView;
 			sourceTree = "<group>";
 		};
 		5DE01BF6C04827819A0C0710 /* Frameworks */ = {
@@ -742,29 +802,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				51138406271135CD00D98BC9 /* BaseTabBarViewController.swift in Sources */,
+				51F1A9AE2750D53000D7F679 /* ArrayExtensions.swift in Sources */,
 				511384A12713115400D98BC9 /* SPAudioModel.swift in Sources */,
+				51F1A9AF2750D53000D7F679 /* UIBarButtonItemExtension.swift in Sources */,
 				51919479271BCEDE006DB03E /* PopView.swift in Sources */,
 				5113848E2711925800D98BC9 /* SPAudioManagerView.swift in Sources */,
 				5191947B271BDA2B006DB03E /* Show.swift in Sources */,
+				51F1A9B02750D53000D7F679 /* DictionaryExtension.swift in Sources */,
 				5113849C27130F4F00D98BC9 /* SPAudioPlayerManager.swift in Sources */,
 				51919473271BC573006DB03E /* Config.swift in Sources */,
 				5113840B27113E7A00D98BC9 /* LearningCenterViewController.swift in Sources */,
 				511384822711423B00D98BC9 /* MineViewController.swift in Sources */,
 				51138489271175C000D98BC9 /* SPAudioBgView.swift in Sources */,
 				51138402271135CD00D98BC9 /* BaseCollectionViewController.swift in Sources */,
+				51F1A9AD2750D53000D7F679 /* DispatchQueueExtension.swift in Sources */,
 				511384972713038A00D98BC9 /* SPAudioViewModel.swift in Sources */,
 				51919475271BC89B006DB03E /* BasePopView.swift in Sources */,
 				51138403271135CD00D98BC9 /* BaseNavViewController.swift in Sources */,
+				5155E599274C7BEB000B9D89 /* SPAlgorithmViewController.swift in Sources */,
 				51138404271135CD00D98BC9 /* BaseTableViewController.swift in Sources */,
+				51F1A9B12750D53000D7F679 /* StringExtension.swift in Sources */,
+				51C493B82721252E00F7A961 /* SPDeveloperCell.swift in Sources */,
 				51138405271135CD00D98BC9 /* BaseUIViewController.swift in Sources */,
+				51F1A9AC2750D53000D7F679 /* UIViewExtension.swift in Sources */,
 				51B7C8B3271FC557009953D3 /* SPHomeViewController.swift in Sources */,
-				511383AE27112BCB00D98BC9 /* ViewController.swift in Sources */,
+				511383AE27112BCB00D98BC9 /* SPDeveloperViewController.swift in Sources */,
+				51F1A9B42750D53000D7F679 /* UIImageExtensions.swift in Sources */,
 				5113849A27130E0B00D98BC9 /* SPAudioPresenter.swift in Sources */,
 				5113849E271310EE00D98BC9 /* SPAudioPresenter+Cache.swift in Sources */,
 				511383AA27112BCB00D98BC9 /* AppDelegate.swift in Sources */,
 				5113848727116ECF00D98BC9 /* SPAudioDetailViewController.swift in Sources */,
+				51B0AFCC2748AEE5003548E4 /* SPTestViewController.swift in Sources */,
 				51919477271BC910006DB03E /* EmptyView.swift in Sources */,
+				51F1A9B72750D80B00D7F679 /* BaseNavgationView.swift in Sources */,
 				511384952712915B00D98BC9 /* SPAudioPlayProgressView.swift in Sources */,
+				51F1A9B22750D53000D7F679 /* UIDeviceExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

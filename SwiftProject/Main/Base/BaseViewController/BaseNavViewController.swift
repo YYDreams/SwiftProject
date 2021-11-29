@@ -8,67 +8,76 @@
 import UIKit
 
 class BaseNavViewController: UINavigationController {
+        
+    //拦截侧滑返回事件
+    var navigationGestBlock:(()->Void)?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegate = self
         
-        if NSObject.responds(to: #selector(getter: interactivePopGestureRecognizer)) {
-            
-            self.interactivePopGestureRecognizer?.delegate = self
-        }
-        
+        guard let interactionGes = interactivePopGestureRecognizer else { return }
+        guard let targetView = interactionGes.view else { return }
+        guard let internalTargets = interactionGes.value(forKeyPath: "targets") as? [NSObject] else { return }
+        guard let internalTarget = internalTargets.first?.value(forKey: "target") else { return }
+        let action = Selector(("handleNavigationTransition:"))
+
+        let fullScreenGesture = UIPanGestureRecognizer(target: internalTarget, action: action)
+        fullScreenGesture.delegate = self
+        targetView.addGestureRecognizer(fullScreenGesture)
+        interactionGes.isEnabled = false
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        
-        if children.count > 0 {
-            
-            let btn = UIButton()
-            
-            btn.setImage(UIImage(named: "nav_left"), for: .normal)
-            btn.addTarget(self, action: #selector(backClick), for: .touchUpInside)
-            btn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-            btn.frame.size = CGSize(width: 40, height: 30)
-            btn.contentMode = .topLeft
-            btn.contentHorizontalAlignment = .left
-            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
-            viewController.hidesBottomBarWhenPushed = true
-        }
-        super.pushViewController(viewController, animated: true)
-    }
-    
-    @objc private func backClick(){
-        
-        
-        popViewController(animated: true)
-        
+        if viewControllers.count > 0 { viewController.hidesBottomBarWhenPushed = true }
+        super.pushViewController(viewController, animated: animated)
     }
 }
-extension BaseNavViewController:UIGestureRecognizerDelegate,UINavigationBarDelegate,UINavigationControllerDelegate{
+
+extension BaseNavViewController: UIGestureRecognizerDelegate {
     
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        
-        if self.navigationController?.viewControllers.count == 1 {
-            
+        let isLeftToRight = UIApplication.shared.userInterfaceLayoutDirection == .leftToRight
+        guard let ges = gestureRecognizer as? UIPanGestureRecognizer else { return true }
+        if ges.translation(in: gestureRecognizer.view).x * (isLeftToRight ? 1 : -1) <= 0
+            || disablePopGesture {
             return false
-        }else {
-            return true
         }
+        if self.navigationGestBlock != nil {
+            self.navigationGestBlock!()
+            return false
+        }
+        return viewControllers.count != 1;
     }
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        
-        if navigationController .responds(to: #selector(getter: interactivePopGestureRecognizer)) {
-            navigationController.interactivePopGestureRecognizer?.isEnabled = true
-        }
-        
-        if navigationController.viewControllers.count == 1 {
-            navigationController.interactivePopGestureRecognizer?.isEnabled = false
-            navigationController.interactivePopGestureRecognizer?.delegate = nil
-            
-        }
-        
-    }
-    
-    
 }
+
+extension BaseNavViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        guard let topVC = topViewController else { return .lightContent }
+        return topVC.preferredStatusBarStyle
+    }
+}
+
+
+enum UNavigationBarStyle {
+    case theme
+    case clear
+    case white
+}
+
+extension UINavigationController {
+    
+    private struct AssociatedKeys {
+        static var disablePopGesture: Void?
+    }
+    
+    var disablePopGesture: Bool {
+        get {
+            return objc_getAssociatedObject(self, &AssociatedKeys.disablePopGesture) as? Bool ?? false
+        }
+        set {
+            objc_setAssociatedObject(self, &AssociatedKeys.disablePopGesture, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+}
+

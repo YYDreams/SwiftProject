@@ -24,15 +24,17 @@ open class BaseTabBarViewController: UITabBarController {
         
         super.viewWillAppear(animated)
         
-        setupPlayBtn()
+//        setupPlayBtn()
     }
     
     open override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupAppearance()
         
         setupViewControllers()
+        setupAppearance()
+
+        
     }
 }
 
@@ -53,13 +55,13 @@ extension BaseTabBarViewController{
         //       let accountVc =   XEMediator.shared()?.XEAccountUI_launchViewController()
         
         let controllers:[UIViewController]  =
-            [SPHomeViewController(),MineViewController(),LearningCenterViewController(),MineViewController(),MineViewController()]
-        let normalImageNames = ["home_vip_play_btn","home_vip_play_btn","","home_vip_play_btn","home_vip_play_btn"]
-        let selectImageNames = ["home_vip_play_btn","home_vip_play_btn","","home_vip_play_btn","home_vip_play_btn"]
+            [SPHomeViewController(),SPDeveloperViewController(),LearningCenterViewController(),SPAlgorithmViewController(),MineViewController()]
+        let normalImageNames = ["icon_play_stop","icon_play_stop","","icon_play_stop","icon_play_stop"]
+        let selectImageNames = ["icon_play_stop","icon_play_stop","","icon_play_stop","icon_play_stop"]
         
         let mineTitle = "账户"
 //            !(LoginHelper.sharedInstance.userInfo?.isLogin ?? false)  ? "未登录" : "账户"
-        let titles = ["首页","我听","","发现",mineTitle]
+        let titles = ["首页","我听","","算法",mineTitle]
         
         for (index, vc) in controllers.enumerated() {
             
@@ -67,10 +69,12 @@ extension BaseTabBarViewController{
             vc.tabBarItem.image = UIImage(named: normalImageNames[index])
             vc.tabBarItem.selectedImage = UIImage(named: selectImageNames[index])
             //设置选中图标的颜色
-            UITabBar.appearance().tintColor = UIColor.red
+            self.tabBar.tintColor = UIColor.red
+      
             addChild( BaseNavViewController(rootViewController: vc))
             
         }
+        self.selectedIndex = 1
         
     }
     private func setupAppearance(){
