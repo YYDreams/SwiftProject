@@ -34,12 +34,10 @@
 		5113849E271310EE00D98BC9 /* SPAudioPresenter+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113849D271310EE00D98BC9 /* SPAudioPresenter+Cache.swift */; };
 		511384A12713115400D98BC9 /* SPAudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511384A02713115400D98BC9 /* SPAudioModel.swift */; };
 		5155E599274C7BEB000B9D89 /* SPAlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */; };
-		51919473271BC573006DB03E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51919472271BC573006DB03E /* Config.swift */; };
-		51919475271BC89B006DB03E /* BasePopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51919474271BC89B006DB03E /* BasePopView.swift */; };
-		51919477271BC910006DB03E /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51919476271BC910006DB03E /* EmptyView.swift */; };
-		51919479271BCEDE006DB03E /* PopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51919478271BCEDE006DB03E /* PopView.swift */; };
-		5191947B271BDA2B006DB03E /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191947A271BDA2B006DB03E /* Show.swift */; };
 		51B0AFCC2748AEE5003548E4 /* SPTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B0AFCB2748AEE5003548E4 /* SPTestViewController.swift */; };
+		51B42592275B39940017C49C /* SPDeveloperTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42591275B39940017C49C /* SPDeveloperTextCell.swift */; };
+		51B429EF275B73590017C49C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B429EE275B73590017C49C /* Network.swift */; };
+		51B42A04275CB0780017C49C /* SPTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42A03275CB0780017C49C /* SPTestCell.swift */; };
 		51B7C8B3271FC557009953D3 /* SPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B7C8B2271FC557009953D3 /* SPHomeViewController.swift */; };
 		51C493B82721252E00F7A961 /* SPDeveloperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C493B72721252E00F7A961 /* SPDeveloperCell.swift */; };
 		51F1A9AC2750D53000D7F679 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1A9A32750D52F00D7F679 /* UIViewExtension.swift */; };
@@ -108,12 +106,10 @@
 		5113849D271310EE00D98BC9 /* SPAudioPresenter+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SPAudioPresenter+Cache.swift"; sourceTree = "<group>"; };
 		511384A02713115400D98BC9 /* SPAudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioModel.swift; sourceTree = "<group>"; };
 		5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAlgorithmViewController.swift; sourceTree = "<group>"; };
-		51919472271BC573006DB03E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		51919474271BC89B006DB03E /* BasePopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePopView.swift; sourceTree = "<group>"; };
-		51919476271BC910006DB03E /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
-		51919478271BCEDE006DB03E /* PopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopView.swift; sourceTree = "<group>"; };
-		5191947A271BDA2B006DB03E /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		51B0AFCB2748AEE5003548E4 /* SPTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTestViewController.swift; sourceTree = "<group>"; };
+		51B42591275B39940017C49C /* SPDeveloperTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDeveloperTextCell.swift; sourceTree = "<group>"; };
+		51B429EE275B73590017C49C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		51B42A03275CB0780017C49C /* SPTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTestCell.swift; sourceTree = "<group>"; };
 		51B7C8B2271FC557009953D3 /* SPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPHomeViewController.swift; sourceTree = "<group>"; };
 		51C493B72721252E00F7A961 /* SPDeveloperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDeveloperCell.swift; sourceTree = "<group>"; };
 		51F1A9A32750D52F00D7F679 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -195,6 +191,7 @@
 				511383AD27112BCB00D98BC9 /* SPDeveloperViewController.swift */,
 				5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */,
 				51B0AFCB2748AEE5003548E4 /* SPTestViewController.swift */,
+				51B42A03275CB0780017C49C /* SPTestCell.swift */,
 				511383AF27112BCB00D98BC9 /* Main.storyboard */,
 				511383B227112BCE00D98BC9 /* Assets.xcassets */,
 				511383B427112BCE00D98BC9 /* LaunchScreen.storyboard */,
@@ -225,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				51B7C8FF272014B5009953D3 /* Network */,
-				51919471271BBC88006DB03E /* Show */,
 			);
 			path = Expand;
 			sourceTree = "<group>";
@@ -317,7 +313,6 @@
 			children = (
 				51B7C8E827200696009953D3 /* Home */,
 				51B7C8B927200695009953D3 /* Public */,
-				51B7C8B42720065B009953D3 /* New Group */,
 				5113844027113F9500D98BC9 /* Mine */,
 			);
 			path = Classes;
@@ -426,25 +421,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		51919471271BBC88006DB03E /* Show */ = {
-			isa = PBXGroup;
-			children = (
-				51919472271BC573006DB03E /* Config.swift */,
-				51919478271BCEDE006DB03E /* PopView.swift */,
-				51919474271BC89B006DB03E /* BasePopView.swift */,
-				51919476271BC910006DB03E /* EmptyView.swift */,
-				5191947A271BDA2B006DB03E /* Show.swift */,
-			);
-			path = Show;
-			sourceTree = "<group>";
-		};
-		51B7C8B42720065B009953D3 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		51B7C8B927200695009953D3 /* Public */ = {
 			isa = PBXGroup;
 			children = (
@@ -503,6 +479,7 @@
 		51B7C8FF272014B5009953D3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				51B429EE275B73590017C49C /* Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -511,6 +488,7 @@
 			isa = PBXGroup;
 			children = (
 				51C493B72721252E00F7A961 /* SPDeveloperCell.swift */,
+				51B42591275B39940017C49C /* SPDeveloperTextCell.swift */,
 			);
 			path = ShopApp;
 			sourceTree = "<group>";
@@ -803,21 +781,20 @@
 			files = (
 				51138406271135CD00D98BC9 /* BaseTabBarViewController.swift in Sources */,
 				51F1A9AE2750D53000D7F679 /* ArrayExtensions.swift in Sources */,
+				51B42592275B39940017C49C /* SPDeveloperTextCell.swift in Sources */,
 				511384A12713115400D98BC9 /* SPAudioModel.swift in Sources */,
 				51F1A9AF2750D53000D7F679 /* UIBarButtonItemExtension.swift in Sources */,
-				51919479271BCEDE006DB03E /* PopView.swift in Sources */,
+				51B429EF275B73590017C49C /* Network.swift in Sources */,
+				51B42A04275CB0780017C49C /* SPTestCell.swift in Sources */,
 				5113848E2711925800D98BC9 /* SPAudioManagerView.swift in Sources */,
-				5191947B271BDA2B006DB03E /* Show.swift in Sources */,
 				51F1A9B02750D53000D7F679 /* DictionaryExtension.swift in Sources */,
 				5113849C27130F4F00D98BC9 /* SPAudioPlayerManager.swift in Sources */,
-				51919473271BC573006DB03E /* Config.swift in Sources */,
 				5113840B27113E7A00D98BC9 /* LearningCenterViewController.swift in Sources */,
 				511384822711423B00D98BC9 /* MineViewController.swift in Sources */,
 				51138489271175C000D98BC9 /* SPAudioBgView.swift in Sources */,
 				51138402271135CD00D98BC9 /* BaseCollectionViewController.swift in Sources */,
 				51F1A9AD2750D53000D7F679 /* DispatchQueueExtension.swift in Sources */,
 				511384972713038A00D98BC9 /* SPAudioViewModel.swift in Sources */,
-				51919475271BC89B006DB03E /* BasePopView.swift in Sources */,
 				51138403271135CD00D98BC9 /* BaseNavViewController.swift in Sources */,
 				5155E599274C7BEB000B9D89 /* SPAlgorithmViewController.swift in Sources */,
 				51138404271135CD00D98BC9 /* BaseTableViewController.swift in Sources */,
@@ -833,7 +810,6 @@
 				511383AA27112BCB00D98BC9 /* AppDelegate.swift in Sources */,
 				5113848727116ECF00D98BC9 /* SPAudioDetailViewController.swift in Sources */,
 				51B0AFCC2748AEE5003548E4 /* SPTestViewController.swift in Sources */,
-				51919477271BC910006DB03E /* EmptyView.swift in Sources */,
 				51F1A9B72750D80B00D7F679 /* BaseNavgationView.swift in Sources */,
 				511384952712915B00D98BC9 /* SPAudioPlayProgressView.swift in Sources */,
 				51F1A9B22750D53000D7F679 /* UIDeviceExtension.swift in Sources */,

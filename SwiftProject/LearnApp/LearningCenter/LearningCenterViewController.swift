@@ -8,6 +8,7 @@
 import Foundation
 import XMUtil
 import SnapKit
+//import SPWidget
 class LearningCenterViewController:  BaseUIViewController {
     
     // MARK: ------------------------- Propertys
@@ -51,19 +52,16 @@ class LearningCenterViewController:  BaseUIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         
-        let content = UIButton.init(frame: CGRect.init(x: 300, y: 100, width: kScreenWidth, height: 400))
-        content.backgroundColor = UIColor.red
-//        content.layer.masksToBounds = true
-//        content.layer.cornerRadius = 30
-//        content.addTarget(self, action: #selector(hideClick), for: .touchUpInside)
-        Show.showPopView(contentView: content) { (config) in
-            config.showAnimateType = .left
-            config.maskType = .color
-            config.clickOtherHidden = true
-            config.animateDamping = false
-            config.cornerRadius = 12
-        }
-        
+//        let content = UIButton.init(frame: CGRect.init(x: 300, y: 100, width: kScreenWidth, height: 400))
+//        content.backgroundColor = UIColor.red
+//        Show.showPopView(contentView: content) { (config) in
+//            config.showAnimateType = .bottom
+//            config.maskType = .color
+//            config.clickOtherHidden = true
+//            config.animateDamping = false
+//            config.cornerRadius = 12
+//        }
+//        
   
         
     return

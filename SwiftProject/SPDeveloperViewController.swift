@@ -8,6 +8,10 @@
 import UIKit
 import XMUtil
 import SnapKit
+import SPAppCore
+import SPNetwork
+import SPWidget
+//import QMUIKit
 // MARK: ------------------------- Const/Enum/Struct
 //
 enum  DeveloperSectionType:Int {
@@ -16,6 +20,16 @@ enum  DeveloperSectionType:Int {
     case info
     
 }
+enum  DeveloperInfoType:Int {
+    case currentServer
+    case deviceInfo
+    case version
+    case shareLog
+    case swimLane
+    case console
+    
+}
+
 
 class SPDeveloperModel: NSObject {
 
@@ -32,23 +46,26 @@ class SPDeveloperModel: NSObject {
             for i in 0..<titleArr.count{
                 let item = SPDeveloperItemModel()
                 item.title = titleArr[i]
+                item.appType = SPAppCore.shared.appType
+                item.isSeleted = (i == SPAppCore.shared.appType?.rawValue)
                 items.append(item)
                }
         case .env:
             title = "网络设置"
-            
-            let titleArr = ["测试环境","正式环境"];
+            let titleArr = ["开发环境","测试环境","正式环境"];
             for i in 0..<titleArr.count{
                 let item = SPDeveloperItemModel()
                 item.title = titleArr[i]
+                item.isSeleted = (i == SPAppCore.shared.environmentType?.rawValue)
                 items.append(item)
                }
         case .info:
             title = "信息查看"
-            let titleArr = ["当前服务器","设备型号","版本号","点击分享日志","泳道名"]
+            let titleArr = ["当前服务器","设备型号","版本号","点击分享日志","泳道名","打开控制台"]
             for i in 0..<titleArr.count{
                 let item = SPDeveloperItemModel()
                 item.title = titleArr[i]
+                item.infoType = DeveloperInfoType(rawValue: i)
                 items.append(item)
                }
         default:
@@ -60,7 +77,10 @@ class SPDeveloperModel: NSObject {
 class SPDeveloperItemModel: NSObject{
     var title: String?
     var isSeleted: Bool = false
+    var appType: SPAppType? = .shop
+    var infoType:DeveloperInfoType? = .currentServer
 }
+
 
 
 
@@ -104,18 +124,26 @@ class SPDeveloperViewController: BaseTableViewController {
         self.setupSubViews()
     }
     func setupSubViews(){
-         
-    
+                 
         self.tableView.registerCell(ofType: SPDeveloperCell.self)
         
-        self.tableView.registerCell(ofType: UITableViewCell.self)
+        self.tableView.registerCell(ofType: SPDeveloperTextCell.self)
+        
+        let footerView = UIView.init(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 50))
+        
+        self.tableView.tableFooterView = footerView
         
         self.confirmBtn = {
             let btn = UIButton(frame: .zero)
             self.tableView.tableFooterView?.addSubview(btn)
             btn.addTarget(self, action: #selector(confirmOnClick), for: .touchUpInside)
             btn.setTitle("确定", for: .normal)
+            btn.setTitleColor(UIColor.white, for: .normal)
             btn.backgroundColor = kThemeColor
+            footerView.addSubview(btn)
+            btn.snp.makeConstraints{
+                $0.edges.equalTo(UIEdgeInsets(top: 5, left: 16, bottom: 5, right: 16))
+            }
             
             return btn
         }()
@@ -149,23 +177,36 @@ class SPDeveloperViewController: BaseTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.cell(ofType: UITableViewCell.self)
         let model =  self.propertys.sections[indexPath.section]
-        let title = model.items[indexPath.row].title
+        let itemModel = model.items[indexPath.row]
         switch model.type {
         case .app, .env:
             let cell = tableView.cell(ofType: SPDeveloperCell.self)
-            cell.switchAppBtn.setTitle(title, for: .normal)
+            cell.switchAppBtn.setTitle(itemModel.title, for: .normal)
             cell.switchAppBtn.isSelected = model.items[indexPath.row].isSeleted
             return cell
-       
         default:
-            
-            break
+            let cell = tableView.cell(ofType: SPDeveloperTextCell.self)
+            cell.titleLabel.text = itemModel.title
+            switch itemModel.infoType {
+            case .currentServer:
+                cell.subTitleLabel.text  = SPAppCore.shared.baseUrl
+            case .deviceInfo:
+                cell.subTitleLabel.text =  UIDevice.current.model + UIDevice.current.systemVersion
+            case .version:
+                if let info = Bundle.main.infoDictionary {
+                    let appVersion = info["CFBundleShortVersionString"] as? String ?? "Unknown"
+                    let build = info["CFBundleVersion" as String] as? String ?? "Unknown"
+                    cell.subTitleLabel.text = "version:" + appVersion + " build:" + build
+                }
+            case .swimLane:
+                let tversion = UserDefaults.standard.object(forKey: "kTversion") as? String
+                cell.subTitleLabel.text = tversion
+            default:
+                break
+            }
+            return cell
         }
-
-        cell.textLabel?.text = title
-        return cell
     }
     
      func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -186,28 +227,83 @@ class SPDeveloperViewController: BaseTableViewController {
     }
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model =  self.propertys.sections[indexPath.section]
-
-        if model.type == .app || model.type == .env {
-            model.items.forEach { itemModel in
-                itemModel.isSeleted = false
-            }
-            let selecteModel = model.items[indexPath.row]
-            selecteModel.isSeleted = true
-            
-            tableView.reloadData()
+        let itemModel  = model.items[safe: indexPath.row]
+        if model.type == .app || model.type == .env  {
+            self.handerDidSelectRow(indexPath: indexPath)
         }else{
-            
-            self.navigationController?.pushViewController(SPTestViewController(), animated: true)
-        }
+            if itemModel?.infoType == .swimLane{
+                
+                writeTversion()
+                
+            }else if itemModel?.infoType == .shareLog{
+                
+                
+            }else if itemModel?.infoType == .console{
+//                QMUIConsole.sharedInstance().canShow = true
+//                QMUIConsole.show()
 
+                
+            }else{
+                self.navigationController?.pushViewController(SPTestViewController(), animated: true)
+            }
+        }
+        
     }
+    func handerDidSelectRow(indexPath: IndexPath){
+        
+        let model =  self.propertys.sections[indexPath.section]
+        model.items.forEach { itemModel in
+            itemModel.isSeleted = false
+        }
+        let selecteModel = model.items[indexPath.row]
+        selecteModel.isSeleted = true
+        if model.type == .app {
+            SPAppCore.shared.appType = SPAppType(rawValue: indexPath.row)
+        }else if model.type == .env{
+            SPAppCore.shared.environmentType  = SPEnvironmentType(rawValue: indexPath.row)
+        }
+        tableView.reloadData()
+        SPAppCore.shared.baseUrl  =  NetworkHelp.shared.baseUrl()
+        print("xxxx----",SPAppCore.shared.environmentType,SPAppCore.shared.appType,SPAppCore.shared.baseUrl)
+    }
+    
+      func writeTversion() {
+        let controller = UIAlertController(title: "设置泳道", message: nil, preferredStyle: .alert)
+        controller.addTextField { textField in
+                        
+            let tversion = UserDefaults.standard.object(forKey: "kTversion") as? String
+            textField.placeholder = "泳道名";
+            
+            textField.clearButtonMode = .whileEditing
+            if !kStringIsEmpty(string: tversion ?? ""){
+                textField.text = tversion
+            }
+        }
+        let actionCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let actionConfirm = UIAlertAction(title: "确定", style: .default) { [weak self] action in
+            let textField = controller.textFields?.first
+            let textFieldText = textField?.text ?? ""
+            UserDefaults.standard.setValue(textFieldText, forKeyPath: "kTversion")
+            UserDefaults.standard.synchronize()
+            self?.tableView.reloadData()
+        }
+        controller.addAction(actionCancel)
+        controller.addAction(actionConfirm)
+        self.present(controller, animated: true, completion: nil)
+    }
+    
     
     @objc func confirmOnClick(){
      
-      
+        SPAppCore.shared.logout()
         
+        let p = SPMenuView.create(superView: self.confirmBtn, dataArr: ["我","大家了大家","顶顶顶顶"])
         
+        p.show()
+//        exit(0)
+
     }
+    
     
 }
 

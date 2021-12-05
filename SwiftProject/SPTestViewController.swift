@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import XMUtil
+import SPWidget
 
 // MARK: ------------------------- Const/Enum/Struct
 
@@ -23,7 +25,7 @@ extension SPTestViewController {
     
 }
 
-class SPTestViewController: BaseUIViewController {
+class SPTestViewController: BaseTableViewController {
     
     // MARK: ------------------------- Propertys
     
@@ -39,7 +41,6 @@ class SPTestViewController: BaseUIViewController {
         
         self.view.backgroundColor  = .red
         
-//        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         
        let nav =  self.navigationController as? BaseNavViewController
         
@@ -57,11 +58,47 @@ class SPTestViewController: BaseUIViewController {
               self.present(alertController, animated: true, completion: nil)
             
         }
+        self.view.addSubview(self.tableView)
+        self.tableView.backgroundColor = UIColor.orange
+        
+        self.tableView.registerCell(ofType: SPTestCell.self)
+        self.tableView.rowHeight = 60
+        
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let content = UIButton.init(frame: CGRect.init(x: 300, y: 100, width: kScreenWidth, height: 400))
+        content.backgroundColor = UIColor.orange
+//        Show.showPopView(contentView: content) { (config) in
+//            config.showAnimateType = .bottom
+//            config.maskType = .color
+//            config.clickOtherHidden = true
+//            config.cornerRadius = 12
+//            config.corners = [.topLeft, .topRight]
+//        }
+        
+        return
+   
     }
     
     // MARK: ------------------------- Events
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.cell(ofType: SPTestCell.self)
+        cell.callBackBlock = { btn in
+      
+        let p = SPMenuView.create(superView: btn, dataArr: ["我","大家了大家","顶顶顶顶"])
+            p.callBackBlock = { [weak self] (menu, title,index) in
+               
+            print("menu,",menu,title,index)
+            }
+            p.show()
+        }
+        return cell
+    }
     
-    // MARK: ------------------------- Methods
     
 }
 
