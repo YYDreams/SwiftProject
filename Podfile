@@ -26,13 +26,20 @@ target 'SwiftProject' do
   
   pod 'JXCategoryView'
   
+  pod 'JXSegmentedView','1.2.7'
+  
   pod 'Moya'
   pod 'PGPickerView'
   
+  pod 'RxSwift'
+  pod 'RxCocoa'
+
   
 
 #============================== 基础组件 ==================================#
-#  pod 'BaseUI', :git => 'https://github.com/YYDreams/BaseUI.git'
+
+pod 'SPBaseUI', :path => '../SPBaseUI'
+
     
 #  pod 'XMUtil', :git => 'https://github.com/YYDreams/XMUtil.git',: branch => 'feature/swiftProject'
   pod 'XMUtil', :path => 'Lib/XMUtil'
@@ -50,8 +57,36 @@ target 'SwiftProject' do
 
   pod 'SPWidget', :git => 'git@github.com:YYDreams/SPWidget.git'
 #  pod 'SPWidget', :path => 'Lib/SPWidget'
+
+
+#============================== 公共模块 ==================================#
+pod 'SPMediator', :git => 'git@github.com:YYDreams/SPMediator.git'
+
+#pod 'SPUserCenterUI', :git => 'git@github.com:YYDreams/SPUserCenterUI.git'
+# 个人中心
+pod 'SPUserCenterUI', :path => '../SPUserCenterUI'
+
+#pod 'SPUserCenterUIExtension', :git => 'git@github.com:YYDreams/SPUserCenterUIExtension.git'
+
+pod 'SPUserCenterUIExtension', :path => '../SPUserCenterUIExtension'
+
+
+
+
+#============================== 音视频App ==================================#
+
+
+
+#============================== 商城App ==================================#
+
+
+# 首页
+  pod 'SPHomeUI', :path => '../SPHomeUI'
   
+  pod 'SPHomeUIExtension', :path => '../SPHomeUIExtension'
   
+
+
   
   
   

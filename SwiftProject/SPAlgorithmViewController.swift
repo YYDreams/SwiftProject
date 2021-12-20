@@ -24,7 +24,7 @@ extension SPAlgorithmViewController {
     
 }
 
-class SPAlgorithmViewController: BaseUIViewController {
+class SPAlgorithmViewController: UIViewController {
     
     // MARK: ------------------------- Propertys
     
