@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import SPAppCore
-import SPNetwork
+
 import SPBaseUI
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,18 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.rootViewController = BaseTabBarViewController()
         self.window?.makeKeyAndVisible()
+        
+        // 配置UI调试神器
+        initInjectionConfig()
+        
+        //初始化网络配置
         initNetworkConfig()
- 
+        
         return true
     }
 
-    func initNetworkConfig(){
-        print("SPAppCore.shared.appType:",SPAppCore.shared.appType,SPAppCore.shared.environmentType)
-        if SPAppCore.shared.appType == .none {
-            SPAppCore.shared.appType  = .shop
-            SPAppCore.shared.environmentType = .pruductEnviroment
-            SPAppCore.shared.baseUrl = NetworkHelp.shared.baseUrl()
-        } 
-    }
 }
 

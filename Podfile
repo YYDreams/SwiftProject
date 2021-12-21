@@ -37,12 +37,13 @@ target 'SwiftProject' do
   
 
 #============================== 基础组件 ==================================#
+pod 'SPBaseUI', :git => 'https://github.com/YYDreams/SPBaseUI.git'
 
-pod 'SPBaseUI', :path => '../SPBaseUI'
+# pod 'SPBaseUI', :path => '../SPBaseUI'
 
     
-#  pod 'XMUtil', :git => 'https://github.com/YYDreams/XMUtil.git',: branch => 'feature/swiftProject'
-  pod 'XMUtil', :path => 'Lib/XMUtil'
+  pod 'XMUtil', :git => 'https://github.com/YYDreams/XMUtil.git', :branch => 'feature/swiftProject'
+#  pod 'XMUtil', :path => 'Lib/XMUtil'
   
   # 网络请求库
   pod 'SPNetwork', :git => 'git@github.com:YYDreams/SPNetwork.git'
@@ -62,13 +63,13 @@ pod 'SPBaseUI', :path => '../SPBaseUI'
 #============================== 公共模块 ==================================#
 pod 'SPMediator', :git => 'git@github.com:YYDreams/SPMediator.git'
 
-#pod 'SPUserCenterUI', :git => 'git@github.com:YYDreams/SPUserCenterUI.git'
+pod 'SPUserCenterUI', :git => 'git@github.com:YYDreams/SPUserCenterUI.git'
 # 个人中心
-pod 'SPUserCenterUI', :path => '../SPUserCenterUI'
+#pod 'SPUserCenterUI', :path => '../SPUserCenterUI'
 
-#pod 'SPUserCenterUIExtension', :git => 'git@github.com:YYDreams/SPUserCenterUIExtension.git'
+pod 'SPUserCenterUIExtension', :git => 'git@github.com:YYDreams/SPUserCenterUIExtension.git'
 
-pod 'SPUserCenterUIExtension', :path => '../SPUserCenterUIExtension'
+#pod 'SPUserCenterUIExtension', :path => '../SPUserCenterUIExtension'
 
 
 
@@ -81,9 +82,13 @@ pod 'SPUserCenterUIExtension', :path => '../SPUserCenterUIExtension'
 
 
 # 首页
-  pod 'SPHomeUI', :path => '../SPHomeUI'
-  
-  pod 'SPHomeUIExtension', :path => '../SPHomeUIExtension'
+pod 'SPHomeUI', :git => 'git@github.com:YYDreams/SPHomeUI.git'
+
+#  pod 'SPHomeUI', :path => '../SPHomeUI'
+ 
+ pod 'SPHomeUIExtension', :git => 'git@github.com:YYDreams/SPHomeUIExtension.git'
+ 
+#  pod 'SPHomeUIExtension', :path => '../SPHomeUIExtension'
   
 
 
