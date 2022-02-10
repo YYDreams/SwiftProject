@@ -15,25 +15,7 @@
 		511383C127112BCF00D98BC9 /* SwiftProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383C027112BCF00D98BC9 /* SwiftProjectTests.swift */; };
 		511383CC27112BCF00D98BC9 /* SwiftProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383CB27112BCF00D98BC9 /* SwiftProjectUITests.swift */; };
 		511384082711363100D98BC9 /* 记录.md in Resources */ = {isa = PBXBuildFile; fileRef = 511384072711363000D98BC9 /* 记录.md */; };
-		5113848727116ECF00D98BC9 /* SPAudioDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113848627116ECF00D98BC9 /* SPAudioDetailViewController.swift */; };
-		51138489271175C000D98BC9 /* SPAudioBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51138488271175C000D98BC9 /* SPAudioBgView.swift */; };
-		5113848E2711925800D98BC9 /* SPAudioManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113848D2711925800D98BC9 /* SPAudioManagerView.swift */; };
-		511384952712915B00D98BC9 /* SPAudioPlayProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511384942712915900D98BC9 /* SPAudioPlayProgressView.swift */; };
-		511384972713038A00D98BC9 /* SPAudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511384962713038A00D98BC9 /* SPAudioViewModel.swift */; };
-		5113849A27130E0B00D98BC9 /* SPAudioPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113849927130E0B00D98BC9 /* SPAudioPresenter.swift */; };
-		5113849C27130F4F00D98BC9 /* SPAudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113849B27130F4F00D98BC9 /* SPAudioPlayerManager.swift */; };
-		5113849E271310EE00D98BC9 /* SPAudioPresenter+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5113849D271310EE00D98BC9 /* SPAudioPresenter+Cache.swift */; };
-		511384A12713115400D98BC9 /* SPAudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511384A02713115400D98BC9 /* SPAudioModel.swift */; };
 		5155E599274C7BEB000B9D89 /* SPAlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */; };
-		517D291E276AE46E0090437B /* SPColumnDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D291D276AE46E0090437B /* SPColumnDetailViewController.swift */; };
-		517D293D276AE7360090437B /* JXPagingMainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D2923276AE7360090437B /* JXPagingMainTableView.swift */; };
-		517D293E276AE7360090437B /* JXPagingSmoothView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D2924276AE7360090437B /* JXPagingSmoothView.swift */; };
-		517D293F276AE7360090437B /* JXPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D2925276AE7360090437B /* JXPagingView.swift */; };
-		517D2940276AE7360090437B /* JXPagingListRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D2926276AE7360090437B /* JXPagingListRefreshView.swift */; };
-		517D2941276AE7360090437B /* JXPagingListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D2927276AE7360090437B /* JXPagingListContainerView.swift */; };
-		517D2942276AE7360090437B /* PagingListBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D2928276AE7360090437B /* PagingListBaseView.swift */; };
-		517D2944276AE7360090437B /* PagingViewTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D292A276AE7360090437B /* PagingViewTableHeaderView.swift */; };
-		517D2953276AEF9E0090437B /* SPCourseListViewControer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D2952276AEF9E0090437B /* SPCourseListViewControer.swift */; };
 		517D296C276C6A960090437B /* shop.md in Resources */ = {isa = PBXBuildFile; fileRef = 517D296B276C6A960090437B /* shop.md */; };
 		51B42A04275CB0780017C49C /* SPTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42A03275CB0780017C49C /* SPTestCell.swift */; };
 		51C27EA6276C9E5D00ED7B99 /* SPTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */; };
@@ -78,25 +60,7 @@
 		511383CB27112BCF00D98BC9 /* SwiftProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProjectUITests.swift; sourceTree = "<group>"; };
 		511383CD27112BCF00D98BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		511384072711363000D98BC9 /* 记录.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "记录.md"; sourceTree = SOURCE_ROOT; };
-		5113848627116ECF00D98BC9 /* SPAudioDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioDetailViewController.swift; sourceTree = "<group>"; };
-		51138488271175C000D98BC9 /* SPAudioBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioBgView.swift; sourceTree = "<group>"; };
-		5113848D2711925800D98BC9 /* SPAudioManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioManagerView.swift; sourceTree = "<group>"; };
-		511384942712915900D98BC9 /* SPAudioPlayProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioPlayProgressView.swift; sourceTree = "<group>"; };
-		511384962713038A00D98BC9 /* SPAudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioViewModel.swift; sourceTree = "<group>"; };
-		5113849927130E0B00D98BC9 /* SPAudioPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioPresenter.swift; sourceTree = "<group>"; };
-		5113849B27130F4F00D98BC9 /* SPAudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioPlayerManager.swift; sourceTree = "<group>"; };
-		5113849D271310EE00D98BC9 /* SPAudioPresenter+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SPAudioPresenter+Cache.swift"; sourceTree = "<group>"; };
-		511384A02713115400D98BC9 /* SPAudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioModel.swift; sourceTree = "<group>"; };
 		5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAlgorithmViewController.swift; sourceTree = "<group>"; };
-		517D291D276AE46E0090437B /* SPColumnDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPColumnDetailViewController.swift; sourceTree = "<group>"; };
-		517D2923276AE7360090437B /* JXPagingMainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXPagingMainTableView.swift; sourceTree = "<group>"; };
-		517D2924276AE7360090437B /* JXPagingSmoothView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXPagingSmoothView.swift; sourceTree = "<group>"; };
-		517D2925276AE7360090437B /* JXPagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXPagingView.swift; sourceTree = "<group>"; };
-		517D2926276AE7360090437B /* JXPagingListRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXPagingListRefreshView.swift; sourceTree = "<group>"; };
-		517D2927276AE7360090437B /* JXPagingListContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXPagingListContainerView.swift; sourceTree = "<group>"; };
-		517D2928276AE7360090437B /* PagingListBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingListBaseView.swift; sourceTree = "<group>"; };
-		517D292A276AE7360090437B /* PagingViewTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingViewTableHeaderView.swift; sourceTree = "<group>"; };
-		517D2952276AEF9E0090437B /* SPCourseListViewControer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPCourseListViewControer.swift; sourceTree = "<group>"; };
 		517D296B276C6A960090437B /* shop.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = shop.md; sourceTree = "<group>"; };
 		51B42A03275CB0780017C49C /* SPTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTestCell.swift; sourceTree = "<group>"; };
 		51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTestViewController.swift; sourceTree = "<group>"; };
@@ -168,8 +132,6 @@
 				517D296B276C6A960090437B /* shop.md */,
 				511384072711363000D98BC9 /* 记录.md */,
 				51C27EF2276DC6D600ED7B99 /* home.json */,
-				511383F92711359C00D98BC9 /* Main */,
-				511383F52711359C00D98BC9 /* LearnApp */,
 				5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */,
 				51B42A03275CB0780017C49C /* SPTestCell.swift */,
 				51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */,
@@ -199,23 +161,6 @@
 			path = SwiftProjectUITests;
 			sourceTree = "<group>";
 		};
-		511383F52711359C00D98BC9 /* LearnApp */ = {
-			isa = PBXGroup;
-			children = (
-				5113848C2711920100D98BC9 /* SPAudioSDK */,
-				5113848327116E8000D98BC9 /* SPAudioUI */,
-				5113840927113E3600D98BC9 /* LearningCenter */,
-			);
-			path = LearnApp;
-			sourceTree = "<group>";
-		};
-		511383F92711359C00D98BC9 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		511383FA2711359C00D98BC9 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,125 +169,6 @@
 				51C27EBC276CA82500ED7B99 /* AppdDelegate+UI.swift */,
 			);
 			path = AppDelegate;
-			sourceTree = "<group>";
-		};
-		5113840927113E3600D98BC9 /* LearningCenter */ = {
-			isa = PBXGroup;
-			children = (
-				517D2951276AEF390090437B /* Controller */,
-				517D2950276AEF2E0090437B /* View */,
-				517D2928276AE7360090437B /* PagingListBaseView.swift */,
-				517D292A276AE7360090437B /* PagingViewTableHeaderView.swift */,
-				517D291D276AE46E0090437B /* SPColumnDetailViewController.swift */,
-			);
-			path = LearningCenter;
-			sourceTree = "<group>";
-		};
-		5113848327116E8000D98BC9 /* SPAudioUI */ = {
-			isa = PBXGroup;
-			children = (
-				511384982713039600D98BC9 /* Presenter */,
-				5113848527116EB400D98BC9 /* View */,
-				5113848427116EAA00D98BC9 /* ViewController */,
-			);
-			path = SPAudioUI;
-			sourceTree = "<group>";
-		};
-		5113848427116EAA00D98BC9 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				5113848627116ECF00D98BC9 /* SPAudioDetailViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		5113848527116EB400D98BC9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				51138488271175C000D98BC9 /* SPAudioBgView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5113848C2711920100D98BC9 /* SPAudioSDK */ = {
-			isa = PBXGroup;
-			children = (
-				511384A42713128800D98BC9 /* View */,
-				511384A32713127D00D98BC9 /* Helper */,
-				511384A22713126800D98BC9 /* Core */,
-				5113849F2713112300D98BC9 /* Model */,
-				5113849B27130F4F00D98BC9 /* SPAudioPlayerManager.swift */,
-			);
-			path = SPAudioSDK;
-			sourceTree = "<group>";
-		};
-		511384982713039600D98BC9 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				511384962713038A00D98BC9 /* SPAudioViewModel.swift */,
-				5113849927130E0B00D98BC9 /* SPAudioPresenter.swift */,
-				5113849D271310EE00D98BC9 /* SPAudioPresenter+Cache.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		5113849F2713112300D98BC9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				511384A02713115400D98BC9 /* SPAudioModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		511384A22713126800D98BC9 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		511384A32713127D00D98BC9 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		511384A42713128800D98BC9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5113848D2711925800D98BC9 /* SPAudioManagerView.swift */,
-				511384942712915900D98BC9 /* SPAudioPlayProgressView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		517D2922276AE7360090437B /* JXPagingView */ = {
-			isa = PBXGroup;
-			children = (
-				517D2923276AE7360090437B /* JXPagingMainTableView.swift */,
-				517D2924276AE7360090437B /* JXPagingSmoothView.swift */,
-				517D2925276AE7360090437B /* JXPagingView.swift */,
-				517D2926276AE7360090437B /* JXPagingListRefreshView.swift */,
-				517D2927276AE7360090437B /* JXPagingListContainerView.swift */,
-			);
-			path = JXPagingView;
-			sourceTree = "<group>";
-		};
-		517D2950276AEF2E0090437B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				517D2922276AE7360090437B /* JXPagingView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		517D2951276AEF390090437B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				517D2952276AEF9E0090437B /* SPCourseListViewControer.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		5DE01BF6C04827819A0C0710 /* Frameworks */ = {
@@ -380,6 +206,7 @@
 				511383A327112BCB00D98BC9 /* Frameworks */,
 				511383A427112BCB00D98BC9 /* Resources */,
 				C292AE9695C8A9469F86ECFE /* [CP] Embed Pods Frameworks */,
+				B24727F076497197061B9029 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -418,6 +245,7 @@
 				511383C427112BCF00D98BC9 /* Frameworks */,
 				511383C527112BCF00D98BC9 /* Resources */,
 				DEDE6F2A833F5D7A4F99DA80 /* [CP] Embed Pods Frameworks */,
+				20F3330E2F4D882ABB401033 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -502,6 +330,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		20F3330E2F4D882ABB401033 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2B8DAA20399AF09B3E031133 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -568,6 +413,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B24727F076497197061B9029 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C292AE9695C8A9469F86ECFE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -609,30 +471,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				511384A12713115400D98BC9 /* SPAudioModel.swift in Sources */,
-				517D293D276AE7360090437B /* JXPagingMainTableView.swift in Sources */,
 				51B42A04275CB0780017C49C /* SPTestCell.swift in Sources */,
-				5113848E2711925800D98BC9 /* SPAudioManagerView.swift in Sources */,
-				5113849C27130F4F00D98BC9 /* SPAudioPlayerManager.swift in Sources */,
-				517D293F276AE7360090437B /* JXPagingView.swift in Sources */,
-				51138489271175C000D98BC9 /* SPAudioBgView.swift in Sources */,
-				511384972713038A00D98BC9 /* SPAudioViewModel.swift in Sources */,
 				5155E599274C7BEB000B9D89 /* SPAlgorithmViewController.swift in Sources */,
-				517D2953276AEF9E0090437B /* SPCourseListViewControer.swift in Sources */,
-				517D2944276AE7360090437B /* PagingViewTableHeaderView.swift in Sources */,
-				517D2940276AE7360090437B /* JXPagingListRefreshView.swift in Sources */,
-				517D293E276AE7360090437B /* JXPagingSmoothView.swift in Sources */,
 				51C27EBB276CA81200ED7B99 /* AppDelegate+Config.swift in Sources */,
 				51C27EA6276C9E5D00ED7B99 /* SPTestViewController.swift in Sources */,
-				517D291E276AE46E0090437B /* SPColumnDetailViewController.swift in Sources */,
-				5113849A27130E0B00D98BC9 /* SPAudioPresenter.swift in Sources */,
 				51C27EBD276CA82500ED7B99 /* AppdDelegate+UI.swift in Sources */,
-				5113849E271310EE00D98BC9 /* SPAudioPresenter+Cache.swift in Sources */,
 				511383AA27112BCB00D98BC9 /* AppDelegate.swift in Sources */,
-				5113848727116ECF00D98BC9 /* SPAudioDetailViewController.swift in Sources */,
-				511384952712915B00D98BC9 /* SPAudioPlayProgressView.swift in Sources */,
-				517D2942276AE7360090437B /* PagingListBaseView.swift in Sources */,
-				517D2941276AE7360090437B /* JXPagingListContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

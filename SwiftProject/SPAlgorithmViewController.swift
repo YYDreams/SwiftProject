@@ -36,10 +36,34 @@ class SPAlgorithmViewController: UIViewController {
     // MARK: ------------------------- CycLife
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
- 
+   
         
     }
+    
+
+    
+    @objc func injected(){
+        
+        print("xxxx==========")
+        self.view.backgroundColor = UIColor.red
+        xx()
+    }
+    
+    
+    func xx(){
+        let array:[Int] = [90,20,50,40,30,60,10,70,80]
+        
+        
+        for (index) in array{
+          print(index)
+            
+        }
+        
+    }
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //     let s =  twoSum([1,2,3,4,5,3,2,7,11,15], 9)
         
@@ -47,6 +71,8 @@ class SPAlgorithmViewController: UIViewController {
         test1( self.propertys.array)
         
     }
+
+    
     
     
     
