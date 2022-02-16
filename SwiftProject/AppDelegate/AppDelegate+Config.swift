@@ -6,8 +6,8 @@
 //
 
 import Foundation
-//import SPNetwork
-//import SPAppCore
+//
+//
 
 extension AppDelegate{
     
@@ -21,11 +21,11 @@ extension AppDelegate{
     
     //初始化网络配置
     func initNetworkConfig(){
-//        print("SPAppCore.shared.appType:",SPAppCore.shared.appType,SPAppCore.shared.environmentType)
-//        if SPAppCore.shared.appType == .none {
-//            SPAppCore.shared.appType  = .shop
-//            SPAppCore.shared.environmentType = .pruductEnviroment
-//            SPAppCore.shared.baseUrl = NetworkHelp.shared.baseUrl()
-//        }
+        print("SPAppCore.shared.appType:",SPAppCore.shared.appType,SPAppCore.shared.environmentType)
+        if SPAppCore.shared.appType == .none {
+            SPAppCore.shared.appType  = .shop
+            SPAppCore.shared.environmentType = .pruductEnviroment
+            SPAppCore.shared.baseUrl = NetworkHelp.shared.baseUrl()
+        }
     }
 }

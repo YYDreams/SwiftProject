@@ -7,7 +7,7 @@
 
 import UIKit
 
-//import SPBaseUI
+//
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = UITabBarController()
+        self.window?.rootViewController = BaseTabBarViewController()
         self.window?.makeKeyAndVisible()
         
         // 配置UI调试神器

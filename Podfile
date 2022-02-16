@@ -37,6 +37,8 @@ target 'SwiftProject' do
   
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'SDCycleScrollView'
+  
 
   
 
