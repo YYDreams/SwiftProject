@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 // MARK: ------------------------- Const/Enum/Struct
 
 class SPTestCell: UITableViewCell {

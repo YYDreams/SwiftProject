@@ -15,7 +15,7 @@ extension SPAlgorithmViewController {
     struct Const {}
     
     /// 内部属性
-    struct Porpertys {
+    struct Propertys {
         var array: [Int] = [2,5,3,1,4,8,10,7,6,9]
     }
     
@@ -29,7 +29,7 @@ class SPAlgorithmViewController: UIViewController {
     // MARK: ------------------------- Propertys
     
     /// 内部属性
-    var propertys: Porpertys = Porpertys()
+    var propertys: Propertys = Propertys()
     /// 外部参数
     var params: Params = Params()
     

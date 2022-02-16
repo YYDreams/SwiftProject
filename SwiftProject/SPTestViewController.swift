@@ -15,7 +15,7 @@ extension SPTestViewController {
     struct Const {}
     
     /// 内部属性
-    struct Porpertys {}
+    struct Propertys {}
     
     /// 外部参数
     struct Params {}
@@ -27,7 +27,7 @@ class SPTestViewController: UIViewController {
     // MARK: ------------------------- Propertys
     
     /// 内部属性
-    var propertys: Porpertys = Porpertys()
+    var propertys: Propertys = Propertys()
     /// 外部参数
     var params: Params = Params()
     
