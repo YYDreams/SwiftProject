@@ -8,6 +8,8 @@
 import HandyJSON
 import UIKit
 
+
+
 class XMHomeTabModel:HandyJSON{
     var msg: String?
     
