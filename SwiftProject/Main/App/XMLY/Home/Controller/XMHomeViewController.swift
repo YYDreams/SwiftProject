@@ -108,9 +108,8 @@ class XMHomeViewController: BaseUIViewController {
         
         containerView = {
             let view = XMHomeListContainerView(type: .collectionView, delegate: self)
-//            _containerView.scrollView.backgroundColor = [UIColor clearColor];
-//            _containerView.delegate = self;
-//            _containerView.listCellBackgroundColor = [UIColor clearColor];
+            view?.scrollView.backgroundColor = UIColor.clear
+            view?.listCellBackgroundColor = UIColor.clear
             return view
         }()
         
@@ -169,7 +168,7 @@ extension XMHomeViewController:JXCategoryViewDelegate,JXCategoryListContainerVie
     
     func listContainerView(_ listContainerView: JXCategoryListContainerView!, initListFor index: Int) -> JXCategoryListContentViewDelegate! {
         let listVC = XMHomeSubViewController()
-        listVC.view.backgroundColor = UIColor.orange
+        listVC.view.backgroundColor = UIColor.clear
         return listVC
     }
     

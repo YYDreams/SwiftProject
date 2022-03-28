@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		27B013A95D6308050B943DAC /* Pods_SwiftProject_SwiftProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B243A71FB72A154E23CED /* Pods_SwiftProject_SwiftProjectUITests.framework */; };
+		357BCFC027F1F79D00CD83F6 /* XMHomeBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BCFBF27F1F79D00CD83F6 /* XMHomeBannerModel.swift */; };
+		357BCFC727F1FDC700CD83F6 /* XMhome.json in Resources */ = {isa = PBXBuildFile; fileRef = 357BCFC627F1FDC700CD83F6 /* XMhome.json */; };
 		5109421C27F005B200C2F939 /* SPProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5109421B27F005B200C2F939 /* SPProvider.swift */; };
 		511383AA27112BCB00D98BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383A927112BCB00D98BC9 /* AppDelegate.swift */; };
 		511383B127112BCB00D98BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511383AF27112BCB00D98BC9 /* Main.storyboard */; };
@@ -128,6 +130,8 @@
 		0845B48B2FC5AB6C510DBDEE /* Pods-SwiftProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjectTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftProjectTests/Pods-SwiftProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		09BACBA7AFE292A5548912D6 /* Pods-SwiftProject-SwiftProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject-SwiftProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		234B243A71FB72A154E23CED /* Pods_SwiftProject_SwiftProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject_SwiftProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		357BCFBF27F1F79D00CD83F6 /* XMHomeBannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMHomeBannerModel.swift; sourceTree = "<group>"; };
+		357BCFC627F1FDC700CD83F6 /* XMhome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = XMhome.json; sourceTree = "<group>"; };
 		5109421B27F005B200C2F939 /* SPProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPProvider.swift; sourceTree = "<group>"; };
 		511383A627112BCB00D98BC9 /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		511383A927112BCB00D98BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +270,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		357BCFBE27F1F78B00CD83F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				357BCFC627F1FDC700CD83F6 /* XMhome.json */,
+				357BCFBF27F1F79D00CD83F6 /* XMHomeBannerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5113839D27112BCA00D98BC9 = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +384,7 @@
 		5167079627EEFF6E007CC65F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				357BCFBE27F1F78B00CD83F6 /* Model */,
 				5167079B27EF06D3007CC65F /* ViewModel */,
 				5167079A27EF06C0007CC65F /* View */,
 				5167079927EF06AF007CC65F /* Controller */,
@@ -1235,6 +1249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				357BCFC727F1FDC700CD83F6 /* XMhome.json in Resources */,
 				51AB58B627BCEDE700BD92DD /* home.json in Resources */,
 				511383B627112BCE00D98BC9 /* LaunchScreen.storyboard in Resources */,
 				511383B327112BCE00D98BC9 /* Assets.xcassets in Resources */,
@@ -1376,6 +1391,7 @@
 				516707A227EF2FC6007CC65F /* NetworkHome.swift in Sources */,
 				51AB58F027BCEE3900BD92DD /* RichEditorOptionItem.swift in Sources */,
 				51FB801927BC8A640095567C /* BaseNavViewController.swift in Sources */,
+				357BCFC027F1F79D00CD83F6 /* XMHomeBannerModel.swift in Sources */,
 				51FB7FF927BC88E50095567C /* SPConst.swift in Sources */,
 				51AB58F427BCEE3900BD92DD /* Target_SPUserCenterUI.swift in Sources */,
 				51AB58F527BCEE3900BD92DD /* SPDeveloperViewController.swift in Sources */,
