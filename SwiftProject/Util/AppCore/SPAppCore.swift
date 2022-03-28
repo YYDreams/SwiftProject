@@ -14,6 +14,7 @@ let kAppCoreEnvType = "kAppCoreEnvType"
 let kAppCoreBaseUrl = "kAppCoreBaseUrl"
 /// 
 public enum SPAppType :Int {
+    case xmly // 喜马拉雅
     case shop
     case learn
     case cartoon

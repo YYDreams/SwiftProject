@@ -23,6 +23,11 @@ target 'SwiftProject' do
   
   pod 'MJRefresh','3.7.2'
   
+  # UI 调试库（pauley）
+  #  pod 'Reveal-SDK', :configurations => ['Debug']
+  pod 'LookinServer', :git => 'https://gitee.com/chuansong16/LookinServer.git', :configurations => ['Debug']
+
+  
   pod 'SwiftyJSON', :git => 'https://gitee.com/chuansong16/SwiftyJSON.git', :commit => 'bad5f2f'
   # Json转模型
   pod 'HandyJSON', :git => 'https://gitee.com/chuansong16/HandyJSON.git', :branch => 'develop'
@@ -37,7 +42,11 @@ target 'SwiftProject' do
   
   pod 'RxSwift'
   pod 'RxCocoa'
+  
   pod 'SDCycleScrollView'
+  
+  pod 'GKCycleScrollView', '1.0.6'
+  
   
 
   

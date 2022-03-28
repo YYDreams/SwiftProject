@@ -30,6 +30,8 @@ public class NetworkHelp {
     public func baseUrl() -> String{
         var baseUrl = ""
         switch SPAppCore.shared.appType {
+        case .xmly:
+            baseUrl = "https://mobile.ximalaya.com"
         case .shop:
             baseUrl = "https://api-sams.walmartmobile.cn"
 //            if SPAppCore.shared.environmentType == .testEnvironment {
@@ -53,6 +55,15 @@ public class NetworkHelp {
     public func formatNetworkParams(_ originParams: [String: Any]?) -> [String: Any] {
         
         switch SPAppCore.shared.appType {
+        case .xmly:
+            let defaultParams: [String : Any] = ["gender": "9",
+                                                 "idfaLimit": "0",
+                                                 "version":Bundle.main.infoDictionary?["CFBundleShortVersionString"] ?? "",
+                                                 "app-version": Bundle.main.infoDictionary?["CFBundleVersion"] ?? "",
+                                                 "deviceId":UIDevice.current.identifierForVendor?.uuidString ?? "",  //获取设备唯一标识符,
+                                                 "device-os-version":UIDevice.current.systemVersion,                                                 "device-name":UIDevice.current.name,
+                                                 "xt":Int64(Date().timeIntervalSince1970)]
+            return defaultParams
         case .shop:
             let languageStr = "CN"; //EN
             let authToken = ""
@@ -93,38 +104,9 @@ public class NetworkHelp {
             params.merge(defaultParams) { (param, defaultParam) -> Any in
                 return param
             }
-            
-            //            if let apiToken = XAAppCore.shared.token {
-            //                params["api_token"] = apiToken
-            //                params["token"] = apiToken
-            //            }
-            //
-            //            if let app_user_id = XAAppCore.shared.userId {
-            //                params["app_user_id"] = app_user_id
-            //            }
-            //
-            //            // app_id
-            //            if (params["app_id"] == nil) {
-            //                if let shop_id = XMAppCore.shared.shop_id {
-            //                    params["app_id"] = shop_id
-            //                }
-            //            }
-            
-            /// 内灰外灰准现网环境，如果没有 app_id 则写死固定 app_id
-            //        switch XAAppCore.shared.environmentType {
-            //        case .innerProductEnviroment, .externalProductEnviroment, .prepruductEnviroment:
-            //            if let appId = self.appId(),
-            //               params["app_id"] == nil,
-            //               isNeedAppId == true {
-            //                params["app_id"] = appId
-            //            }
-            //        default: break
-            //        }
-            
+    
             return params
-            
-//        case .cartoon
-//           return [:]
+
         
         default:
             return [:]

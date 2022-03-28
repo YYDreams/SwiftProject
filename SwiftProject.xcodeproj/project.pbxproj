@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27B013A95D6308050B943DAC /* Pods_SwiftProject_SwiftProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B243A71FB72A154E23CED /* Pods_SwiftProject_SwiftProjectUITests.framework */; };
+		5109421C27F005B200C2F939 /* SPProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5109421B27F005B200C2F939 /* SPProvider.swift */; };
 		511383AA27112BCB00D98BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383A927112BCB00D98BC9 /* AppDelegate.swift */; };
 		511383B127112BCB00D98BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511383AF27112BCB00D98BC9 /* Main.storyboard */; };
 		511383B327112BCE00D98BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511383B227112BCE00D98BC9 /* Assets.xcassets */; };
@@ -15,7 +16,12 @@
 		511383C127112BCF00D98BC9 /* SwiftProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383C027112BCF00D98BC9 /* SwiftProjectTests.swift */; };
 		511383CC27112BCF00D98BC9 /* SwiftProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383CB27112BCF00D98BC9 /* SwiftProjectUITests.swift */; };
 		511384082711363100D98BC9 /* 记录.md in Resources */ = {isa = PBXBuildFile; fileRef = 511384072711363000D98BC9 /* 记录.md */; };
+		5129D40C27F013D90067D511 /* XMHomeListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5129D40B27F013D90067D511 /* XMHomeListContainerView.swift */; };
 		5155E599274C7BEB000B9D89 /* SPAlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */; };
+		5167079827EEFF89007CC65F /* XMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5167079727EEFF89007CC65F /* XMHomeViewController.swift */; };
+		516707A027EF2E82007CC65F /* SPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5167079F27EF2E82007CC65F /* SPModel.swift */; };
+		516707A227EF2FC6007CC65F /* NetworkHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516707A127EF2FC6007CC65F /* NetworkHome.swift */; };
+		516707A427EF4D6F007CC65F /* XMHomeSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516707A327EF4D6F007CC65F /* XMHomeSubViewController.swift */; };
 		517D296C276C6A960090437B /* shop.md in Resources */ = {isa = PBXBuildFile; fileRef = 517D296B276C6A960090437B /* shop.md */; };
 		51AB58A227BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587827BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift */; };
 		51AB58A327BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587927BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift */; };
@@ -73,6 +79,7 @@
 		51C27EA6276C9E5D00ED7B99 /* SPTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */; };
 		51C27EBB276CA81200ED7B99 /* AppDelegate+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C27EBA276CA81200ED7B99 /* AppDelegate+Config.swift */; };
 		51C27EBD276CA82500ED7B99 /* AppdDelegate+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C27EBC276CA82500ED7B99 /* AppdDelegate+UI.swift */; };
+		51C8F22C27EDB2FE0066E186 /* BaseEmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C8F22B27EDB2FE0066E186 /* BaseEmptyDataView.swift */; };
 		51FB7FF127BC88E50095567C /* HudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB7FDD27BC88E40095567C /* HudManager.swift */; };
 		51FB7FF227BC88E50095567C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB7FE027BC88E50095567C /* UIImage+Extension.swift */; };
 		51FB7FF327BC88E50095567C /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB7FE227BC88E50095567C /* UILabel+Extension.swift */; };
@@ -121,6 +128,7 @@
 		0845B48B2FC5AB6C510DBDEE /* Pods-SwiftProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjectTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftProjectTests/Pods-SwiftProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		09BACBA7AFE292A5548912D6 /* Pods-SwiftProject-SwiftProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject-SwiftProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		234B243A71FB72A154E23CED /* Pods_SwiftProject_SwiftProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject_SwiftProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5109421B27F005B200C2F939 /* SPProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPProvider.swift; sourceTree = "<group>"; };
 		511383A627112BCB00D98BC9 /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		511383A927112BCB00D98BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		511383B027112BCB00D98BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,7 +142,12 @@
 		511383CB27112BCF00D98BC9 /* SwiftProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProjectUITests.swift; sourceTree = "<group>"; };
 		511383CD27112BCF00D98BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		511384072711363000D98BC9 /* 记录.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "记录.md"; sourceTree = SOURCE_ROOT; };
+		5129D40B27F013D90067D511 /* XMHomeListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMHomeListContainerView.swift; sourceTree = "<group>"; };
 		5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAlgorithmViewController.swift; sourceTree = "<group>"; };
+		5167079727EEFF89007CC65F /* XMHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMHomeViewController.swift; sourceTree = "<group>"; };
+		5167079F27EF2E82007CC65F /* SPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPModel.swift; sourceTree = "<group>"; };
+		516707A127EF2FC6007CC65F /* NetworkHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHome.swift; sourceTree = "<group>"; };
+		516707A327EF4D6F007CC65F /* XMHomeSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMHomeSubViewController.swift; sourceTree = "<group>"; };
 		517D296B276C6A960090437B /* shop.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = shop.md; sourceTree = "<group>"; };
 		51AB587827BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeRichTextModuleViewModel.swift; sourceTree = "<group>"; };
 		51AB587927BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeHotZoneModuleViewModel.swift; sourceTree = "<group>"; };
@@ -192,6 +205,7 @@
 		51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTestViewController.swift; sourceTree = "<group>"; };
 		51C27EBA276CA81200ED7B99 /* AppDelegate+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Config.swift"; sourceTree = "<group>"; };
 		51C27EBC276CA82500ED7B99 /* AppdDelegate+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppdDelegate+UI.swift"; sourceTree = "<group>"; };
+		51C8F22B27EDB2FE0066E186 /* BaseEmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEmptyDataView.swift; sourceTree = "<group>"; };
 		51FB7FDD27BC88E40095567C /* HudManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudManager.swift; sourceTree = "<group>"; };
 		51FB7FE027BC88E50095567C /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		51FB7FE227BC88E50095567C /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -284,7 +298,6 @@
 				51FB7FD727BC88650095567C /* Widget */,
 				517D296B276C6A960090437B /* shop.md */,
 				511384072711363000D98BC9 /* 记录.md */,
-				5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */,
 				51B42A03275CB0780017C49C /* SPTestCell.swift */,
 				51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */,
 				511383AF27112BCB00D98BC9 /* Main.storyboard */,
@@ -321,6 +334,95 @@
 				51C27EBC276CA82500ED7B99 /* AppdDelegate+UI.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		514B7E1727C3269000CDF619 /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				514B7E1827C3269000CDF619 /* Controller */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		514B7E1827C3269000CDF619 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5167079427EEFDDE007CC65F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5167079527EEFDF0007CC65F /* XMLY */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5167079527EEFDF0007CC65F /* XMLY */ = {
+			isa = PBXGroup;
+			children = (
+				5167079627EEFF6E007CC65F /* Home */,
+			);
+			path = XMLY;
+			sourceTree = "<group>";
+		};
+		5167079627EEFF6E007CC65F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5167079B27EF06D3007CC65F /* ViewModel */,
+				5167079A27EF06C0007CC65F /* View */,
+				5167079927EF06AF007CC65F /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5167079927EF06AF007CC65F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5167079727EEFF89007CC65F /* XMHomeViewController.swift */,
+				516707A327EF4D6F007CC65F /* XMHomeSubViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5167079A27EF06C0007CC65F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5129D40B27F013D90067D511 /* XMHomeListContainerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5167079B27EF06D3007CC65F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5167079C27EF06F3007CC65F /* BaseViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseViewModel;
+			sourceTree = "<group>";
+		};
+		5167079D27EF2E14007CC65F /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				5167079E27EF2E22007CC65F /* XMLY */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		5167079E27EF2E22007CC65F /* XMLY */ = {
+			isa = PBXGroup;
+			children = (
+				516707A127EF2FC6007CC65F /* NetworkHome.swift */,
+			);
+			path = XMLY;
 			sourceTree = "<group>";
 		};
 		51AB587627BCEDE700BD92DD /* Home */ = {
@@ -612,6 +714,7 @@
 		51AB58FC27BCF09A00BD92DD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5167079D27EF2E14007CC65F /* Request */,
 				51AB58FD27BCF09A00BD92DD /* Result */,
 				51AB58FE27BCF09A00BD92DD /* Core */,
 				51AB590127BCF09A00BD92DD /* Model */,
@@ -631,6 +734,7 @@
 			children = (
 				51AB58FF27BCF09A00BD92DD /* NetworkHelp.swift */,
 				51AB590027BCF09A00BD92DD /* NetworkPublicApi.swift */,
+				5109421B27F005B200C2F939 /* SPProvider.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -638,6 +742,7 @@
 		51AB590127BCF09A00BD92DD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5167079F27EF2E82007CC65F /* SPModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -645,6 +750,7 @@
 		51FB7FBB27BC88650095567C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5167079427EEFDDE007CC65F /* App */,
 				51FB7FFB27BC8A560095567C /* Base */,
 				51FB7FBE27BC88650095567C /* Classes */,
 			);
@@ -654,6 +760,7 @@
 		51FB7FBE27BC88650095567C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				514B7E1727C3269000CDF619 /* Algorithm */,
 				51AB58C527BCEE3900BD92DD /* SummaryReview */,
 				51AB58DB27BCEE3900BD92DD /* UserCenter */,
 				51AB587627BCEDE700BD92DD /* Home */,
@@ -930,6 +1037,7 @@
 		51FB7FFB27BC8A560095567C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				5167079C27EF06F3007CC65F /* BaseViewModel */,
 				51FB800327BC8A640095567C /* BaseModel */,
 				51FB800527BC8A640095567C /* BaseView */,
 				51FB800827BC8A640095567C /* BaseViewController */,
@@ -970,6 +1078,7 @@
 			children = (
 				51FB800627BC8A640095567C /* BaseTableView.swift */,
 				51FB800727BC8A640095567C /* BaseNavgationView.swift */,
+				51C8F22B27EDB2FE0066E186 /* BaseEmptyDataView.swift */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -1264,6 +1373,7 @@
 			files = (
 				51AB58B227BCEDE700BD92DD /* SPNewsExpressModuleViewModel.swift in Sources */,
 				51AB58AC27BCEDE700BD92DD /* SPHomeSliderModuleViewModel.swift in Sources */,
+				516707A227EF2FC6007CC65F /* NetworkHome.swift in Sources */,
 				51AB58F027BCEE3900BD92DD /* RichEditorOptionItem.swift in Sources */,
 				51FB801927BC8A640095567C /* BaseNavViewController.swift in Sources */,
 				51FB7FF927BC88E50095567C /* SPConst.swift in Sources */,
@@ -1272,6 +1382,7 @@
 				51B42A04275CB0780017C49C /* SPTestCell.swift in Sources */,
 				51AB58F127BCEE3900BD92DD /* Target_SPSummaryReviewUI.swift in Sources */,
 				51AB58B027BCEDE700BD92DD /* SPHomeRecommendGoodsModuleViewModel.swift in Sources */,
+				5167079827EEFF89007CC65F /* XMHomeViewController.swift in Sources */,
 				51FB7FF727BC88E50095567C /* Foundation.swift in Sources */,
 				51AB58EF27BCEE3900BD92DD /* RichEditorToolbar.swift in Sources */,
 				51AB58BA27BCEDE700BD92DD /* SPHomeSubViewController.swift in Sources */,
@@ -1305,6 +1416,7 @@
 				51AB58EB27BCEE3900BD92DD /* SPRichTextViewController.swift in Sources */,
 				51AB58A727BCEDE700BD92DD /* SPHomeSearchModuleViewModel.swift in Sources */,
 				51FB7FF527BC88E50095567C /* UIColor+Extension.swift in Sources */,
+				516707A427EF4D6F007CC65F /* XMHomeSubViewController.swift in Sources */,
 				51FB801D27BC8A640095567C /* SPRefreshFooter.swift in Sources */,
 				51FB7FF427BC88E50095567C /* UIButton+XESpace.m in Sources */,
 				511383AA27112BCB00D98BC9 /* AppDelegate.swift in Sources */,
@@ -1321,6 +1433,8 @@
 				51AB590327BCF09A00BD92DD /* NetworkPublicApi.swift in Sources */,
 				51FB801527BC8A640095567C /* SPBaseModel.swift in Sources */,
 				51FB801827BC8A640095567C /* BaseCollectionViewController.swift in Sources */,
+				5109421C27F005B200C2F939 /* SPProvider.swift in Sources */,
+				516707A027EF2E82007CC65F /* SPModel.swift in Sources */,
 				51AB58E927BCEE3900BD92DD /* SPCategoryViewController.swift in Sources */,
 				51FB801B27BC8A640095567C /* BaseUIViewController.swift in Sources */,
 				51FB801627BC8A640095567C /* BaseTableView.swift in Sources */,
@@ -1329,6 +1443,7 @@
 				51AB58B927BCEDE700BD92DD /* SPHomeViewController+Delegate.swift in Sources */,
 				51AB58B427BCEDE700BD92DD /* Target_SPHomeUI.swift in Sources */,
 				51AB58AD27BCEDE700BD92DD /* SPHomeStoreTopModuleViewModel.swift in Sources */,
+				5129D40C27F013D90067D511 /* XMHomeListContainerView.swift in Sources */,
 				51AB58EC27BCEE3900BD92DD /* RichEditorView.swift in Sources */,
 				51AB58A427BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift in Sources */,
 				51FB801727BC8A640095567C /* BaseNavgationView.swift in Sources */,
@@ -1339,6 +1454,7 @@
 				51AB58A927BCEDE700BD92DD /* SPHomeLiveBroadcastModuleViewModel.swift in Sources */,
 				51AB58AF27BCEDE700BD92DD /* SPHomeTitleModuleViewModel.swift in Sources */,
 				51AB58A627BCEDE700BD92DD /* SPHomeCouponModuleViewModel.swift in Sources */,
+				51C8F22C27EDB2FE0066E186 /* BaseEmptyDataView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

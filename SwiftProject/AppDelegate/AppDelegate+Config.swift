@@ -21,7 +21,9 @@ extension AppDelegate{
     
     //初始化网络配置
     func initNetworkConfig(){
+        SPAppCore.shared.appType = .xmly
         print("SPAppCore.shared.appType:",SPAppCore.shared.appType,SPAppCore.shared.environmentType)
+
         if SPAppCore.shared.appType == .none {
             SPAppCore.shared.appType  = .shop
             SPAppCore.shared.environmentType = .pruductEnviroment

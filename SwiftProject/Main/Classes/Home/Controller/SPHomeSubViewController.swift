@@ -7,6 +7,7 @@
 
 import Foundation
 import JXCategoryView
+import UIKit
 
 
 // MARK: ------------------------- Const/Enum/Struct
@@ -32,6 +33,10 @@ class SPHomeSubViewController: BaseUIViewController, UICollectionViewDelegate, U
     // MARK: ------------------------- Propertys
     
     var handlerDidScrollBlock:((_ scrollView: UIScrollView) -> Void)?
+    
+    var handerListWillAppearCallBack:((_ scrollView: UIScrollView) -> Void)?
+    
+    
     
     lazy var collectionView: SPHomeBaseCollection = {
         let layout = UICollectionViewFlowLayout()
@@ -111,7 +116,9 @@ extension SPHomeSubViewController:JXCategoryListContentViewDelegate,JXCategoryVi
     }
  
     
-    
+    func listWillAppear() {
+        handerListWillAppearCallBack?(self.collectionView)
+    }
     
     
     

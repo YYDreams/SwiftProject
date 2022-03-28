@@ -23,6 +23,7 @@ public let kStatusBarHeight = UIApplication.shared.statusBarFrame.height
 
 
 
+//适配比例
 public let kRatio = kScreenWidth / 750
 
 

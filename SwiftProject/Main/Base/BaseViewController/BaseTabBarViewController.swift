@@ -23,17 +23,22 @@ extension BaseTabBarViewController{
     
     private func setupViewControllers(){
 
-        
-        let controllers:[UIViewController]  =
-            [SPHomeViewController(),SPSummaryReviewViewController(),SPTestViewController(),SPTestViewController(),SPUserCenterViewController()]
-     
+        var controllers:[UIViewController]
+        var titles:[String]
+        switch SPAppCore.shared.appType {
+        case .xmly:
+            controllers =
+                [XMHomeViewController(),XMHomeViewController(),XMHomeViewController(),XMHomeViewController(),XMHomeViewController()]
+            titles = ["首页","VIP","待定","动态","我的"]
+        default:
+            controllers  =
+                [SPHomeViewController(),SPSummaryReviewViewController(),SPTestViewController(),SPTestViewController(),SPUserCenterViewController()]
+            titles = ["首页","复盘","待定","算法","我的"]
+        }
         let normalImageNames = ["icon_play_stop","icon_play_stop","","icon_play_stop","icon_play_stop"]
         let selectImageNames = ["icon_play_stop","icon_play_stop","","icon_play_stop","icon_play_stop"]
         
-        let titles = ["首页","复盘","待定","算法","我的"]
-        
         for (index, vc) in controllers.enumerated() {
-            
             vc.tabBarItem.title = titles[index]
             vc.tabBarItem.image = UIImage(named: normalImageNames[index])
             vc.tabBarItem.selectedImage = UIImage(named: selectImageNames[index])
@@ -43,7 +48,7 @@ extension BaseTabBarViewController{
             addChild( BaseNavViewController(rootViewController: vc))
             
         }
-        self.selectedIndex = 1
+        self.selectedIndex = 0
     }
 
     private func setupAppearance(){

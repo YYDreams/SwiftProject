@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 // MARK: ------------------------- Const/Enum/Struct
 
 extension SPAlgorithmViewController {
@@ -38,9 +39,52 @@ class SPAlgorithmViewController: UIViewController {
         super.viewDidLoad()
        
         
+        let btn = UIButton()
+        btn.centerX = self.view.centerX
+        btn.centerY = self.view.centerY
+        btn.width = 100
+        btn.height = 50
+        btn.backgroundColor = UIColor.red
+        
+        btn.addTarget(self, action: #selector(testtest), for: .touchUpInside)
+        view.addSubview(btn)
    
         
+        
     }
+    @objc func testtest(){
+     let e =    exchange([1,2,3,4])
+        
+        print("e:==========",e)
+        
+        
+    }
+    
+    
+    
+    // 调整数组顺序使奇数位于偶数前面
+    /**
+     *   输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有奇数在数组的前半部分，所有偶数在数组的后半部分。
+     示例：
+     输入：nums = [1,2,3,4]
+     输出：[1,3,2,4]
+     注：[3,1,2,4] 也是正确的答案之一。
+     */
+   @objc func exchange(_ nums: [Int]) -> [Int] {
+        var temp: [Int] = []
+        nums.forEach {
+            if $0 & 1 == 1 {
+                temp.insert($0, at: 0)
+            }
+            else {
+                temp.append($0)
+            }
+        }
+        return temp
+    }
+
+
+    
     
 
     
