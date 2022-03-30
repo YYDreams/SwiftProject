@@ -109,6 +109,7 @@ class XMHomeViewController: BaseUIViewController {
         containerView = {
             let view = XMHomeListContainerView(type: .collectionView, delegate: self)
             view?.scrollView.backgroundColor = UIColor.clear
+            view?.delegate = self
             view?.listCellBackgroundColor = UIColor.clear
             return view
         }()
@@ -144,7 +145,8 @@ class XMHomeViewController: BaseUIViewController {
  
     // MARK: ------------------------- Events
     func requestData(){
-        self.propertys.titles = ["直播","推荐","直播1","推荐2","直播3","推荐4"]
+        
+    self.propertys.titles = ["直播","推荐","直播1","推荐2","直播3","推荐4"]
                 
         self.propertys.titles.flatMap { _ in
                 
@@ -157,10 +159,43 @@ class XMHomeViewController: BaseUIViewController {
     }
     
     // MARK: ------------------------- Methods
+    func changeToWhiteStateAndVC(vc: XMHomeSubViewController?){
+        
+        self.categoryView.titleColor = UIColor.white
+        self.categoryView.titleSelectedColor = UIColor.white
+        self.lineView.indicatorColor = UIColor.white        
+        if let homeSubVc = vc {
+            homeSubVc.isCriticalPoint = false
+            UIView.animate(withDuration: 0.3) {
+                self.coverView.isHidden = false
+                self.headerBgView.backgroundColor = homeSubVc.bgColor
+            }
+        }
+
+    }
+    
+    
+    func changeToBlackStateAndVC(vc: XMHomeSubViewController?){
+        // 标签栏改变
+        
+        self.categoryView.titleColor = UIColor.black
+        self.categoryView.titleSelectedColor = UIColor.black
+        self.lineView.indicatorColor = UIColor.red
+        self.categoryView.refreshCellState()
+        
+        if let homeSubVc = vc {
+            homeSubVc.isCriticalPoint = true
+            UIView.animate(withDuration: 0.3) {
+                self.coverView.isHidden = true
+                self.headerBgView.backgroundColor = UIColor.white
+            }
+        }
+    }
     
 }
 
 
+ //MARK: ------------------------- JXCategoryViewDelegate,JXCategoryListContainerViewDelegate
 extension XMHomeViewController:JXCategoryViewDelegate,JXCategoryListContainerViewDelegate{
     func number(ofListsInlistContainerView listContainerView: JXCategoryListContainerView!) -> Int {
         self.propertys.titles.count
@@ -168,8 +203,47 @@ extension XMHomeViewController:JXCategoryViewDelegate,JXCategoryListContainerVie
     
     func listContainerView(_ listContainerView: JXCategoryListContainerView!, initListFor index: Int) -> JXCategoryListContentViewDelegate! {
         let listVC = XMHomeSubViewController()
+        listVC.delegate = self
         listVC.view.backgroundColor = UIColor.clear
         return listVC
     }
+    
+    func categoryView(_ categoryView: JXCategoryBaseView!, didSelectedItemAt index: Int) {
+
+        print("didSelectedItemAt",index)
+                
+        let listVC = self.containerView.validListDict[NSNumber(value: index)] as? XMHomeSubViewController
+        listVC?.isSelected = true
+        listVC?.loadData()
+    }
+    
+}
+//MARK: ------------------------- XMHomeListContainerViewDelegate
+extension XMHomeViewController: XMHomeListContainerViewDelegate{
+    
+    func scrollWillBegin(){
+        self.containerView.validListDict.compactMap { (key, obj) in
+            let listVC = obj as? XMHomeSubViewController
+            listVC?.staartScroll()
+            
+        }
+    }
+    func scrollDidEnded(){
+        let listVC = self.containerView.validListDict[NSNumber(value: self.categoryView.selectedIndex)] as? XMHomeSubViewController
+        listVC?.staartScroll()
+    }
+}
+
+//MARK: ------------------------- XMHomeSubViewControllerDelegate
+extension XMHomeViewController:XMHomeSubViewControllerDelegate{
+    func  didScroll(_ controller: XMHomeSubViewController,scrollView: UIScrollView){
+        
+    }
+    
+    func  didChangeColor(_ controller: XMHomeSubViewController,color: UIColor){
+        print("didChangeColor===",color);
+        self.headerBgView.backgroundColor = color
+    }
+    
     
 }

@@ -77,10 +77,13 @@
 		51AB58FB27BCF00C00BD92DD /* SPAppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB58FA27BCF00C00BD92DD /* SPAppCore.swift */; };
 		51AB590227BCF09A00BD92DD /* NetworkHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB58FF27BCF09A00BD92DD /* NetworkHelp.swift */; };
 		51AB590327BCF09A00BD92DD /* NetworkPublicApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB590027BCF09A00BD92DD /* NetworkPublicApi.swift */; };
+		51AD064827F2A17B00958A0D /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AD064627F2A17B00958A0D /* UIColor+Category.m */; };
+		51AD064B27F2A38400958A0D /* Foundation+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AD064A27F2A38400958A0D /* Foundation+Category.m */; };
 		51B42A04275CB0780017C49C /* SPTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42A03275CB0780017C49C /* SPTestCell.swift */; };
 		51C27EA6276C9E5D00ED7B99 /* SPTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */; };
 		51C27EBB276CA81200ED7B99 /* AppDelegate+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C27EBA276CA81200ED7B99 /* AppDelegate+Config.swift */; };
 		51C27EBD276CA82500ED7B99 /* AppdDelegate+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C27EBC276CA82500ED7B99 /* AppdDelegate+UI.swift */; };
+		51C83F9A27F4654000E13670 /* JXCategoryTitleView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C83F9827F4654000E13670 /* JXCategoryTitleView+Category.m */; };
 		51C8F22C27EDB2FE0066E186 /* BaseEmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C8F22B27EDB2FE0066E186 /* BaseEmptyDataView.swift */; };
 		51FB7FF127BC88E50095567C /* HudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB7FDD27BC88E40095567C /* HudManager.swift */; };
 		51FB7FF227BC88E50095567C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB7FE027BC88E50095567C /* UIImage+Extension.swift */; };
@@ -205,10 +208,17 @@
 		51AB58FA27BCF00C00BD92DD /* SPAppCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAppCore.swift; sourceTree = "<group>"; };
 		51AB58FF27BCF09A00BD92DD /* NetworkHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelp.swift; sourceTree = "<group>"; };
 		51AB590027BCF09A00BD92DD /* NetworkPublicApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkPublicApi.swift; sourceTree = "<group>"; };
+		51AD064527F2A06800958A0D /* SwiftProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		51AD064627F2A17B00958A0D /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
+		51AD064727F2A17B00958A0D /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
+		51AD064927F2A38400958A0D /* Foundation+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Category.h"; sourceTree = "<group>"; };
+		51AD064A27F2A38400958A0D /* Foundation+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Category.m"; sourceTree = "<group>"; };
 		51B42A03275CB0780017C49C /* SPTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTestCell.swift; sourceTree = "<group>"; };
 		51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTestViewController.swift; sourceTree = "<group>"; };
 		51C27EBA276CA81200ED7B99 /* AppDelegate+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Config.swift"; sourceTree = "<group>"; };
 		51C27EBC276CA82500ED7B99 /* AppdDelegate+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppdDelegate+UI.swift"; sourceTree = "<group>"; };
+		51C83F9827F4654000E13670 /* JXCategoryTitleView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JXCategoryTitleView+Category.m"; sourceTree = "<group>"; };
+		51C83F9927F4654000E13670 /* JXCategoryTitleView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JXCategoryTitleView+Category.h"; sourceTree = "<group>"; };
 		51C8F22B27EDB2FE0066E186 /* BaseEmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEmptyDataView.swift; sourceTree = "<group>"; };
 		51FB7FDD27BC88E40095567C /* HudManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudManager.swift; sourceTree = "<group>"; };
 		51FB7FE027BC88E50095567C /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -311,6 +321,7 @@
 				51FB7FD727BC88650095567C /* Widget */,
 				517D296B276C6A960090437B /* shop.md */,
 				511384072711363000D98BC9 /* 记录.md */,
+				51AD064527F2A06800958A0D /* SwiftProject-Bridging-Header.h */,
 				51B42A03275CB0780017C49C /* SPTestCell.swift */,
 				51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */,
 				511383AF27112BCB00D98BC9 /* Main.storyboard */,
@@ -761,6 +772,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		51AD064027F29FBC00958A0D /* EmptyDataView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EmptyDataView;
+			sourceTree = "<group>";
+		};
 		51FB7FBB27BC88650095567C /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -949,6 +967,7 @@
 		51FB7FD727BC88650095567C /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				51AD064027F29FBC00958A0D /* EmptyDataView */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -1010,6 +1029,8 @@
 		51FB7FE627BC88E50095567C /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
+				51AD064727F2A17B00958A0D /* UIColor+Category.h */,
+				51AD064627F2A17B00958A0D /* UIColor+Category.m */,
 				51FB7FE727BC88E50095567C /* UIColor+Extension.swift */,
 			);
 			path = UIColor;
@@ -1026,6 +1047,10 @@
 		51FB7FEA27BC88E50095567C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				51AD064927F2A38400958A0D /* Foundation+Category.h */,
+				51AD064A27F2A38400958A0D /* Foundation+Category.m */,
+				51C83F9927F4654000E13670 /* JXCategoryTitleView+Category.h */,
+				51C83F9827F4654000E13670 /* JXCategoryTitleView+Category.m */,
 				51FB7FEB27BC88E50095567C /* Foundation.swift */,
 			);
 			path = Foundation;
@@ -1429,6 +1454,7 @@
 				51AB58BB27BCEDE700BD92DD /* SPHomeRecommendGoodsCell.swift in Sources */,
 				51AB58A827BCEDE700BD92DD /* SPHomeVideoModuleViewModel.swift in Sources */,
 				51AB58A327BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift in Sources */,
+				51AD064827F2A17B00958A0D /* UIColor+Category.m in Sources */,
 				51AB58EB27BCEE3900BD92DD /* SPRichTextViewController.swift in Sources */,
 				51AB58A727BCEDE700BD92DD /* SPHomeSearchModuleViewModel.swift in Sources */,
 				51FB7FF527BC88E50095567C /* UIColor+Extension.swift in Sources */,
@@ -1456,10 +1482,12 @@
 				51FB801627BC8A640095567C /* BaseTableView.swift in Sources */,
 				51AB58EA27BCEE3900BD92DD /* SPSummaryReviewViewController.swift in Sources */,
 				51AB58C427BCEDE800BD92DD /* SPHomeCategoryHeaderView.swift in Sources */,
+				51C83F9A27F4654000E13670 /* JXCategoryTitleView+Category.m in Sources */,
 				51AB58B927BCEDE700BD92DD /* SPHomeViewController+Delegate.swift in Sources */,
 				51AB58B427BCEDE700BD92DD /* Target_SPHomeUI.swift in Sources */,
 				51AB58AD27BCEDE700BD92DD /* SPHomeStoreTopModuleViewModel.swift in Sources */,
 				5129D40C27F013D90067D511 /* XMHomeListContainerView.swift in Sources */,
+				51AD064B27F2A38400958A0D /* Foundation+Category.m in Sources */,
 				51AB58EC27BCEE3900BD92DD /* RichEditorView.swift in Sources */,
 				51AB58A427BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift in Sources */,
 				51FB801727BC8A640095567C /* BaseNavgationView.swift in Sources */,
@@ -1657,7 +1685,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = HH.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftProject/SwiftProject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1679,7 +1707,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = HH.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftProject/SwiftProject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
