@@ -26,10 +26,10 @@
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGContextRef context = CGBitmapContextCreate(NULL,
-                                                 thumbSize.width,
-                                                 thumbSize.height,
+                                                 roundf(thumbSize.width),
+                                                 roundf(thumbSize.height),
                                                  8,//bits per component
-                                                 thumbSize.width * 4,
+                                                 roundf(thumbSize.width) * 4,
                                                  colorSpace,
                                                  bitmapInfo);
     
