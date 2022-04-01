@@ -70,12 +70,6 @@ class XMHomeViewController: BaseUIViewController {
         print("----33---%p",accountManager)
     }
     
-    override var preferredStatusBarStyle : UIStatusBarStyle {
-        return darkMode ? .default : .lightContent
-    }
-    
-    
-    
     func setupSubViews(){
         self.navigationController?.navigationBar.isHidden = true
         headerBgView = {
