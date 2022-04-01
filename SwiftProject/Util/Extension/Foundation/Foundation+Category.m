@@ -179,3 +179,21 @@
     
 }
 @end
+
+
+
+
+@implementation UIViewController(NavigationBar)
+static char kAssociatedObjectKey_statusBarStyle;
+- (void)setSp_statusBarStyle:(UIStatusBarStyle)sp_statusBarStyle{
+    objc_setAssociatedObject(self, &kAssociatedObjectKey_statusBarStyle, @(sp_statusBarStyle), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+- (UIStatusBarStyle)sp_statusBarStyle{
+    id style = objc_getAssociatedObject(self, &kAssociatedObjectKey_statusBarStyle);
+    return  [style intValue];
+    
+}
+@end
+

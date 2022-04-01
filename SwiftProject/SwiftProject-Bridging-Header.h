@@ -14,5 +14,6 @@
 
 #import "JXCategoryTitleView+Category.h"
 
+#import "XMAccountManager.h"
 
 #endif /* SwiftProject_Bridging_Header_h */

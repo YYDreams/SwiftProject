@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import  <UIKit/UIKit.h>
+#import <objc/message.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -30,5 +32,12 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
+
+@interface UIViewController(NavigationBar)
+
+/// 设置状态栏类型
+@property (nonatomic, assign) UIStatusBarStyle      sp_statusBarStyle;
+
+@end
 
 NS_ASSUME_NONNULL_END

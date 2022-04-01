@@ -84,6 +84,7 @@
 		51C27EBB276CA81200ED7B99 /* AppDelegate+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C27EBA276CA81200ED7B99 /* AppDelegate+Config.swift */; };
 		51C27EBD276CA82500ED7B99 /* AppdDelegate+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C27EBC276CA82500ED7B99 /* AppdDelegate+UI.swift */; };
 		51C83F9A27F4654000E13670 /* JXCategoryTitleView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C83F9827F4654000E13670 /* JXCategoryTitleView+Category.m */; };
+		51C83FA027F545D400E13670 /* XMAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C83F9F27F545D400E13670 /* XMAccountManager.m */; };
 		51C8F22C27EDB2FE0066E186 /* BaseEmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C8F22B27EDB2FE0066E186 /* BaseEmptyDataView.swift */; };
 		51FB7FF127BC88E50095567C /* HudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB7FDD27BC88E40095567C /* HudManager.swift */; };
 		51FB7FF227BC88E50095567C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB7FE027BC88E50095567C /* UIImage+Extension.swift */; };
@@ -219,6 +220,8 @@
 		51C27EBC276CA82500ED7B99 /* AppdDelegate+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppdDelegate+UI.swift"; sourceTree = "<group>"; };
 		51C83F9827F4654000E13670 /* JXCategoryTitleView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JXCategoryTitleView+Category.m"; sourceTree = "<group>"; };
 		51C83F9927F4654000E13670 /* JXCategoryTitleView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JXCategoryTitleView+Category.h"; sourceTree = "<group>"; };
+		51C83F9E27F545D400E13670 /* XMAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMAccountManager.h; sourceTree = "<group>"; };
+		51C83F9F27F545D400E13670 /* XMAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMAccountManager.m; sourceTree = "<group>"; };
 		51C8F22B27EDB2FE0066E186 /* BaseEmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEmptyDataView.swift; sourceTree = "<group>"; };
 		51FB7FDD27BC88E40095567C /* HudManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudManager.swift; sourceTree = "<group>"; };
 		51FB7FE027BC88E50095567C /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -731,6 +734,8 @@
 		51AB58F927BCF00C00BD92DD /* AppCore */ = {
 			isa = PBXGroup;
 			children = (
+				51C83F9E27F545D400E13670 /* XMAccountManager.h */,
+				51C83F9F27F545D400E13670 /* XMAccountManager.m */,
 				51AB58FA27BCF00C00BD92DD /* SPAppCore.swift */,
 			);
 			path = AppCore;
@@ -1448,6 +1453,7 @@
 				51AB58F627BCEE3900BD92DD /* SPDeveloperTextCell.swift in Sources */,
 				51AB58B727BCEDE700BD92DD /* SPHomeViewController+Network.swift in Sources */,
 				51FB801E27BC8A640095567C /* SPRefreshHeader.swift in Sources */,
+				51C83FA027F545D400E13670 /* XMAccountManager.m in Sources */,
 				51FB801A27BC8A640095567C /* BaseTableViewController.swift in Sources */,
 				51AB58BD27BCEDE700BD92DD /* SPHomeCategoryHeaderCell.swift in Sources */,
 				51C27EBD276CA82500ED7B99 /* AppdDelegate+UI.swift in Sources */,
@@ -1677,6 +1683,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99R59D39XW;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1699,6 +1706,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99R59D39XW;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SwiftProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

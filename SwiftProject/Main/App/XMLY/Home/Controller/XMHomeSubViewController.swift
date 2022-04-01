@@ -83,8 +83,6 @@ class XMHomeSubViewController: BaseTableViewController {
         super.viewDidLoad()
         setupSubViews()
         loadData()
-        
-        
     }
     func setupSubViews(){
         pageControl = UIPageControl()
@@ -194,13 +192,13 @@ extension XMHomeSubViewController: GKCycleScrollViewDelegate,GKCycleScrollViewDa
             
             switch result {
             case .success(let value):
-                if model?.headerBgColor != nil{
+//                if model?.headerBgColor != nil{
                     model?.headerBgColor = UIColor(mostImage: value.image, scale: 0.01)
-                }
-                if index == self.bannerScrollView.currentSelectIndex{
+//                }
+//                if index == self.bannerScrollView.currentSelectIndex{
                     self.bgColor = model?.headerBgColor ?? UIColor(hexInt: 0x5C5859)
                     self.delegate?.didChangeColor(self, color: self.bgColor)
-                }
+//                }
             default:
                 break
             }
@@ -224,9 +222,10 @@ extension XMHomeSubViewController: GKCycleScrollViewDelegate,GKCycleScrollViewDa
             let rightColor = (rightModel.headerBgColor != nil) ? rightModel.headerBgColor: Const.defalutColor
             let color  = JXCategoryFactory.interpolationColor(from: leftColor, to: rightColor, percent: ratio) ?? Const.defalutColor
             self.bgColor = color
-            if self.isSelected {
+//            if self.isSelected {
                 self.delegate?.didChangeColor(self, color: color)
-            }
+                print("=====scrollingFrom",color)
+//            }
         }
         
     }

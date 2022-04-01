@@ -53,12 +53,29 @@ class XMHomeViewController: BaseUIViewController {
     /// 外部参数
     var params: Params = Params()
     
+    var accountManager:XMAccountManager!
+    
     // MARK: ------------------------- CycLife
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "clear", style: .plain, target: self, action: #selector(clear))
         setupSubViews()
+        accountManager  = XMAccountManager.shareInstance()
+        print("----11---%p",accountManager)
         requestData()
     }
+    @objc func clear(){
+        accountManager.clear()
+        print("----33---%p",accountManager)
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return darkMode ? .default : .lightContent
+    }
+    
+    
+    
     func setupSubViews(){
         self.navigationController?.navigationBar.isHidden = true
         headerBgView = {
@@ -78,7 +95,7 @@ class XMHomeViewController: BaseUIViewController {
             return view
         }()
         lineView = {
-            lineView = JXCategoryIndicatorLineView()
+            let lineView = JXCategoryIndicatorLineView()
             lineView.indicatorWidth     = kRatio * 40.0
             lineView.indicatorHeight    = kRatio * 8.0
             lineView.indicatorColor     = UIColor.white
@@ -100,7 +117,7 @@ class XMHomeViewController: BaseUIViewController {
             categoryView.titleLabelZoomScale   = 1.3;  // 标题缩放程度
             categoryView.isContentScrollViewClickTransitionAnimationEnabled = false
             categoryView.titleLabelAnchorPointStyle = .bottom
-            categoryView.indicators    = [self.lineView]
+            categoryView.indicators    = [lineView]
             categoryView.listContainer = self.containerView
             return categoryView
         }()
@@ -156,11 +173,12 @@ class XMHomeViewController: BaseUIViewController {
         categoryView.imageTypes = self.propertys.imageTypes
         self.categoryView.reloadData()
         self.containerView.reloadData()
+        categoryView(categoryView, didSelectedItemAt: 0)
+
     }
     
     // MARK: ------------------------- Methods
     func changeToWhiteStateAndVC(vc: XMHomeSubViewController?){
-        
         self.categoryView.titleColor = UIColor.white
         self.categoryView.titleSelectedColor = UIColor.white
         self.lineView.indicatorColor = UIColor.white        
@@ -176,6 +194,7 @@ class XMHomeViewController: BaseUIViewController {
     
     
     func changeToBlackStateAndVC(vc: XMHomeSubViewController?){
+        
         // 标签栏改变
         
         self.categoryView.titleColor = UIColor.black
@@ -205,6 +224,7 @@ extension XMHomeViewController:JXCategoryViewDelegate,JXCategoryListContainerVie
         let listVC = XMHomeSubViewController()
         listVC.delegate = self
         listVC.view.backgroundColor = UIColor.clear
+        
         return listVC
     }
     
