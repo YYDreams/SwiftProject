@@ -66,13 +66,12 @@ class XMHomeViewController: BaseUIViewController {
         requestData()
     }
     @objc func clear(){
-        self.navigationController?.pushViewController(SPTestTabViewController(), animated: true)
         accountManager.clear()
         print("----33---%p",accountManager)
     }
     
     func setupSubViews(){
-//        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = true
         headerBgView = {
           let view = UIView()
             view.backgroundColor = UIColor(hexInt: 0x5C5859)
