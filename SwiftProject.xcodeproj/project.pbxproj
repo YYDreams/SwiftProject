@@ -18,6 +18,11 @@
 		511383C127112BCF00D98BC9 /* SwiftProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383C027112BCF00D98BC9 /* SwiftProjectTests.swift */; };
 		511383CC27112BCF00D98BC9 /* SwiftProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383CB27112BCF00D98BC9 /* SwiftProjectUITests.swift */; };
 		511384082711363100D98BC9 /* 记录.md in Resources */ = {isa = PBXBuildFile; fileRef = 511384072711363000D98BC9 /* 记录.md */; };
+		511FB00227F6F5BF005F659C /* XMSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511FB00127F6F5BF005F659C /* XMSquareCell.swift */; };
+		5125006D27FD415700AC20E1 /* home_discover-feed-recommand.json in Resources */ = {isa = PBXBuildFile; fileRef = 5125006C27FD415700AC20E1 /* home_discover-feed-recommand.json */; };
+		5125006F27FD42CA00AC20E1 /* XMHomeRecommandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5125006E27FD42CA00AC20E1 /* XMHomeRecommandModel.swift */; };
+		5125007227FD776A00AC20E1 /* home_discovery-category-personal-growth.json in Resources */ = {isa = PBXBuildFile; fileRef = 5125007127FD776A00AC20E1 /* home_discovery-category-personal-growth.json */; };
+		5125007427FD8F5E00AC20E1 /* SPTestTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5125007327FD8F5E00AC20E1 /* SPTestTabViewController.swift */; };
 		5129D40C27F013D90067D511 /* XMHomeListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5129D40B27F013D90067D511 /* XMHomeListContainerView.swift */; };
 		5155E599274C7BEB000B9D89 /* SPAlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */; };
 		5167079827EEFF89007CC65F /* XMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5167079727EEFF89007CC65F /* XMHomeViewController.swift */; };
@@ -150,6 +155,11 @@
 		511383CB27112BCF00D98BC9 /* SwiftProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProjectUITests.swift; sourceTree = "<group>"; };
 		511383CD27112BCF00D98BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		511384072711363000D98BC9 /* 记录.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "记录.md"; sourceTree = SOURCE_ROOT; };
+		511FB00127F6F5BF005F659C /* XMSquareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMSquareCell.swift; sourceTree = "<group>"; };
+		5125006C27FD415700AC20E1 /* home_discover-feed-recommand.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "home_discover-feed-recommand.json"; sourceTree = "<group>"; };
+		5125006E27FD42CA00AC20E1 /* XMHomeRecommandModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMHomeRecommandModel.swift; sourceTree = "<group>"; };
+		5125007127FD776A00AC20E1 /* home_discovery-category-personal-growth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "home_discovery-category-personal-growth.json"; sourceTree = "<group>"; };
+		5125007327FD8F5E00AC20E1 /* SPTestTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTestTabViewController.swift; sourceTree = "<group>"; };
 		5129D40B27F013D90067D511 /* XMHomeListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMHomeListContainerView.swift; sourceTree = "<group>"; };
 		5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAlgorithmViewController.swift; sourceTree = "<group>"; };
 		5167079727EEFF89007CC65F /* XMHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMHomeViewController.swift; sourceTree = "<group>"; };
@@ -286,7 +296,7 @@
 		357BCFBE27F1F78B00CD83F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				357BCFC627F1FDC700CD83F6 /* XMhome.json */,
+				5125006E27FD42CA00AC20E1 /* XMHomeRecommandModel.swift */,
 				357BCFBF27F1F79D00CD83F6 /* XMHomeBannerModel.swift */,
 			);
 			path = Model;
@@ -327,6 +337,7 @@
 				51AD064527F2A06800958A0D /* SwiftProject-Bridging-Header.h */,
 				51B42A03275CB0780017C49C /* SPTestCell.swift */,
 				51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */,
+				5125007327FD8F5E00AC20E1 /* SPTestTabViewController.swift */,
 				511383AF27112BCB00D98BC9 /* Main.storyboard */,
 				511383B227112BCE00D98BC9 /* Assets.xcassets */,
 				511383B427112BCE00D98BC9 /* LaunchScreen.storyboard */,
@@ -363,6 +374,16 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		5125007027FD42FF00AC20E1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5125006C27FD415700AC20E1 /* home_discover-feed-recommand.json */,
+				5125007127FD776A00AC20E1 /* home_discovery-category-personal-growth.json */,
+				357BCFC627F1FDC700CD83F6 /* XMhome.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		514B7E1727C3269000CDF619 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +411,7 @@
 		5167079527EEFDF0007CC65F /* XMLY */ = {
 			isa = PBXGroup;
 			children = (
+				5125007027FD42FF00AC20E1 /* Resource */,
 				5167079627EEFF6E007CC65F /* Home */,
 			);
 			path = XMLY;
@@ -419,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				5129D40B27F013D90067D511 /* XMHomeListContainerView.swift */,
+				511FB00127F6F5BF005F659C /* XMSquareCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1283,10 +1306,12 @@
 				51AB58B627BCEDE700BD92DD /* home.json in Resources */,
 				511383B627112BCE00D98BC9 /* LaunchScreen.storyboard in Resources */,
 				511383B327112BCE00D98BC9 /* Assets.xcassets in Resources */,
+				5125007227FD776A00AC20E1 /* home_discovery-category-personal-growth.json in Resources */,
 				51FB801427BC8A640095567C /* pullUpToRefresh.json in Resources */,
 				51FB801227BC8A640095567C /* pulldown_fresh_white.json in Resources */,
 				517D296C276C6A960090437B /* shop.md in Resources */,
 				511384082711363100D98BC9 /* 记录.md in Resources */,
+				5125006D27FD415700AC20E1 /* home_discover-feed-recommand.json in Resources */,
 				51FB801327BC8A640095567C /* pullDownToRefresh.json in Resources */,
 				511383B127112BCB00D98BC9 /* Main.storyboard in Resources */,
 			);
@@ -1438,12 +1463,14 @@
 				51AB58FB27BCF00C00BD92DD /* SPAppCore.swift in Sources */,
 				51AB58F727BCEE3900BD92DD /* SPDeveloperCell.swift in Sources */,
 				51FB7FF627BC88E50095567C /* UIView+Extension.swift in Sources */,
+				511FB00227F6F5BF005F659C /* XMSquareCell.swift in Sources */,
 				51FB801C27BC8A640095567C /* BaseTabBarViewController.swift in Sources */,
 				51AB58BF27BCEDE800BD92DD /* SPHomeSliderModuleCell.swift in Sources */,
 				51AB58B327BCEDE700BD92DD /* SPHomeImageAdsModuleViewModel.swift in Sources */,
 				51C27EBB276CA81200ED7B99 /* AppDelegate+Config.swift in Sources */,
 				51AB58F327BCEE3900BD92DD /* SPSummaryReviewUI.swift in Sources */,
 				51FB7FF827BC88E50095567C /* UITableView+Extension.swift in Sources */,
+				5125007427FD8F5E00AC20E1 /* SPTestTabViewController.swift in Sources */,
 				51C27EA6276C9E5D00ED7B99 /* SPTestViewController.swift in Sources */,
 				51AB58A527BCEDE700BD92DD /* SPHomeBaseViewModel.swift in Sources */,
 				51AB58B827BCEDE700BD92DD /* SPHomeViewController.swift in Sources */,
@@ -1461,6 +1488,7 @@
 				51AB58A827BCEDE700BD92DD /* SPHomeVideoModuleViewModel.swift in Sources */,
 				51AB58A327BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift in Sources */,
 				51AD064827F2A17B00958A0D /* UIColor+Category.m in Sources */,
+				5125006F27FD42CA00AC20E1 /* XMHomeRecommandModel.swift in Sources */,
 				51AB58EB27BCEE3900BD92DD /* SPRichTextViewController.swift in Sources */,
 				51AB58A727BCEDE700BD92DD /* SPHomeSearchModuleViewModel.swift in Sources */,
 				51FB7FF527BC88E50095567C /* UIColor+Extension.swift in Sources */,

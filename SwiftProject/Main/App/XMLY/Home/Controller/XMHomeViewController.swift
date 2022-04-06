@@ -66,12 +66,13 @@ class XMHomeViewController: BaseUIViewController {
         requestData()
     }
     @objc func clear(){
+        self.navigationController?.pushViewController(SPTestTabViewController(), animated: true)
         accountManager.clear()
         print("----33---%p",accountManager)
     }
     
     func setupSubViews(){
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
         headerBgView = {
           let view = UIView()
             view.backgroundColor = UIColor(hexInt: 0x5C5859)
@@ -96,6 +97,13 @@ class XMHomeViewController: BaseUIViewController {
             lineView.lineStyle          = .lengthen
             return lineView
         }()
+        containerView = {
+            let view = XMHomeListContainerView(type: .collectionView, delegate: self)
+            view?.scrollView.backgroundColor = UIColor.clear
+            view?.listCellBackgroundColor = UIColor.clear
+            return view
+        }()
+        
         categoryView = {
             let categoryView = JXCategoryTitleImageView()
             categoryView.delegate              = self
@@ -115,16 +123,6 @@ class XMHomeViewController: BaseUIViewController {
             categoryView.listContainer = self.containerView
             return categoryView
         }()
-      
-        
-        containerView = {
-            let view = XMHomeListContainerView(type: .collectionView, delegate: self)
-            view?.scrollView.backgroundColor = UIColor.clear
-            view?.delegate = self
-            view?.listCellBackgroundColor = UIColor.clear
-            return view
-        }()
-        
         self.view.addSubview(headerBgView)
         self.view.addSubview(coverView)
         self.view.addSubview(topView)
@@ -152,6 +150,7 @@ class XMHomeViewController: BaseUIViewController {
             $0.top.equalTo(self.categoryView.snp.bottom)
             
         }
+        changeToWhiteStateAndVC(vc: nil)
     }
  
     // MARK: ------------------------- Events
@@ -175,7 +174,8 @@ class XMHomeViewController: BaseUIViewController {
     func changeToWhiteStateAndVC(vc: XMHomeSubViewController?){
         self.categoryView.titleColor = UIColor.white
         self.categoryView.titleSelectedColor = UIColor.white
-        self.lineView.indicatorColor = UIColor.white        
+        self.lineView.indicatorColor = UIColor.white
+        self.categoryView.refreshCellState()
         if let homeSubVc = vc {
             homeSubVc.isCriticalPoint = false
             UIView.animate(withDuration: 0.3) {
@@ -217,8 +217,7 @@ extension XMHomeViewController:JXCategoryViewDelegate,JXCategoryListContainerVie
     func listContainerView(_ listContainerView: JXCategoryListContainerView!, initListFor index: Int) -> JXCategoryListContentViewDelegate! {
         let listVC = XMHomeSubViewController()
         listVC.delegate = self
-        listVC.view.backgroundColor = UIColor.clear
-        
+        listVC.bgColor = XMHomeSubViewController.Const.defalutColor
         return listVC
     }
     
@@ -229,6 +228,44 @@ extension XMHomeViewController:JXCategoryViewDelegate,JXCategoryListContainerVie
         let listVC = self.containerView.validListDict[NSNumber(value: index)] as? XMHomeSubViewController
         listVC?.isSelected = true
         listVC?.loadData()
+        
+        if  listVC?.isCriticalPoint ?? false {
+            changeToBlackStateAndVC(vc: listVC)
+        }else{
+            changeToWhiteStateAndVC(vc: listVC)
+        }
+    }
+    func categoryView(_ categoryView: JXCategoryBaseView!, scrollingFromLeftIndex leftIndex: Int, toRightIndex rightIndex: Int, ratio: CGFloat) {
+     
+        guard let leftVc = self.containerView.validListDict[NSNumber(value: leftIndex)] as? XMHomeSubViewController,
+         let rightVc = self.containerView.validListDict[NSNumber(value: rightIndex)] as? XMHomeSubViewController else{
+            
+            return
+        }
+   
+        
+        let leftColor = leftVc.isCriticalPoint ? UIColor.white : leftVc.bgColor
+        let rightColor = rightVc.isCriticalPoint ? UIColor.white : rightVc.bgColor
+        
+        let color = JXCategoryFactory.interpolationColor(from: leftColor, to: rightColor, percent: ratio)
+        self.headerBgView.backgroundColor = color
+        if leftVc.isCriticalPoint == rightVc.isCriticalPoint {return}
+        if leftVc.isCriticalPoint {
+            if ratio > 0.5 {
+                changeToWhiteStateAndVC(vc: nil)
+            }else{
+                changeToBlackStateAndVC(vc: nil)
+            }
+        }else if rightVc.isCriticalPoint{
+            if ratio > 0.5 {
+                changeToBlackStateAndVC(vc: nil)
+            }else{
+                changeToWhiteStateAndVC(vc: nil)
+            }
+        }
+        
+        
+        
     }
     
 }
@@ -238,7 +275,7 @@ extension XMHomeViewController: XMHomeListContainerViewDelegate{
     func scrollWillBegin(){
         self.containerView.validListDict.compactMap { (key, obj) in
             let listVC = obj as? XMHomeSubViewController
-            listVC?.staartScroll()
+            listVC?.stopScroll()
             
         }
     }
@@ -251,6 +288,14 @@ extension XMHomeViewController: XMHomeListContainerViewDelegate{
 //MARK: ------------------------- XMHomeSubViewControllerDelegate
 extension XMHomeViewController:XMHomeSubViewControllerDelegate{
     func  didScroll(_ controller: XMHomeSubViewController,scrollView: UIScrollView){
+        let offsetY = scrollView.contentOffset.y
+        if offsetY <= 0 {return}
+        if offsetY > kRatio * 300 {
+            changeToBlackStateAndVC(vc: controller)
+        }else{
+            changeToWhiteStateAndVC(vc: controller)
+        }
+
         
     }
     

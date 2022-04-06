@@ -82,6 +82,7 @@ class XMHomeSubViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubViews()
+        self.view.backgroundColor = UIColor.clear
         loadData()
     }
     func setupSubViews(){
@@ -100,6 +101,7 @@ class XMHomeSubViewController: BaseTableViewController {
         headerView.addSubview(bannerScrollView)
         tableView.backgroundColor = UIColor.clear
         tableView.tableHeaderView = headerView
+        
         tableView.registerCell(ofType: UITableViewCell.self)
         tableView.snp.updateConstraints{
             $0.top.equalTo(self.view)
@@ -109,6 +111,27 @@ class XMHomeSubViewController: BaseTableViewController {
     }
   
     func loadData(){
+        
+        
+//        let banners = [
+//            "https://upload-images.jianshu.io/upload_images/1598505-a1be3eff58b036cf.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+//            "https://upload-images.jianshu.io/upload_images/1598505-9d5fefd9e08c398b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+//            "https://upload-images.jianshu.io/upload_images/1598505-594492e704dce1e8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+//            "https://upload-images.jianshu.io/upload_images/1598505-c57b15c77a047156.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+//            "https://upload-images.jianshu.io/upload_images/1598505-ab4bfe225b394c9b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+//            "https://upload-images.jianshu.io/upload_images/1598505-01ffc92bebb6a56e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"];
+//
+//        banners.flatMap { image in
+//            let model = XMHomeBannerModel()
+//            self.propertys.bannerLists.append(model)
+//        }
+//
+//        self.pageControl.numberOfPages = self.propertys.bannerLists.count
+//        self.bannerScrollView.reloadData()
+//        self.bgColor = self.propertys.bannerLists.first?.headerBgColor ?? Const.defalutColor
+
+        
+        
         let path = Bundle.main.path(forResource: "XMhome", ofType: "json")
         let url = URL(fileURLWithPath: path!)
         // 带throws的方法需要抛异常
@@ -121,17 +144,18 @@ class XMHomeSubViewController: BaseTableViewController {
             let data = try Data(contentsOf: url)
             let jsonData:Any = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)
             let json = jsonData as! [String: Any]
-            
+
             let model = XMHomeTabModel.deserialize(from: json)
             if let data = model?.focusImages?.data,data.count > 0{
+                
                 self.propertys.bannerLists = data
             }
-            
+
             print("读取本地数据:!",self.propertys.bannerLists)
             self.pageControl.numberOfPages = self.propertys.bannerLists.count
             self.bannerScrollView.reloadData()
             self.bgColor = self.propertys.bannerLists.first?.headerBgColor ?? UIColor(hexInt: 0x5C5859)
-            
+
         } catch let error as Error? {
             print("读取本地数据出现错误!",error)
         }
@@ -191,14 +215,14 @@ extension XMHomeSubViewController: GKCycleScrollViewDelegate,GKCycleScrollViewDa
         cell?.imageView.kf.setImage(with: URL(string: model?.cover ?? ""), completionHandler: {(result) in
             
             switch result {
-            case .success(let value):
-//                if model?.headerBgColor != nil{
+            case .success(let value): 
+                if model?.headerBgColor == nil{
                     model?.headerBgColor = UIColor(mostImage: value.image, scale: 0.01)
-//                }
-//                if index == self.bannerScrollView.currentSelectIndex{
-                    self.bgColor = model?.headerBgColor ?? UIColor(hexInt: 0x5C5859)
+                }
+                if index == self.bannerScrollView.currentSelectIndex{
+                    self.bgColor = model?.headerBgColor ?? Const.defalutColor
                     self.delegate?.didChangeColor(self, color: self.bgColor)
-//                }
+                }
             default:
                 break
             }
@@ -222,10 +246,10 @@ extension XMHomeSubViewController: GKCycleScrollViewDelegate,GKCycleScrollViewDa
             let rightColor = (rightModel.headerBgColor != nil) ? rightModel.headerBgColor: Const.defalutColor
             let color  = JXCategoryFactory.interpolationColor(from: leftColor, to: rightColor, percent: ratio) ?? Const.defalutColor
             self.bgColor = color
-//            if self.isSelected {
+            if self.isSelected {
                 self.delegate?.didChangeColor(self, color: color)
                 print("=====scrollingFrom",color)
-//            }
+            }
         }
         
     }
