@@ -19,6 +19,6 @@ static dispatch_once_t   onceToken;
 }
 
 - (void)clear{
-    onceToken = 0;
+    onceToken = 0; //只有置成0,GCD才会认为它从未执行过.这样才能保证下次再次调用shareInstance的时候,再次创建对象.
 }
 @end
