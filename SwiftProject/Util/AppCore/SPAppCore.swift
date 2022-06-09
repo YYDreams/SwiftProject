@@ -14,6 +14,7 @@ let kAppCoreEnvType = "kAppCoreEnvType"
 let kAppCoreBaseUrl = "kAppCoreBaseUrl"
 /// 
 public enum SPAppType :Int {
+    case defalut //自己备用
     case xmly // 喜马拉雅
     case shop
     case learn
@@ -76,9 +77,7 @@ public  class SPAppCore: NSObject {
         set{
             UserDefaults.standard.setValue(newValue, forKey: kAppCoreBaseUrl)
             UserDefaults.standard.synchronize()
-         
-            
-            
+  
         }
     }
     

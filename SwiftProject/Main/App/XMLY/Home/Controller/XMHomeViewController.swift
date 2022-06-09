@@ -59,19 +59,42 @@ class XMHomeViewController: BaseUIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        let greenView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 200))
+//        greenView.backgroundColor = UIColor.green
+//        SPShowView.showCustomView(contentView: greenView)
+//        SPShowView.show(title: "我的", buttonTitles: ["取消","确定"]) { index in
+//            print("======index",index)
+//        }
+        
+        self.navigationController?.pushViewController(SPTestViewController(), animated: true)
+//        self.navigationController?.pushViewController(SPUserDetailViewController(), animated: true)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "clear", style: .plain, target: self, action: #selector(clear))
+        
+//        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(clear), userInfo: nil, repeats: true)
+//        Timer.scheduledTimer(timeInterval: 0.1,
+//                    target:self,selector:Selector("testListener"),
+//                    userInfo:nil,repeats:true)
         setupSubViews()
-        accountManager  = XMAccountManager.shareInstance()
+        
+//        accountManager  = XMAccountManager.shareInstance()
         print("----11---%p",accountManager)
         requestData()
     }
     @objc func clear(){
-        accountManager.clear()
+//        let greenView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 200))
+//        greenView.backgroundColor = UIColor.green
+//        SPShowView.showCustomView(contentView: greenView)
+        
+        SPShowView.show(title: "我的",content: "怎么啦三生ddsd打赏都是多多所多所多所多所多所多所多所多所付付打赏都是大所大所", buttonTitles: ["取消","确定"]) { index in
+            print("======index",index)
+        }
+
+//        accountManager.clear()
         print("----33---%p",accountManager)
     }
     
     func setupSubViews(){
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
         headerBgView = {
           let view = UIView()
             view.backgroundColor = UIColor(hexInt: 0x5C5859)

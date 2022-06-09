@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		27B013A95D6308050B943DAC /* Pods_SwiftProject_SwiftProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B243A71FB72A154E23CED /* Pods_SwiftProject_SwiftProjectUITests.framework */; };
+		35113CF62852619D00565D01 /* SPHighImitationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35113CF52852619D00565D01 /* SPHighImitationController.swift */; };
 		357BCFC027F1F79D00CD83F6 /* XMHomeBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357BCFBF27F1F79D00CD83F6 /* XMHomeBannerModel.swift */; };
 		357BCFC727F1FDC700CD83F6 /* XMhome.json in Resources */ = {isa = PBXBuildFile; fileRef = 357BCFC627F1FDC700CD83F6 /* XMhome.json */; };
+		3580EFD7283D12B400159F17 /* SPShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3580EFD6283D12B400159F17 /* SPShowView.swift */; };
+		3580EFD9283D165B00159F17 /* SPShowConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3580EFD8283D165B00159F17 /* SPShowConfig.swift */; };
+		3580EFDB283D20E200159F17 /* SPAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3580EFDA283D20E200159F17 /* SPAlertView.swift */; };
+		35E9FCDF28046C57007539CC /* SPUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E9FCDE28046C57007539CC /* SPUserDetailViewController.swift */; };
+		35E9FCE2280472F3007539CC /* SPUserDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E9FCE1280472F3007539CC /* SPUserDetailHeaderView.swift */; };
+		35E9FCE428047313007539CC /* SPUserDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35E9FCE328047313007539CC /* SPUserDetailHeaderView.xib */; };
+		35EBDA7928427447007379A7 /* EmptyDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EBDA7828427447007379A7 /* EmptyDataView.m */; };
 		5109421C27F005B200C2F939 /* SPProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5109421B27F005B200C2F939 /* SPProvider.swift */; };
 		511383AA27112BCB00D98BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383A927112BCB00D98BC9 /* AppDelegate.swift */; };
 		511383B127112BCB00D98BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511383AF27112BCB00D98BC9 /* Main.storyboard */; };
@@ -138,8 +146,17 @@
 		0845B48B2FC5AB6C510DBDEE /* Pods-SwiftProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProjectTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftProjectTests/Pods-SwiftProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		09BACBA7AFE292A5548912D6 /* Pods-SwiftProject-SwiftProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject-SwiftProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		234B243A71FB72A154E23CED /* Pods_SwiftProject_SwiftProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject_SwiftProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35113CF52852619D00565D01 /* SPHighImitationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPHighImitationController.swift; sourceTree = "<group>"; };
 		357BCFBF27F1F79D00CD83F6 /* XMHomeBannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMHomeBannerModel.swift; sourceTree = "<group>"; };
 		357BCFC627F1FDC700CD83F6 /* XMhome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = XMhome.json; sourceTree = "<group>"; };
+		3580EFD6283D12B400159F17 /* SPShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPShowView.swift; sourceTree = "<group>"; };
+		3580EFD8283D165B00159F17 /* SPShowConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPShowConfig.swift; sourceTree = "<group>"; };
+		3580EFDA283D20E200159F17 /* SPAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAlertView.swift; sourceTree = "<group>"; };
+		35E9FCDE28046C57007539CC /* SPUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPUserDetailViewController.swift; sourceTree = "<group>"; };
+		35E9FCE1280472F3007539CC /* SPUserDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPUserDetailHeaderView.swift; sourceTree = "<group>"; };
+		35E9FCE328047313007539CC /* SPUserDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPUserDetailHeaderView.xib; sourceTree = "<group>"; };
+		35EBDA7728427447007379A7 /* EmptyDataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyDataView.h; sourceTree = "<group>"; };
+		35EBDA7828427447007379A7 /* EmptyDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyDataView.m; sourceTree = "<group>"; };
 		5109421B27F005B200C2F939 /* SPProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPProvider.swift; sourceTree = "<group>"; };
 		511383A627112BCB00D98BC9 /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		511383A927112BCB00D98BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -291,6 +308,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35113CF2285260F100565D01 /* Defalut */ = {
+			isa = PBXGroup;
+			children = (
+				35113CF32852618900565D01 /* HighImitation */,
+				514B7E1727C3269000CDF619 /* Algorithm */,
+				51AB58C527BCEE3900BD92DD /* SummaryReview */,
+			);
+			path = Defalut;
+			sourceTree = "<group>";
+		};
+		35113CF32852618900565D01 /* HighImitation */ = {
+			isa = PBXGroup;
+			children = (
+				35113CF42852618900565D01 /* Controller */,
+			);
+			path = HighImitation;
+			sourceTree = "<group>";
+		};
+		35113CF42852618900565D01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35113CF52852619D00565D01 /* SPHighImitationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		357BCFBE27F1F78B00CD83F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +341,34 @@
 				357BCFBF27F1F79D00CD83F6 /* XMHomeBannerModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3580EFD3283D121700159F17 /* SPShow */ = {
+			isa = PBXGroup;
+			children = (
+				3580EFD6283D12B400159F17 /* SPShowView.swift */,
+				3580EFD8283D165B00159F17 /* SPShowConfig.swift */,
+				3580EFDA283D20E200159F17 /* SPAlertView.swift */,
+			);
+			path = SPShow;
+			sourceTree = "<group>";
+		};
+		35E9FCE0280472DC007539CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				35E9FCE1280472F3007539CC /* SPUserDetailHeaderView.swift */,
+				35E9FCE328047313007539CC /* SPUserDetailHeaderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35EBDA74284268B3007379A7 /* EmptyDataView */ = {
+			isa = PBXGroup;
+			children = (
+				35EBDA7728427447007379A7 /* EmptyDataView.h */,
+				35EBDA7828427447007379A7 /* EmptyDataView.m */,
+			);
+			path = EmptyDataView;
 			sourceTree = "<group>";
 		};
 		5113839D27112BCA00D98BC9 = {
@@ -400,6 +471,7 @@
 		5167079427EEFDDE007CC65F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				35113CF2285260F100565D01 /* Defalut */,
 				5167079527EEFDF0007CC65F /* XMLY */,
 			);
 			path = App;
@@ -797,13 +869,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		51AD064027F29FBC00958A0D /* EmptyDataView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = EmptyDataView;
-			sourceTree = "<group>";
-		};
 		51FB7FBB27BC88650095567C /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -817,8 +882,6 @@
 		51FB7FBE27BC88650095567C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				514B7E1727C3269000CDF619 /* Algorithm */,
-				51AB58C527BCEE3900BD92DD /* SummaryReview */,
 				51AB58DB27BCEE3900BD92DD /* UserCenter */,
 				51AB587627BCEDE700BD92DD /* Home */,
 				51FB7FBF27BC88650095567C /* Public */,
@@ -957,6 +1020,7 @@
 		51FB7FCF27BC88650095567C /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				35E9FCE0280472DC007539CC /* View */,
 				51FB7FD027BC88650095567C /* Controller */,
 				51FB7FD327BC88650095567C /* Model */,
 			);
@@ -966,6 +1030,7 @@
 		51FB7FD027BC88650095567C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				35E9FCDE28046C57007539CC /* SPUserDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -992,7 +1057,8 @@
 		51FB7FD727BC88650095567C /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				51AD064027F29FBC00958A0D /* EmptyDataView */,
+				35EBDA74284268B3007379A7 /* EmptyDataView */,
+				3580EFD3283D121700159F17 /* SPShow */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -1306,6 +1372,7 @@
 				5125007227FD776A00AC20E1 /* home_discovery-category-personal-growth.json in Resources */,
 				51FB801427BC8A640095567C /* pullUpToRefresh.json in Resources */,
 				51FB801227BC8A640095567C /* pulldown_fresh_white.json in Resources */,
+				35E9FCE428047313007539CC /* SPUserDetailHeaderView.xib in Resources */,
 				517D296C276C6A960090437B /* shop.md in Resources */,
 				511384082711363100D98BC9 /* 记录.md in Resources */,
 				5125006D27FD415700AC20E1 /* home_discover-feed-recommand.json in Resources */,
@@ -1468,7 +1535,9 @@
 				51AB58F327BCEE3900BD92DD /* SPSummaryReviewUI.swift in Sources */,
 				51FB7FF827BC88E50095567C /* UITableView+Extension.swift in Sources */,
 				51C27EA6276C9E5D00ED7B99 /* SPTestViewController.swift in Sources */,
+				3580EFD7283D12B400159F17 /* SPShowView.swift in Sources */,
 				51AB58A527BCEDE700BD92DD /* SPHomeBaseViewModel.swift in Sources */,
+				35E9FCE2280472F3007539CC /* SPUserDetailHeaderView.swift in Sources */,
 				51AB58B827BCEDE700BD92DD /* SPHomeViewController.swift in Sources */,
 				51AB58EE27BCEE3900BD92DD /* UIColor+Extensions.swift in Sources */,
 				51AB58BC27BCEDE700BD92DD /* SPHomeModuleBaseCell.swift in Sources */,
@@ -1476,6 +1545,7 @@
 				51AB58F627BCEE3900BD92DD /* SPDeveloperTextCell.swift in Sources */,
 				51AB58B727BCEDE700BD92DD /* SPHomeViewController+Network.swift in Sources */,
 				51FB801E27BC8A640095567C /* SPRefreshHeader.swift in Sources */,
+				35E9FCDF28046C57007539CC /* SPUserDetailViewController.swift in Sources */,
 				51C83FA027F545D400E13670 /* XMAccountManager.m in Sources */,
 				51FB801A27BC8A640095567C /* BaseTableViewController.swift in Sources */,
 				51AB58BD27BCEDE700BD92DD /* SPHomeCategoryHeaderCell.swift in Sources */,
@@ -1505,6 +1575,7 @@
 				51AB590327BCF09A00BD92DD /* NetworkPublicApi.swift in Sources */,
 				51FB801527BC8A640095567C /* SPBaseModel.swift in Sources */,
 				51FB801827BC8A640095567C /* BaseCollectionViewController.swift in Sources */,
+				3580EFD9283D165B00159F17 /* SPShowConfig.swift in Sources */,
 				5109421C27F005B200C2F939 /* SPProvider.swift in Sources */,
 				516707A027EF2E82007CC65F /* SPModel.swift in Sources */,
 				51AB58E927BCEE3900BD92DD /* SPCategoryViewController.swift in Sources */,
@@ -1514,12 +1585,15 @@
 				51AB58C427BCEDE800BD92DD /* SPHomeCategoryHeaderView.swift in Sources */,
 				51C83F9A27F4654000E13670 /* JXCategoryTitleView+Category.m in Sources */,
 				51AB58B927BCEDE700BD92DD /* SPHomeViewController+Delegate.swift in Sources */,
+				35EBDA7928427447007379A7 /* EmptyDataView.m in Sources */,
 				51AB58B427BCEDE700BD92DD /* Target_SPHomeUI.swift in Sources */,
 				51AB58AD27BCEDE700BD92DD /* SPHomeStoreTopModuleViewModel.swift in Sources */,
+				3580EFDB283D20E200159F17 /* SPAlertView.swift in Sources */,
 				5129D40C27F013D90067D511 /* XMHomeListContainerView.swift in Sources */,
 				51AD064B27F2A38400958A0D /* Foundation+Category.m in Sources */,
 				51AB58EC27BCEE3900BD92DD /* RichEditorView.swift in Sources */,
 				51AB58A427BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift in Sources */,
+				35113CF62852619D00565D01 /* SPHighImitationController.swift in Sources */,
 				51FB801727BC8A640095567C /* BaseNavgationView.swift in Sources */,
 				51AB58AE27BCEDE700BD92DD /* SPHomeGoodsModuleViewModel.swift in Sources */,
 				51AB58A227BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift in Sources */,
@@ -1706,7 +1780,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99R59D39XW;
+				DEVELOPMENT_TEAM = EK4EZD55H6;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SwiftProject/Info.plist;

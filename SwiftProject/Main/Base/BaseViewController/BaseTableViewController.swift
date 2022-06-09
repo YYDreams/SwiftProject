@@ -7,7 +7,7 @@
 
 import UIKit
 
-open  class BaseTableViewController: BaseUIViewController {
+class BaseTableViewController: BaseUIViewController {
     
     
     // MARK: ------------------------- Propertys
@@ -20,7 +20,7 @@ open  class BaseTableViewController: BaseUIViewController {
     
     
     // MARK: ------------------------- CycLife
-    open override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
         tableView.snp.makeConstraints{
@@ -50,12 +50,12 @@ open  class BaseTableViewController: BaseUIViewController {
 }
 
 extension  BaseTableViewController:UITableViewDelegate,UITableViewDataSource{
-  open    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 0
     }
     
-    open  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         return UITableViewCell()
     }

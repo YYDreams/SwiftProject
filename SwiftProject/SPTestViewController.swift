@@ -15,14 +15,16 @@ extension SPTestViewController {
     struct Const {}
     
     /// 内部属性
-    struct Propertys {}
+    struct Propertys {
+       var  dataArr = ["单行展示2个按钮","单行单个按钮","只有title没有conent","多文案"]
+    }
     
     /// 外部参数
     struct Params {}
     
 }
 
-class SPTestViewController: UIViewController {
+class SPTestViewController: BaseTableViewController {
     
     // MARK: ------------------------- Propertys
     
@@ -35,121 +37,68 @@ class SPTestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.red
-  
-//        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(test), userInfo: nil, repeats: true)
-        
-        
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.navigationController?.pushViewController(SPTestViewController(), animated: true)
+        self.tableView.registerCell(ofType: UITableViewCell.self)
 
-        
-        
+//        Timer.scheduledTimer(withTimeInterval: TimeInterval(1), repeats: true, block: { timer in
+//            print("viewDidLoad ===")
+//            SPShowView.show(title: "领卡失败，请先绑定会籍卡", buttonTitles: ["取消","去绑卡"]) { index in
+//                print("======index",index)
+//            }
+//        })
+//
     }
+ 
     
     @objc func injected() {
-        #if DEBUG
-        
-        arrOpation()
-//
-//        var arr = [10,1,4,20,99]
-//        print("arr-----",arr)
-//        // 返回true: v1排在v2前面
-//        // 返回false: v1排在v2后面
-//        //等价
-////        arr.sor t { v1, v2 in   return v1 > v2}
-//        //        arr.sort(by: {$0 < $1})
-//        //        arr.sort(by: >)
-//        //        arr.sort{ $0 < $1 }
-//
-//
-////        使用 append() 方法或者赋值运算符 += 在数组末尾添加元素
-//        arr.append(100)
-//        arr += [400]
-//
-//        //通过索引修改数组元素的值：
-//        arr[0] = 10
-//
-//        //遍历数组
-//        for item in arr {
-//           print(item)
-//        }
-//
-//
-//        //需要每个数据项的值和索引值，可以使用 String 的 enumerate() 方法来进行数组遍历
-//        for (index,item) in arr.enumerated() {
-//
-//        }
-//        let btn = UIButton(type: .contactAdd)
-//        btn.backgroundColor = UIColor.orange
-//        btn.frame = CGRect(x: 200, y: 200, width: 100, height: 40)
-//        btn.addTarget(self, action: #selector(testOnClick), for: .touchUpInside)
-//        view.addSubview(btn)
-//        //合并数组
-//
-//        print("arr--11---",arr)
+     
+        self.tableView.reloadData()
 
-        // 可选性绑定
-//        if let
-        
-        // 只执行一次
-//        static
-        
-        
-        
-        
-        #endif
     }
     
-    @objc func  arrOpation(){
-        var arr = [[1,2,3,4],[3,4]]
-        // map:会返回一个新的数组
-//       arr =  arr.map { item in
-//            return item + 1
-//        }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return propertys.dataArr.count
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var arr1 = arr.flatMap { a in
-            return a
+        let cell = tableView.cell(ofType: UITableViewCell.self)
+        cell.textLabel?.text = propertys.dataArr[safe: indexPath.row]
+        return cell
+    }
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+ 
+        switch indexPath.row {
+        case 0:
+     
+            SPShowView.show(title: "删除商品",content: "确认从列表中删除所选商品", buttonTitles: ["取消","删除"]) { index in
+                print("======index",index)
+            }
+        case 1:
+
+            SPShowView.show(title: "暂不支持退换",content: "取件费已超出订单费，请联系客服", buttonTitles: ["我知道了"]) { index in
+                print("======index",index)
+            }
+            print("222")
+        case 2:
+            SPShowView.show(title: "领卡失败，请先绑定会籍卡", buttonTitles: ["取消","去绑卡"]) { index in
+                print("======index",index)
+            }
+        case 3:
+
+            SPShowView.show(title: "提示",content: "人的事业会遇到瓶颈期，生活也会被各种鸡毛蒜皮小事烦扰，就需要清理自己，极致坦诚的告诉自己内心真实的想法，提出问题解决问题。人的事业会遇到瓶颈期，生活也会被各种鸡毛蒜皮小事烦扰，就需要清理自己，极致坦诚的告诉自己内心真实的想法，提出问题解决问题。是因为努力可以变得更好，成为更好的自己，而当你变成更好的自己的时候，也会认识到更多优秀的人，成为同行的人，从而激励和帮助自己变得更好。每个人对成功和满足感的定义都不同，你只要把握好自己的节奏即可。我们都一样，年幼时渴望长大，长大后却会彷徨。“这本书将讲述青春里的你我都曾经历的故事，或许每个人的青春都有一张相似的脸，它写满困惑，也可爱至极——渴望被爱，却畏惧表达；向往自由，却有勇无谋；偏爱某人，却负气离开；听过那么多道理，还是任性而为，明知前路多艰，还要逆流直上，后悔错过良辰美景无数，却依然坚持特立独行。我一直不信这个世界有什么一夜成名的神话，在外人只看结果的环境下，没有人在意你努力了多少年，因为在你默默无闻时没有人关心你是谁，只有当你有所收获时才能拿着结果去证实自己的能力。", buttonTitles: ["取消","去绑卡"]) { index in
+                print("======index",index)
+            }
+        case 4:
+            SPShowView.show(content: "人的事业会遇到瓶颈期，生活也会被各种鸡毛蒜皮小事烦扰，就需要清理自己，极致坦诚的告诉自己内心真实的想法，提出问题解决问题。人的事业会遇到瓶颈期，生活也会被各种鸡毛蒜皮小事烦扰，就需要清理自己，极致坦诚的告诉自己内心真实的想法，提出问题解决问题。是因为努力可以变得更好，成为更好的自己，而当你变成更好的自己的时候，也会认识到更多优秀的人，成为同行的人，从而激励和帮助自己变得更好。每个人对成功和满足感的定义都不同，你只要把握好自己的节奏即可。我们都一样，年幼时渴望长大，长大后却会彷徨。“这本书将讲述青春里的你我都曾经历的故事，或许每个人的青春都有一张相似的脸，它写满困惑，也可爱至极——渴望被爱，却畏惧表达；向往自由，却有勇无谋；偏爱某人，却负气离开；听过那么多道理，还是任性而为，明知前路多艰，还要逆流直上，后悔错过良辰美景无数，却依然坚持特立独行。我一直不信这个世界有什么一夜成名的神话，在外人只看结果的环境下，没有人在意你努力了多少年，因为在你默默无闻时没有人关心你是谁，只有当你有所收获时才能拿着结果去证实自己的能力。", buttonTitles: ["取消","去绑卡"]) { index in
+                print("======index",index)
+            }
+            
+            
+        default:
+            break
         }
-        // 遍历数组
-//        arr.filter(<#T##isIncluded: (Int) throws -> Bool##(Int) throws -> Bool#>)
-        // 也会遍历数组
-        
-        // 方式1
-//      var arr1 =  arr.reduce(0) { reslut, element in
-//
-//            return reslut + element
-//        }
-//
-//        // 方式2
-//        // $0上一次遍历返回的结果（初始值是0）
-//        // $1每次遍历到的数组元素
-//        var arr2 = arr.reduce(0){$0 + $1}
-        
-        print("arr-----",arr)
-        print("arr1-----",arr1)
-//        print("arr2-----",arr2)
-        
-
-    }
-    
-   @objc func testOnClick(){
-        
-        print("Thread.current",Thread.current)
         
     }
-    
-    
-    func exec(v1: Int, v2: Int, fn: (Int,Int) -> Int){
-
-        print(fn(v1 + v2, 3))
-        
-    }
-    
-    // $0 最前面的参数
-    
-    
     
     deinit {
         
@@ -161,10 +110,6 @@ class SPTestViewController: UIViewController {
     // MARK: ------------------------- Methods
     
 }
-
-
-
-//同时只能有1条数线程可以访问
 
 
 

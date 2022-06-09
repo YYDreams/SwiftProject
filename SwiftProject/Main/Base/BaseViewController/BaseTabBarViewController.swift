@@ -25,6 +25,8 @@ extension BaseTabBarViewController{
 
         var controllers:[UIViewController]
         var titles:[String]
+        var normalImageNames = [String]()
+        var selectImageNames = [String]()
         switch SPAppCore.shared.appType {
         case .xmly:
             controllers =
@@ -32,23 +34,25 @@ extension BaseTabBarViewController{
             titles = ["首页","VIP","待定","动态","我的"]
         default:
             controllers  =
-                [SPHomeViewController(),SPSummaryReviewViewController(),SPTestViewController(),SPTestViewController(),SPUserCenterViewController()]
-            titles = ["首页","复盘","待定","算法","我的"]
+                [SPHighImitationController(),SPSummaryReviewViewController(),SPTestViewController(),SPTestViewController(),SPUserCenterViewController()]
+            titles = ["高仿","复盘","封装","算法","我的"]
+            normalImageNames = ["ldld_houseSrc_normal","ldld_order_normal","ldld_message_normal","cleaner_cmpOrd_normal","ldld_user_normal"]
+            selectImageNames = ["ldld_houseSrc_selected","ldld_order_selected","ldld_message_selected","cleaner_cmpOrd_selected","ldld_user_selected"]
         }
-        let normalImageNames = ["icon_play_stop","icon_play_stop","","icon_play_stop","icon_play_stop"]
-        let selectImageNames = ["icon_play_stop","icon_play_stop","","icon_play_stop","icon_play_stop"]
+      
         
         for (index, vc) in controllers.enumerated() {
             vc.tabBarItem.title = titles[index]
             vc.tabBarItem.image = UIImage(named: normalImageNames[index])
             vc.tabBarItem.selectedImage = UIImage(named: selectImageNames[index])
+
             //设置选中图标的颜色
             self.tabBar.tintColor = UIColor.red
       
             addChild( BaseNavViewController(rootViewController: vc))
             
         }
-        self.selectedIndex = 0
+        self.selectedIndex = 1
     }
 
     private func setupAppearance(){

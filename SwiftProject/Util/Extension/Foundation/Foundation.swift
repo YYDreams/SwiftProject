@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public extension Collection {
     
@@ -30,4 +31,23 @@ public extension Array {
     }
 }
 
+
+extension String{
+    
+    //计算文本的size
+public func caculateTextSize(text:String?,font:UIFont?,maxWidth:CGFloat = CGFloat.greatestFiniteMagnitude,maxHeight:CGFloat = CGFloat.greatestFiniteMagnitude) -> CGSize{
+    
+    guard (text != nil), (text!.count > 0), (font != nil) else {
+        return .zero
+    }
+    
+    return (text! as NSString).boundingRect(with: CGSize(width: maxWidth, height: maxHeight),
+                                            options: [.usesLineFragmentOrigin, .usesFontLeading],
+                                            attributes: [NSAttributedString.Key.font: font!],
+                                            context: nil).size
+    }
+}
+    
+
+    
 

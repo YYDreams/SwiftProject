@@ -11,29 +11,37 @@ import UIKit
 // MARK: ------------------------- Const/Enum/Struct
 enum  SPSectionType:Int {
     
-    case date202112
+    case date202204
     
-    case date202201
+    case date202205
     
-    case date202202
+    case date202206
     
     public var typeString: String{
         switch self {
-        case .date202112:
-            return "2021年12月复盘篇"
-        case .date202201:
-            return "2022年01月复盘篇"
-        case .date202202:
-            return "2022年02月复盘篇"
+        case .date202204:
+            return "2021年04月复盘篇"
+        case .date202205:
+            return "2022年05月复盘篇"
+        case .date202206:
+            return "2022年06月复盘篇"
         }
     }
 }
 
 enum  SPInfoType:String {
+    
+    // 4月
     case richText = "富文本编辑器"
     case customTime = "自定义时间选择器"
     case libJXSegmentedViewDemo = "使用JXSegmentedView导致页面卡顿问题"
     case category = "分类圆弧"
+    // 5月
+    case  base64 =  "Base64字符与图片之间的转换"
+    case saveScreenshot = "保存截图"
+    case qrCode = "二维码生成"
+    case imgViewRoe = "图片旋转"
+
 }
 extension SPSummaryReviewViewController {
     
@@ -45,8 +53,8 @@ extension SPSummaryReviewViewController {
     /// 内部属性
     struct Propertys {
         var localData:[SPSectionType:[SPInfoType]] = [
-            .date202112: [.richText, .customTime, .libJXSegmentedViewDemo],
-            .date202201: [.category],
+            .date202204: [.richText, .customTime, .libJXSegmentedViewDemo,.category],
+            .date202205: [.base64, .saveScreenshot, .qrCode,.imgViewRoe],
         ]
     }
     

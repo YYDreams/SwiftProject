@@ -16,7 +16,7 @@ extension BaseUIViewController {
     
 }
 
-open  class BaseUIViewController: UIViewController {
+class BaseUIViewController: UIViewController {
     
     
     // MARK: ------------------------- Propertys
@@ -24,7 +24,7 @@ open  class BaseUIViewController: UIViewController {
     
     
     // MARK: ------------------------- CycLife
-    open override func viewDidLoad() {
+    override func viewDidLoad() {
         self.view.backgroundColor = UIColor.white
         super.viewDidLoad()
     }
