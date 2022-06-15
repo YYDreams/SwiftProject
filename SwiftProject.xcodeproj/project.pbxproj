@@ -92,6 +92,7 @@
 		51AD064827F2A17B00958A0D /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AD064627F2A17B00958A0D /* UIColor+Category.m */; };
 		51AD064B27F2A38400958A0D /* Foundation+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AD064A27F2A38400958A0D /* Foundation+Category.m */; };
 		51B42A04275CB0780017C49C /* SPTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B42A03275CB0780017C49C /* SPTestCell.swift */; };
+		51C0014128597D5000432B60 /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0014028597D5000432B60 /* BaseWebViewController.swift */; };
 		51C27EA6276C9E5D00ED7B99 /* SPTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */; };
 		51C27EBB276CA81200ED7B99 /* AppDelegate+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C27EBA276CA81200ED7B99 /* AppDelegate+Config.swift */; };
 		51C27EBD276CA82500ED7B99 /* AppdDelegate+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C27EBC276CA82500ED7B99 /* AppdDelegate+UI.swift */; };
@@ -240,6 +241,7 @@
 		51AD064927F2A38400958A0D /* Foundation+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Category.h"; sourceTree = "<group>"; };
 		51AD064A27F2A38400958A0D /* Foundation+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Category.m"; sourceTree = "<group>"; };
 		51B42A03275CB0780017C49C /* SPTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTestCell.swift; sourceTree = "<group>"; };
+		51C0014028597D5000432B60 /* BaseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
 		51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPTestViewController.swift; sourceTree = "<group>"; };
 		51C27EBA276CA81200ED7B99 /* AppDelegate+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Config.swift"; sourceTree = "<group>"; };
 		51C27EBC276CA82500ED7B99 /* AppdDelegate+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppdDelegate+UI.swift"; sourceTree = "<group>"; };
@@ -672,6 +674,7 @@
 		51AB58C727BCEE3900BD92DD /* SummaryReview */ = {
 			isa = PBXGroup;
 			children = (
+				51C0013F28597CC500432B60 /* Modules */,
 				51AB58C827BCEE3900BD92DD /* CreateCard */,
 				51AB58C927BCEE3900BD92DD /* Category */,
 				51AB58CB27BCEE3900BD92DD /* Controller */,
@@ -867,6 +870,13 @@
 				5167079F27EF2E82007CC65F /* SPModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		51C0013F28597CC500432B60 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		51FB7FBB27BC88650095567C /* Main */ = {
@@ -1221,6 +1231,7 @@
 				51FB800B27BC8A640095567C /* BaseTableViewController.swift */,
 				51FB800C27BC8A640095567C /* BaseUIViewController.swift */,
 				51FB800D27BC8A640095567C /* BaseTabBarViewController.swift */,
+				51C0014028597D5000432B60 /* BaseWebViewController.swift */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -1586,6 +1597,7 @@
 				51C83F9A27F4654000E13670 /* JXCategoryTitleView+Category.m in Sources */,
 				51AB58B927BCEDE700BD92DD /* SPHomeViewController+Delegate.swift in Sources */,
 				35EBDA7928427447007379A7 /* EmptyDataView.m in Sources */,
+				51C0014128597D5000432B60 /* BaseWebViewController.swift in Sources */,
 				51AB58B427BCEDE700BD92DD /* Target_SPHomeUI.swift in Sources */,
 				51AB58AD27BCEDE700BD92DD /* SPHomeStoreTopModuleViewModel.swift in Sources */,
 				3580EFDB283D20E200159F17 /* SPAlertView.swift in Sources */,

@@ -16,7 +16,7 @@ extension BaseUIViewController {
     
 }
 
-class BaseUIViewController: UIViewController {
+ class BaseUIViewController: UIViewController {
     
     
     // MARK: ------------------------- Propertys

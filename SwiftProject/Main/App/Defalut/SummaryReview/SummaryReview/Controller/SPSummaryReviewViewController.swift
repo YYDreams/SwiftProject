@@ -41,6 +41,9 @@ enum  SPInfoType:String {
     case saveScreenshot = "保存截图"
     case qrCode = "二维码生成"
     case imgViewRoe = "图片旋转"
+    // 6月
+    case webViewCookies = "js、css注入cookie"
+    
 
 }
 extension SPSummaryReviewViewController {
@@ -55,6 +58,7 @@ extension SPSummaryReviewViewController {
         var localData:[SPSectionType:[SPInfoType]] = [
             .date202204: [.richText, .customTime, .libJXSegmentedViewDemo,.category],
             .date202205: [.base64, .saveScreenshot, .qrCode,.imgViewRoe],
+            .date202206: [.webViewCookies]
         ]
     }
     
@@ -125,6 +129,12 @@ class SPSummaryReviewViewController: BaseTableViewController {
         switch infoType {
         case .richText:
                print("富文本")
+                  let vc  =  BaseWebViewController()
+            vc.params.requestUrl = "https://admin-mobile.xiaoeknow.com/v1/adminMobile/businessWeekly/businessWeeklyList?app_id=appptaa4nql6484"
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+//            self.navigationController?.pushViewController(BaseWebViewController(), animated: true)
+
         case .customTime:
             print("日期")
         case .libJXSegmentedViewDemo:
