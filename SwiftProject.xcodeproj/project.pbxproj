@@ -19,6 +19,9 @@
 		35E9FCE428047313007539CC /* SPUserDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35E9FCE328047313007539CC /* SPUserDetailHeaderView.xib */; };
 		35EBDA7928427447007379A7 /* EmptyDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EBDA7828427447007379A7 /* EmptyDataView.m */; };
 		5109421C27F005B200C2F939 /* SPProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5109421B27F005B200C2F939 /* SPProvider.swift */; };
+		510F40F9285C0C9100C3F3A0 /* SPDate202205ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F40F8285C0C9100C3F3A0 /* SPDate202205ViewController.swift */; };
+		510F40FB285C0CB600C3F3A0 /* SPDate202204ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F40FA285C0CB600C3F3A0 /* SPDate202204ViewController.swift */; };
+		510F40FD285C0CC000C3F3A0 /* SPDate202206ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F40FC285C0CC000C3F3A0 /* SPDate202206ViewController.swift */; };
 		511383AA27112BCB00D98BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511383A927112BCB00D98BC9 /* AppDelegate.swift */; };
 		511383B127112BCB00D98BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511383AF27112BCB00D98BC9 /* Main.storyboard */; };
 		511383B327112BCE00D98BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511383B227112BCE00D98BC9 /* Assets.xcassets */; };
@@ -37,6 +40,10 @@
 		516707A227EF2FC6007CC65F /* NetworkHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516707A127EF2FC6007CC65F /* NetworkHome.swift */; };
 		516707A427EF4D6F007CC65F /* XMHomeSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516707A327EF4D6F007CC65F /* XMHomeSubViewController.swift */; };
 		517D296C276C6A960090437B /* shop.md in Resources */ = {isa = PBXBuildFile; fileRef = 517D296B276C6A960090437B /* shop.md */; };
+		5196543328695EDC003C247D /* SCQRCodeScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5196542C28695EDB003C247D /* SCQRCodeScanManager.m */; };
+		5196543428695EDC003C247D /* SCVIPScanController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5196542D28695EDC003C247D /* SCVIPScanController.xib */; };
+		5196543528695EDC003C247D /* SCVIPScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5196543128695EDC003C247D /* SCVIPScanView.m */; };
+		5196543628695EDC003C247D /* SCVIPScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5196543228695EDC003C247D /* SCVIPScanController.m */; };
 		51AB58A227BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587827BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift */; };
 		51AB58A327BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587927BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift */; };
 		51AB58A427BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587A27BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift */; };
@@ -159,6 +166,9 @@
 		35EBDA7728427447007379A7 /* EmptyDataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyDataView.h; sourceTree = "<group>"; };
 		35EBDA7828427447007379A7 /* EmptyDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyDataView.m; sourceTree = "<group>"; };
 		5109421B27F005B200C2F939 /* SPProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPProvider.swift; sourceTree = "<group>"; };
+		510F40F8285C0C9100C3F3A0 /* SPDate202205ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDate202205ViewController.swift; sourceTree = "<group>"; };
+		510F40FA285C0CB600C3F3A0 /* SPDate202204ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDate202204ViewController.swift; sourceTree = "<group>"; };
+		510F40FC285C0CC000C3F3A0 /* SPDate202206ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDate202206ViewController.swift; sourceTree = "<group>"; };
 		511383A627112BCB00D98BC9 /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		511383A927112BCB00D98BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		511383B027112BCB00D98BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -183,6 +193,13 @@
 		516707A127EF2FC6007CC65F /* NetworkHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHome.swift; sourceTree = "<group>"; };
 		516707A327EF4D6F007CC65F /* XMHomeSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMHomeSubViewController.swift; sourceTree = "<group>"; };
 		517D296B276C6A960090437B /* shop.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = shop.md; sourceTree = "<group>"; };
+		5196542C28695EDB003C247D /* SCQRCodeScanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCQRCodeScanManager.m; sourceTree = "<group>"; };
+		5196542D28695EDC003C247D /* SCVIPScanController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCVIPScanController.xib; sourceTree = "<group>"; };
+		5196542E28695EDC003C247D /* SCVIPScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVIPScanController.h; sourceTree = "<group>"; };
+		5196542F28695EDC003C247D /* SCQRCodeScanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCQRCodeScanManager.h; sourceTree = "<group>"; };
+		5196543028695EDC003C247D /* SCVIPScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVIPScanView.h; sourceTree = "<group>"; };
+		5196543128695EDC003C247D /* SCVIPScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVIPScanView.m; sourceTree = "<group>"; };
+		5196543228695EDC003C247D /* SCVIPScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVIPScanController.m; sourceTree = "<group>"; };
 		51AB587827BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeRichTextModuleViewModel.swift; sourceTree = "<group>"; };
 		51AB587927BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeHotZoneModuleViewModel.swift; sourceTree = "<group>"; };
 		51AB587A27BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeBuyCardModuleViewModel.swift; sourceTree = "<group>"; };
@@ -373,6 +390,30 @@
 			path = EmptyDataView;
 			sourceTree = "<group>";
 		};
+		510F40F5285C0C5000C3F3A0 /* Date202206 */ = {
+			isa = PBXGroup;
+			children = (
+				510F40FC285C0CC000C3F3A0 /* SPDate202206ViewController.swift */,
+			);
+			path = Date202206;
+			sourceTree = "<group>";
+		};
+		510F40F6285C0C5100C3F3A0 /* Date202204 */ = {
+			isa = PBXGroup;
+			children = (
+				510F40FA285C0CB600C3F3A0 /* SPDate202204ViewController.swift */,
+			);
+			path = Date202204;
+			sourceTree = "<group>";
+		};
+		510F40F7285C0C5100C3F3A0 /* Date202205 */ = {
+			isa = PBXGroup;
+			children = (
+				510F40F8285C0C9100C3F3A0 /* SPDate202205ViewController.swift */,
+			);
+			path = Date202205;
+			sourceTree = "<group>";
+		};
 		5113839D27112BCA00D98BC9 = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +449,13 @@
 				51AD064527F2A06800958A0D /* SwiftProject-Bridging-Header.h */,
 				51B42A03275CB0780017C49C /* SPTestCell.swift */,
 				51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */,
+				5196542F28695EDC003C247D /* SCQRCodeScanManager.h */,
+				5196542C28695EDB003C247D /* SCQRCodeScanManager.m */,
+				5196542E28695EDC003C247D /* SCVIPScanController.h */,
+				5196543228695EDC003C247D /* SCVIPScanController.m */,
+				5196542D28695EDC003C247D /* SCVIPScanController.xib */,
+				5196543028695EDC003C247D /* SCVIPScanView.h */,
+				5196543128695EDC003C247D /* SCVIPScanView.m */,
 				511383AF27112BCB00D98BC9 /* Main.storyboard */,
 				511383B227112BCE00D98BC9 /* Assets.xcassets */,
 				511383B427112BCE00D98BC9 /* LaunchScreen.storyboard */,
@@ -875,6 +923,9 @@
 		51C0013F28597CC500432B60 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				510F40F6285C0C5100C3F3A0 /* Date202204 */,
+				510F40F7285C0C5100C3F3A0 /* Date202205 */,
+				510F40F5285C0C5000C3F3A0 /* Date202206 */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1280,6 +1331,7 @@
 				511383A327112BCB00D98BC9 /* Frameworks */,
 				511383A427112BCB00D98BC9 /* Resources */,
 				C292AE9695C8A9469F86ECFE /* [CP] Embed Pods Frameworks */,
+				B56B1ECB9589B8B14B36DB79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1318,6 +1370,7 @@
 				511383C427112BCF00D98BC9 /* Frameworks */,
 				511383C527112BCF00D98BC9 /* Resources */,
 				DEDE6F2A833F5D7A4F99DA80 /* [CP] Embed Pods Frameworks */,
+				2BC98ECE303D12B4F8701694 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1380,6 +1433,7 @@
 				51AB58B627BCEDE700BD92DD /* home.json in Resources */,
 				511383B627112BCE00D98BC9 /* LaunchScreen.storyboard in Resources */,
 				511383B327112BCE00D98BC9 /* Assets.xcassets in Resources */,
+				5196543428695EDC003C247D /* SCVIPScanController.xib in Resources */,
 				5125007227FD776A00AC20E1 /* home_discovery-category-personal-growth.json in Resources */,
 				51FB801427BC8A640095567C /* pullUpToRefresh.json in Resources */,
 				51FB801227BC8A640095567C /* pulldown_fresh_white.json in Resources */,
@@ -1431,6 +1485,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2BC98ECE303D12B4F8701694 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		30DCD5A90984C4DC1163D6EB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1473,6 +1544,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B56B1ECB9589B8B14B36DB79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C292AE9695C8A9469F86ECFE /* [CP] Embed Pods Frameworks */ = {
@@ -1528,14 +1616,17 @@
 				51B42A04275CB0780017C49C /* SPTestCell.swift in Sources */,
 				51AB58F127BCEE3900BD92DD /* Target_SPSummaryReviewUI.swift in Sources */,
 				51AB58B027BCEDE700BD92DD /* SPHomeRecommendGoodsModuleViewModel.swift in Sources */,
+				5196543328695EDC003C247D /* SCQRCodeScanManager.m in Sources */,
 				5167079827EEFF89007CC65F /* XMHomeViewController.swift in Sources */,
 				51FB7FF727BC88E50095567C /* Foundation.swift in Sources */,
 				51AB58EF27BCEE3900BD92DD /* RichEditorToolbar.swift in Sources */,
 				51AB58BA27BCEDE700BD92DD /* SPHomeSubViewController.swift in Sources */,
 				51FB7FFA27BC88E50095567C /* SPMacros.swift in Sources */,
 				5155E599274C7BEB000B9D89 /* SPAlgorithmViewController.swift in Sources */,
+				5196543628695EDC003C247D /* SCVIPScanController.m in Sources */,
 				51AB590227BCF09A00BD92DD /* NetworkHelp.swift in Sources */,
 				51AB58FB27BCF00C00BD92DD /* SPAppCore.swift in Sources */,
+				510F40F9285C0C9100C3F3A0 /* SPDate202205ViewController.swift in Sources */,
 				51AB58F727BCEE3900BD92DD /* SPDeveloperCell.swift in Sources */,
 				51FB7FF627BC88E50095567C /* UIView+Extension.swift in Sources */,
 				511FB00227F6F5BF005F659C /* XMSquareCell.swift in Sources */,
@@ -1543,6 +1634,7 @@
 				51AB58BF27BCEDE800BD92DD /* SPHomeSliderModuleCell.swift in Sources */,
 				51AB58B327BCEDE700BD92DD /* SPHomeImageAdsModuleViewModel.swift in Sources */,
 				51C27EBB276CA81200ED7B99 /* AppDelegate+Config.swift in Sources */,
+				510F40FD285C0CC000C3F3A0 /* SPDate202206ViewController.swift in Sources */,
 				51AB58F327BCEE3900BD92DD /* SPSummaryReviewUI.swift in Sources */,
 				51FB7FF827BC88E50095567C /* UITableView+Extension.swift in Sources */,
 				51C27EA6276C9E5D00ED7B99 /* SPTestViewController.swift in Sources */,
@@ -1584,6 +1676,7 @@
 				51FB7FF127BC88E50095567C /* HudManager.swift in Sources */,
 				51AB58AA27BCEDE700BD92DD /* SPHomeImageTextNavigationModuleViewModel.swift in Sources */,
 				51AB590327BCF09A00BD92DD /* NetworkPublicApi.swift in Sources */,
+				510F40FB285C0CB600C3F3A0 /* SPDate202204ViewController.swift in Sources */,
 				51FB801527BC8A640095567C /* SPBaseModel.swift in Sources */,
 				51FB801827BC8A640095567C /* BaseCollectionViewController.swift in Sources */,
 				3580EFD9283D165B00159F17 /* SPShowConfig.swift in Sources */,
@@ -1591,6 +1684,7 @@
 				516707A027EF2E82007CC65F /* SPModel.swift in Sources */,
 				51AB58E927BCEE3900BD92DD /* SPCategoryViewController.swift in Sources */,
 				51FB801B27BC8A640095567C /* BaseUIViewController.swift in Sources */,
+				5196543528695EDC003C247D /* SCVIPScanView.m in Sources */,
 				51FB801627BC8A640095567C /* BaseTableView.swift in Sources */,
 				51AB58EA27BCEE3900BD92DD /* SPSummaryReviewViewController.swift in Sources */,
 				51AB58C427BCEDE800BD92DD /* SPHomeCategoryHeaderView.swift in Sources */,
@@ -1792,7 +1886,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EK4EZD55H6;
+				DEVELOPMENT_TEAM = 6BVBR4S533;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SwiftProject/Info.plist;
@@ -1800,7 +1894,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = HH.SwiftProject;
+				PRODUCT_BUNDLE_IDENTIFIER = HH.SwiftProject1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftProject/SwiftProject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1815,7 +1909,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99R59D39XW;
+				DEVELOPMENT_TEAM = 6BVBR4S533;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SwiftProject/Info.plist;
@@ -1823,7 +1917,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = HH.SwiftProject;
+				PRODUCT_BUNDLE_IDENTIFIER = HH.SwiftProject1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftProject/SwiftProject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1838,7 +1932,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99R59D39XW;
+				DEVELOPMENT_TEAM = QB7UW9MJ9S;
 				INFOPLIST_FILE = SwiftProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1861,7 +1955,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99R59D39XW;
+				DEVELOPMENT_TEAM = QB7UW9MJ9S;
 				INFOPLIST_FILE = SwiftProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1883,7 +1977,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99R59D39XW;
+				DEVELOPMENT_TEAM = QB7UW9MJ9S;
 				INFOPLIST_FILE = SwiftProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1904,7 +1998,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99R59D39XW;
+				DEVELOPMENT_TEAM = QB7UW9MJ9S;
 				INFOPLIST_FILE = SwiftProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

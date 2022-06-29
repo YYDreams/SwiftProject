@@ -75,7 +75,7 @@ extension BaseUIViewController {
         
     }
     
-    public func showHudText(text:String){
+    public func showHudText(_ text:String){
         
         
         showHudWithText(text: text)

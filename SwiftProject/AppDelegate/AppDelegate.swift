@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import ZTLogManager
 //
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
+    
         self.window?.rootViewController = BaseTabBarViewController()
         self.window?.makeKeyAndVisible()
         
@@ -24,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //初始化网络配置
         initNetworkConfig()
+        
+        initLogConfig()
         
         return true
     }

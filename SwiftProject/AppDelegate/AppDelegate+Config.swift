@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import ZTLogManager
+
 //
 //
 
@@ -29,5 +31,9 @@ extension AppDelegate{
             SPAppCore.shared.environmentType = .pruductEnviroment
             SPAppCore.shared.baseUrl = NetworkHelp.shared.baseUrl()
         }
+    }
+    func initLogConfig(){
+
+        
     }
 }

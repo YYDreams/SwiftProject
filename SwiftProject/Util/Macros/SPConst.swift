@@ -174,6 +174,22 @@ public func kTableViewChangeSeparatorPace(_ tableViewCell:UITableViewCell, _ edg
         tableViewCell.layoutMargins = edgeInsets
     }
 }
+/// 获取打印的文件名、打印函数、打印行数
+func printLog(_ msg: Any,file: NSString = #file,line: Int = #line,fn: String = #function) {
+    #if DEBUG
+    let t = String.formatDate(Date(), "yyyy-MM-dd HH:mm:ss")
+    let prefix = "\(t) \(file.lastPathComponent) -> \(fn) [第\(line)行] \(msg)";
+    print(prefix)
+    #endif
+}
+extension String {
+  static func formatDate(_ date:Date,_ format:String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: date)
+     }
+ }
+
 
 //public extension Collection {
 //    

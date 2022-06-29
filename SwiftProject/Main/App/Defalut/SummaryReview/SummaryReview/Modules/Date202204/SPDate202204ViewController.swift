@@ -1,16 +1,14 @@
 //
-//  SPHomeCategoryHeaderView.swift
-//  SPHomeUI
+//  SPDate202204ViewController.swift
+//  SwiftProject
 //
-//  Created by flowerflower on 2021/12/18.
+//  Created by flowerflower on 2022/6/17.
 //
 
 import Foundation
-import JXCategoryView
-
 // MARK: ------------------------- Const/Enum/Struct
 
-extension SPHomeCategoryHeaderView {
+extension SPDate202204ViewController {
     
     /// 常量
     struct Const {}
@@ -19,16 +17,13 @@ extension SPHomeCategoryHeaderView {
     struct Propertys {}
     
     /// 外部参数
-    struct Params {
-        
-    }
+    struct Params {}
     
 }
 
-class SPHomeCategoryHeaderView: JXCategoryTitleView {
+class SPDate202204ViewController: BaseUIViewController {
     
     // MARK: ------------------------- Propertys
-    
     
     /// 内部属性
     var propertys: Propertys = Propertys()
@@ -36,18 +31,6 @@ class SPHomeCategoryHeaderView: JXCategoryTitleView {
     var params: Params = Params()
     
     // MARK: ------------------------- CycLife
-    override func initializeData(){
-        super.initializeData()
-//        timeti
-        
-
-    }
-    
-//    override func preferredCellClass() -> AnyClass! {
-//        
-//    }
-    
-
     
     // MARK: ------------------------- Events
     

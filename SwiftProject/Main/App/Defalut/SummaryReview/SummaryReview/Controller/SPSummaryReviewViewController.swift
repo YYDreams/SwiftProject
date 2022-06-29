@@ -30,7 +30,7 @@ enum  SPSectionType:Int {
 }
 
 enum  SPInfoType:String {
-    
+    case none = ""
     // 4月
     case richText = "富文本编辑器"
     case customTime = "自定义时间选择器"
@@ -42,7 +42,10 @@ enum  SPInfoType:String {
     case qrCode = "二维码生成"
     case imgViewRoe = "图片旋转"
     // 6月
-    case webViewCookies = "js、css注入cookie"
+    case webViewCookies = "原生js、css注入cookie"
+    case libWebViewCookies = "第三方GGWKCookie注入js、css注入cookie"
+    case qrcode = "高仿微信扫一扫"
+    
     
 
 }
@@ -58,7 +61,7 @@ extension SPSummaryReviewViewController {
         var localData:[SPSectionType:[SPInfoType]] = [
             .date202204: [.richText, .customTime, .libJXSegmentedViewDemo,.category],
             .date202205: [.base64, .saveScreenshot, .qrCode,.imgViewRoe],
-            .date202206: [.webViewCookies]
+            .date202206: [.webViewCookies,.libWebViewCookies,.qrcode]
         ]
     }
     
@@ -129,18 +132,36 @@ class SPSummaryReviewViewController: BaseTableViewController {
         switch infoType {
         case .richText:
                print("富文本")
-                  let vc  =  BaseWebViewController()
-            vc.params.requestUrl = "https://admin-mobile.xiaoeknow.com/v1/adminMobile/businessWeekly/businessWeeklyList?app_id=appptaa4nql6484"
-            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = SCVIPScanController()
             
-//            self.navigationController?.pushViewController(BaseWebViewController(), animated: true)
-
+            self.navigationController?.present(vc, animated: true, completion: nil)
+            
+            
+//            SCVIPScanController * vc = [SCVIPScanController new];
+//            @weakify(self);
+//            vc.info = @{@"completion":^(NSString * resultCode){
+//                @strongify(self);
+//                self.cardNumber.text = [self dealWithString:resultCode];
+//            }};
+//            [SCNavigator presentViewController:vc animated:YES completion:^{
+//
+//            }];
         case .customTime:
             print("日期")
         case .libJXSegmentedViewDemo:
             print("xxxxx")
         case .category:
             self.navigationController?.pushViewController(SPCategoryViewController(), animated: true)
+            
+        case  .base64,.saveScreenshot,.qrCode,.imgViewRoe:
+            self.navigationController?.pushViewController(SPDate202205ViewController(type: infoType ?? .none), animated: true)
+        case .webViewCookies:
+            let vc  =  BaseWebViewController()
+            vc.params.requestUrl = "https://admin-mobile.xiaoeknow.com/v1/adminMobile/businessWeekly/businessWeeklyList?app_id=appptaa4nql6484"
+            self.navigationController?.pushViewController(vc, animated: true)
+        case .libWebViewCookies:
+            self.navigationController?.pushViewController(SPDate202206ViewController(), animated: true)
+
         default:
             break
         }

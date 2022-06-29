@@ -8,13 +8,13 @@
 import Foundation
 import MBProgressHUD
 
-open class HudManager: NSObject {
+public class HudManager: NSObject {
 
     
-    open func showHudText(text:String){
+    public func showHudText(_ text:String){
         showHudWithText(text: text)
     }
-    open func showHudWithText(text:String,toView:UIView? = nil,afterDelay:TimeInterval? = 1.5){
+    public func showHudWithText(text:String,toView:UIView? = nil,afterDelay:TimeInterval? = 1.5){
         if kStringIsEmpty(string: text) {return}
         var  view = toView
         if (view == nil){

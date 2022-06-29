@@ -17,7 +17,7 @@ extension SPHomeViewController {
        static let  JXheightForHeaderInSection:CGFloat = 46
     }
     /// 内部属性
-    struct Porpertys {
+    struct Propertys {
         var viewModel = SPHomeBaseViewModel()
         var dataArr = [SPHomeBaseViewModel]()
         var moduleSignType: SPModuleSignType = .none
@@ -34,7 +34,7 @@ class SPHomeViewController:  BaseUIViewController{
     // MARK: ------------------------- Propertys
     
     /// 内部属性
-    var propertys: Porpertys = Porpertys()
+    var propertys: Propertys = Propertys()
     /// 外部参数
     var params: Params = Params()
     

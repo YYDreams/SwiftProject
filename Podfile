@@ -47,8 +47,9 @@ target 'SwiftProject' do
   
   pod 'GKCycleScrollView', '1.0.6'
   
+  pod 'GGWkCookie','0.1.2'
   
-
+  pod 'ZTLogManager'
   
 
 #============================== 基础组件 ==================================#
