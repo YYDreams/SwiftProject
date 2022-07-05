@@ -53,41 +53,114 @@ class SPDate202205ViewController: BaseUIViewController {
         printLog("type===\(type)")
         
     }
-    /*
-     case  base64 =  "Base64字符与图片之间的转换"
-     case saveScreenshot = "保存截图"
-     case qrCode = "二维码生成"
-     case imgViewRoe = "图片旋转"
-     */
+    @objc func injected(){
+        printLog("injected")
+        
+        setupSubViews()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.title = self.params.type.rawValue
         self.view.backgroundColor = UIColor.white
-        
-        
-        
+        setupSubViews()
+    }
+    func setupSubViews(){
         switch self.params.type {
         case .base64:
-            printLog("1")
+            showHudText("详情请查看简书")
         case .saveScreenshot:
-            saveScreenShot()
+            setupSaveUI()
         case .qrCode:
-            printLog("3")
+            setQrCodeUI()
         case .imgViewRoe:
             imgViewRo()
         default:
             break
         }
     }
-
-    func saveScreenShot(){
+    
+    func setQrCodeUI(){
+        let codeImageView: UIImageView = {
+            let imageView = UIImageView()
+            view.addSubview(imageView)
+            imageView.snp.makeConstraints{
+                $0.centerX.equalToSuperview()
+                $0.top.height.width.equalTo(200)
+            }
+            return imageView
+        }()
+        
+        DispatchQueue.global(qos: .utility).async(execute: {
+            let image = UIImage.setupQRCodeImage("https://apphr4pyvl34424.h5.xiaoeknow.com/p/decorate/homepage")
+            DispatchQueue.main.async {
+                codeImageView.image = image
+            }
+        })
+    }
+    
+    func setupSaveUI(){
         
         let bgView = UIView()
-        bgView.backgroundColor = UIColor.red
-        bgView.frame = CGRect(x: (kScreenWidth - 200) * 0.5, y: kNavBarHeight, width: 200, height: 300)
+        bgView.backgroundColor = UIColor.orange
+        bgView.tag = 100
         self.view.addSubview(bgView)
-   
-      let tempImage =   bgView.screenShot(size: bgView.size)
+        bgView.snp.makeConstraints{
+            $0.centerX.equalToSuperview()
+            $0.top.height.width.equalTo(200)
+        }
+        let btn = UIButton()
+        btn.setTitle("保存图片", for: .normal)
+        btn.backgroundColor  = UIColor.red
+        btn.addTarget(self, action: #selector(saveScreenShot), for: .touchUpInside)
+        view.addSubview(btn)
+        btn.snp.makeConstraints{
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(44)
+            $0.width.equalTo(100)
+            $0.top.equalTo(bgView.snp.bottom).offset(16)
+        }
+        
+    }
+    
+    func imgViewRo(){
+        let stackView:UIStackView = UIStackView()
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.axis = .horizontal
+        view.addSubview(stackView)
+        stackView.snp.makeConstraints{
+            $0.width.equalTo(200)
+            $0.top.equalTo(100)
+            $0.height.equalTo(48)
+            $0.centerX.equalToSuperview()
+        }
+        
+        for (i, element) in ["开始","暂停"].enumerated() {
+            let btn = UIButton()
+            btn.setTitle(element, for: .normal)
+            btn.backgroundColor = UIColor.randomColor
+            btn.tag = i
+            btn.addTarget(self, action: #selector(btnOnClick(btn:)), for: .touchUpInside)
+            stackView.addArrangedSubview(btn)
+        }
+        
+        imgView = UIImageView()
+        imgView.image = UIImage(named: "home_shop_pop_light")
+        view.addSubview(imgView)
+        imgView.snp.makeConstraints{
+            $0.centerY.centerX.equalToSuperview()
+        }
+        imgView.layer.add(rotationAnim, forKey: "kLightImage")
+        
+    }
+    
+    // MARK: ------------------------- Events
+    @objc func saveScreenShot(){
+        
+        guard let  bgView =  view.viewWithTag(100) else { return  }
+        let tempImage =   bgView.screenShot(size: bgView.size)
         guard let haveImage = tempImage else {
             showHudText("获取图片异常")
             return
@@ -101,6 +174,7 @@ class SPDate202205ViewController: BaseUIViewController {
             }
         }
     }
+    
     @objc func btnOnClick(btn:UIButton){
         
         if btn.tag == 0 {
@@ -108,43 +182,8 @@ class SPDate202205ViewController: BaseUIViewController {
         }else{
             imgView.layer.removeAnimation(forKey: "kLightImage")
         }
-
-    }
-    func imgViewRo(){
         
-        let stackView:UIStackView = UIStackView()
-        stackView.distribution = .fillEqually
-        stackView.alignment = .fill
-        stackView.axis = .horizontal
-        view.addSubview(stackView)
-        stackView.snp.makeConstraints{
-            $0.width.equalTo(200)
-            $0.top.equalTo(100)
-            $0.height.equalTo(48)
-            $0.centerX.equalToSuperview()
-        }
-
-        for (i, element) in ["开始","暂停"].enumerated() {
-            let btn = UIButton()
-            btn.setTitle(element, for: .normal)
-            btn.backgroundColor = UIColor.randomColor
-            btn.tag = i
-            btn.addTarget(self, action: #selector(btnOnClick(btn:)), for: .touchUpInside)
-            stackView.addArrangedSubview(btn)
-        }
-
-        imgView = UIImageView()
-        imgView.image = UIImage(named: "home_shop_pop_light")
-        view.addSubview(imgView)
-        imgView.snp.makeConstraints{
-            $0.centerY.centerX.equalToSuperview()
-        }
-        imgView.layer.add(rotationAnim, forKey: "kLightImage")
-   
     }
-    
-    // MARK: ------------------------- Events
-    
     // MARK: ------------------------- Methods
     
 }

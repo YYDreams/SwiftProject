@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import WebKit
+import GGWkCookie
 
 // MARK: ------------------------- Const/Enum/Struct
 
@@ -21,7 +22,8 @@ extension SPDate202206ViewController {
     
     /// 外部参数
     struct Params {
-
+        var url = ""
+        var appId = ""
     }
     
 }
@@ -37,9 +39,11 @@ class SPDate202206ViewController: BaseUIViewController {
     
     var webView: WKWebView!
     // MARK: ------------------------- CycLife
- 
-    public func loadUrl(url:String){
-        
+    
+    public func loadUrl(url:String,appId: String){
+        self.params.url = url
+        self.params.appId = appId
+        clearWebCache()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,30 +52,30 @@ class SPDate202206ViewController: BaseUIViewController {
         
     }
     func setupSubViews(){
-            let webConfig = WKWebViewConfiguration()
-            webView = WKWebView(frame: CGRect.zero, configuration: webConfig)
-            webView.addObserver(self, forKeyPath: "title", options: .new, context: nil)
-            webView.uiDelegate = self
-            webView.navigationDelegate = self
-//            webView.cookieDelegate  = self
-
-            webView.evaluateJavaScript("navigator.userAgent") { result, error in
-                if let result = (result as? String) {
-                    var userAgent = result
-                    let currentUA = ";XiaoEApp"
-                    if !userAgent.contains(currentUA) {
-                        userAgent = userAgent + currentUA
-                        let dictionary = ["UserAgent": userAgent]
-                        UserDefaults.standard.register(defaults: dictionary)
-                        UserDefaults.standard.synchronize()
-                    }
-                    
-                    // 关键代码, 必须实现这个方法, 否则第一次打开UA还是原始值, 待第二次打开webview才是正确的UA;
-//                    webView.customUserAgent = userAgent
+        let webConfig = WKWebViewConfiguration()
+        webView = WKWebView(frame: CGRect.zero, configuration: webConfig)
+        webView.addObserver(self, forKeyPath: "title", options: .new, context: nil)
+        webView.uiDelegate = self
+        webView.navigationDelegate = self
+        webView.cookieDelegate  = self
+        
+        webView.evaluateJavaScript("navigator.userAgent") { [weak self] result, error in
+            if let result = (result as? String) {
+                var userAgent = result
+                let currentUA = ";XiaoEApp"
+                if !userAgent.contains(currentUA) {
+                    userAgent = userAgent + currentUA
+                    let dictionary = ["UserAgent": userAgent]
+                    UserDefaults.standard.register(defaults: dictionary)
+                    UserDefaults.standard.synchronize()
                 }
+                
+                // 关键代码, 必须实现这个方法, 否则第一次打开UA还是原始值, 待第二次打开webview才是正确的UA;
+                self?.webView.customUserAgent = userAgent
             }
+        }
     }
-   
+    
     
     // MARK: ------------------------- Events
     
@@ -90,10 +94,56 @@ class SPDate202206ViewController: BaseUIViewController {
             try? FileManager.default.removeItem(atPath: cookiesFolderPath)
         }
     }
-
+    
     
     
 }
+// MARK: ------------------------- Delegate
+extension SPDate202206ViewController: GGWkWebViewDelegate{
+    //设置cookies
+    func webviewSetAppCookieKeyAndValue() -> [AnyHashable : Any]! {
+        return ["app_token": "",
+                "with_app_id": self.params.appId,
+                "app-type":"merchant_assistant_app"
+        ]
+    }
+}
+
 extension SPDate202206ViewController: WKUIDelegate, WKNavigationDelegate {
+    // 开始加载
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        self.showLoadingView()
+    }
     
+    // 完成加载
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.hideLoadingView()
+    }
+    
+    // 加载失败
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        self.hideLoadingView()
+        printLog("error - \(error)")
+        showHudText("加载失败，请稍后重试")
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        let urlstr = navigationAction.request.url
+        printLog("urlstr -\(urlstr) allHTTPHeaderFields:\(navigationAction.request.allHTTPHeaderFields)")
+        
+        if #available(iOS 11.0, *) {
+            let coolieStore = webView.configuration.websiteDataStore.httpCookieStore
+            coolieStore.getAllCookies { cookies in
+                for item in cookies {
+                    HTTPCookieStorage.shared.setCookie(item)
+                    printLog("item - \(item.name)=\(item.value)")
+                }
+            }
+        }
+        decisionHandler(.allow)
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        decisionHandler(.allow)
+    }
 }

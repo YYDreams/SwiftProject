@@ -17,6 +17,8 @@ enum  SPSectionType:Int {
     
     case date202206
     
+    case date202207
+    
     public var typeString: String{
         switch self {
         case .date202204:
@@ -25,6 +27,8 @@ enum  SPSectionType:Int {
             return "2022年05月复盘篇"
         case .date202206:
             return "2022年06月复盘篇"
+        case .date202207:
+            return "2022年07月复盘篇"
         }
     }
 }
@@ -44,9 +48,8 @@ enum  SPInfoType:String {
     // 6月
     case webViewCookies = "原生js、css注入cookie"
     case libWebViewCookies = "第三方GGWKCookie注入js、css注入cookie"
-    case qrcode = "高仿微信扫一扫"
-    
-    
+    // 7月
+    case scan = "扫一扫功能，以及从相册识别二维码和条形码"
 
 }
 extension SPSummaryReviewViewController {
@@ -61,7 +64,8 @@ extension SPSummaryReviewViewController {
         var localData:[SPSectionType:[SPInfoType]] = [
             .date202204: [.richText, .customTime, .libJXSegmentedViewDemo,.category],
             .date202205: [.base64, .saveScreenshot, .qrCode,.imgViewRoe],
-            .date202206: [.webViewCookies,.libWebViewCookies,.qrcode]
+            .date202206: [.webViewCookies,.libWebViewCookies,],
+            .date202207: [.scan]
         ]
     }
     
@@ -82,6 +86,9 @@ class SPSummaryReviewViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.snp.updateConstraints{
+            $0.bottom.equalTo(-kTabBarHeight)
+        }
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(refreshData))
     }
     @objc func refreshData(){
@@ -132,20 +139,7 @@ class SPSummaryReviewViewController: BaseTableViewController {
         switch infoType {
         case .richText:
                print("富文本")
-            let vc = SCVIPScanController()
-            
-            self.navigationController?.present(vc, animated: true, completion: nil)
-            
-            
-//            SCVIPScanController * vc = [SCVIPScanController new];
-//            @weakify(self);
-//            vc.info = @{@"completion":^(NSString * resultCode){
-//                @strongify(self);
-//                self.cardNumber.text = [self dealWithString:resultCode];
-//            }};
-//            [SCNavigator presentViewController:vc animated:YES completion:^{
-//
-//            }];
+
         case .customTime:
             print("日期")
         case .libJXSegmentedViewDemo:

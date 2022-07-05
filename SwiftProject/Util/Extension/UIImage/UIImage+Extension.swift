@@ -91,7 +91,7 @@ public extension UIImage {
 // MARK:获取点9图拉伸
 public extension UIImage {
     
-    public class func getImageWithImageName(imageName: String) -> UIImage {
+     class func getImageWithImageName(imageName: String) -> UIImage {
         
         var image = UIImage(named: imageName)
         
@@ -115,7 +115,7 @@ public extension UIImage {
         return image!
     }
     
-    public class func getPointNineStretchSImage1(intputimage:UIImage) -> UIImage {
+     class func getPointNineStretchSImage1(intputimage:UIImage) -> UIImage {
         
         var image = intputimage
         
@@ -138,4 +138,43 @@ public extension UIImage {
         
         return image
     }
+    //MARK: - 传进去字符串,生成二维码图片
+    class   func setupQRCodeImage(_ text: String) -> UIImage {
+        //创建滤镜
+        let filter = CIFilter(name: "CIQRCodeGenerator")
+        filter?.setDefaults()
+        //将url加入二维码
+        filter?.setValue(text.data(using: String.Encoding.utf8), forKey: "inputMessage")
+        //取出生成的二维码（不清晰）
+        if let outputImage = filter?.outputImage {
+            //生成清晰度更好的二维码
+            let qrCodeImage = setupHighDefinitionUIImage(outputImage, size: 800)
+            
+            return qrCodeImage
+        }
+        
+        return UIImage()
+    }
+    //MARK: - 生成高清的UIImage
+    class func setupHighDefinitionUIImage(_ image: CIImage, size: CGFloat) -> UIImage {
+        let integral: CGRect = image.extent.integral
+        let proportion: CGFloat = min(size/integral.width, size/integral.height)
+        
+        let width = integral.width * proportion
+        let height = integral.height * proportion
+        let colorSpace: CGColorSpace = CGColorSpaceCreateDeviceGray()
+        let bitmapRef = CGContext(data: nil, width: Int(width), height: Int(height), bitsPerComponent: 8, bytesPerRow: 0, space: colorSpace, bitmapInfo: 0)!
+        
+        let context = CIContext(options: nil)
+        let bitmapImage: CGImage = context.createCGImage(image, from: integral)!
+        
+        bitmapRef.interpolationQuality = CGInterpolationQuality.none
+        bitmapRef.scaleBy(x: proportion, y: proportion);
+        bitmapRef.draw(bitmapImage, in: integral);
+        let image: CGImage = bitmapRef.makeImage()!
+        return UIImage(cgImage: image)
+    }
+    
+    
+    
 }

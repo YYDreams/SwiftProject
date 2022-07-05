@@ -40,10 +40,6 @@
 		516707A227EF2FC6007CC65F /* NetworkHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516707A127EF2FC6007CC65F /* NetworkHome.swift */; };
 		516707A427EF4D6F007CC65F /* XMHomeSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516707A327EF4D6F007CC65F /* XMHomeSubViewController.swift */; };
 		517D296C276C6A960090437B /* shop.md in Resources */ = {isa = PBXBuildFile; fileRef = 517D296B276C6A960090437B /* shop.md */; };
-		5196543328695EDC003C247D /* SCQRCodeScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5196542C28695EDB003C247D /* SCQRCodeScanManager.m */; };
-		5196543428695EDC003C247D /* SCVIPScanController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5196542D28695EDC003C247D /* SCVIPScanController.xib */; };
-		5196543528695EDC003C247D /* SCVIPScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5196543128695EDC003C247D /* SCVIPScanView.m */; };
-		5196543628695EDC003C247D /* SCVIPScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5196543228695EDC003C247D /* SCVIPScanController.m */; };
 		51AB58A227BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587827BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift */; };
 		51AB58A327BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587927BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift */; };
 		51AB58A427BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587A27BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift */; };
@@ -193,13 +189,6 @@
 		516707A127EF2FC6007CC65F /* NetworkHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHome.swift; sourceTree = "<group>"; };
 		516707A327EF4D6F007CC65F /* XMHomeSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMHomeSubViewController.swift; sourceTree = "<group>"; };
 		517D296B276C6A960090437B /* shop.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = shop.md; sourceTree = "<group>"; };
-		5196542C28695EDB003C247D /* SCQRCodeScanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCQRCodeScanManager.m; sourceTree = "<group>"; };
-		5196542D28695EDC003C247D /* SCVIPScanController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCVIPScanController.xib; sourceTree = "<group>"; };
-		5196542E28695EDC003C247D /* SCVIPScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVIPScanController.h; sourceTree = "<group>"; };
-		5196542F28695EDC003C247D /* SCQRCodeScanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCQRCodeScanManager.h; sourceTree = "<group>"; };
-		5196543028695EDC003C247D /* SCVIPScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVIPScanView.h; sourceTree = "<group>"; };
-		5196543128695EDC003C247D /* SCVIPScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVIPScanView.m; sourceTree = "<group>"; };
-		5196543228695EDC003C247D /* SCVIPScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCVIPScanController.m; sourceTree = "<group>"; };
 		51AB587827BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeRichTextModuleViewModel.swift; sourceTree = "<group>"; };
 		51AB587927BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeHotZoneModuleViewModel.swift; sourceTree = "<group>"; };
 		51AB587A27BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeBuyCardModuleViewModel.swift; sourceTree = "<group>"; };
@@ -393,6 +382,7 @@
 		510F40F5285C0C5000C3F3A0 /* Date202206 */ = {
 			isa = PBXGroup;
 			children = (
+				5172DD67286D542A000E0756 /* QRCode */,
 				510F40FC285C0CC000C3F3A0 /* SPDate202206ViewController.swift */,
 			);
 			path = Date202206;
@@ -449,13 +439,6 @@
 				51AD064527F2A06800958A0D /* SwiftProject-Bridging-Header.h */,
 				51B42A03275CB0780017C49C /* SPTestCell.swift */,
 				51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */,
-				5196542F28695EDC003C247D /* SCQRCodeScanManager.h */,
-				5196542C28695EDB003C247D /* SCQRCodeScanManager.m */,
-				5196542E28695EDC003C247D /* SCVIPScanController.h */,
-				5196543228695EDC003C247D /* SCVIPScanController.m */,
-				5196542D28695EDC003C247D /* SCVIPScanController.xib */,
-				5196543028695EDC003C247D /* SCVIPScanView.h */,
-				5196543128695EDC003C247D /* SCVIPScanView.m */,
 				511383AF27112BCB00D98BC9 /* Main.storyboard */,
 				511383B227112BCE00D98BC9 /* Assets.xcassets */,
 				511383B427112BCE00D98BC9 /* LaunchScreen.storyboard */,
@@ -593,6 +576,13 @@
 				516707A127EF2FC6007CC65F /* NetworkHome.swift */,
 			);
 			path = XMLY;
+			sourceTree = "<group>";
+		};
+		5172DD67286D542A000E0756 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		51AB587627BCEDE700BD92DD /* Home */ = {
@@ -923,11 +913,19 @@
 		51C0013F28597CC500432B60 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				51E9710228714A0E003F1818 /* Date202207 */,
 				510F40F6285C0C5100C3F3A0 /* Date202204 */,
 				510F40F7285C0C5100C3F3A0 /* Date202205 */,
 				510F40F5285C0C5000C3F3A0 /* Date202206 */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		51E9710228714A0E003F1818 /* Date202207 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Date202207;
 			sourceTree = "<group>";
 		};
 		51FB7FBB27BC88650095567C /* Main */ = {
@@ -1433,7 +1431,6 @@
 				51AB58B627BCEDE700BD92DD /* home.json in Resources */,
 				511383B627112BCE00D98BC9 /* LaunchScreen.storyboard in Resources */,
 				511383B327112BCE00D98BC9 /* Assets.xcassets in Resources */,
-				5196543428695EDC003C247D /* SCVIPScanController.xib in Resources */,
 				5125007227FD776A00AC20E1 /* home_discovery-category-personal-growth.json in Resources */,
 				51FB801427BC8A640095567C /* pullUpToRefresh.json in Resources */,
 				51FB801227BC8A640095567C /* pulldown_fresh_white.json in Resources */,
@@ -1616,14 +1613,12 @@
 				51B42A04275CB0780017C49C /* SPTestCell.swift in Sources */,
 				51AB58F127BCEE3900BD92DD /* Target_SPSummaryReviewUI.swift in Sources */,
 				51AB58B027BCEDE700BD92DD /* SPHomeRecommendGoodsModuleViewModel.swift in Sources */,
-				5196543328695EDC003C247D /* SCQRCodeScanManager.m in Sources */,
 				5167079827EEFF89007CC65F /* XMHomeViewController.swift in Sources */,
 				51FB7FF727BC88E50095567C /* Foundation.swift in Sources */,
 				51AB58EF27BCEE3900BD92DD /* RichEditorToolbar.swift in Sources */,
 				51AB58BA27BCEDE700BD92DD /* SPHomeSubViewController.swift in Sources */,
 				51FB7FFA27BC88E50095567C /* SPMacros.swift in Sources */,
 				5155E599274C7BEB000B9D89 /* SPAlgorithmViewController.swift in Sources */,
-				5196543628695EDC003C247D /* SCVIPScanController.m in Sources */,
 				51AB590227BCF09A00BD92DD /* NetworkHelp.swift in Sources */,
 				51AB58FB27BCF00C00BD92DD /* SPAppCore.swift in Sources */,
 				510F40F9285C0C9100C3F3A0 /* SPDate202205ViewController.swift in Sources */,
@@ -1684,7 +1679,6 @@
 				516707A027EF2E82007CC65F /* SPModel.swift in Sources */,
 				51AB58E927BCEE3900BD92DD /* SPCategoryViewController.swift in Sources */,
 				51FB801B27BC8A640095567C /* BaseUIViewController.swift in Sources */,
-				5196543528695EDC003C247D /* SCVIPScanView.m in Sources */,
 				51FB801627BC8A640095567C /* BaseTableView.swift in Sources */,
 				51AB58EA27BCEE3900BD92DD /* SPSummaryReviewViewController.swift in Sources */,
 				51AB58C427BCEDE800BD92DD /* SPHomeCategoryHeaderView.swift in Sources */,

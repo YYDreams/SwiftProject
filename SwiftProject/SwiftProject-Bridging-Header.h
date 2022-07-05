@@ -18,8 +18,6 @@
 
 #import "UIButton+XESpace.h"
 
-#import "SCVIPScanController.h"
-
 
 
 #endif /* SwiftProject_Bridging_Header_h */
