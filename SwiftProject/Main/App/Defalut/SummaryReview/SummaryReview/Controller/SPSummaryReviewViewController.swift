@@ -151,10 +151,13 @@ class SPSummaryReviewViewController: BaseTableViewController {
             self.navigationController?.pushViewController(SPDate202205ViewController(type: infoType ?? .none), animated: true)
         case .webViewCookies:
             let vc  =  BaseWebViewController()
-            vc.params.requestUrl = "https://admin-mobile.xiaoeknow.com/v1/adminMobile/businessWeekly/businessWeeklyList?app_id=appptaa4nql6484"
+            vc.params.requestUrl = "https://admin-mobile.xiaoeknow.com/v1/adminMobile/businessWeekly/businessWeeklyList"
             self.navigationController?.pushViewController(vc, animated: true)
         case .libWebViewCookies:
-            self.navigationController?.pushViewController(SPDate202206ViewController(), animated: true)
+           let webView =  SPDate202206ViewController()
+            webView.params.appId = "appptaa4nql6484"
+            webView.params.url = "https://admin-mobile.xiaoeknow.com/v1/adminMobile/businessWeekly/businessWeeklyList"
+            self.navigationController?.pushViewController(webView, animated: true)
 
         default:
             break

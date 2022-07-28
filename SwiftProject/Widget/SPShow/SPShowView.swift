@@ -282,15 +282,20 @@ public class SPShowView: UIView{
         
         if isAnimating { return }
         let containerView = UIApplication.shared.keyWindow!
-        var flag = false
         
-        for view in containerView.subviews {
-            if view.isKind(of: SPShowView.self){
-               flag = true
-               break
+        //是否是自动触发,没必要每次都遍历
+        if (config.isAutoTrigger){
+            var flag = false
+            for view in containerView.subviews {
+                if view.isKind(of: SPShowView.self){
+                   flag = true
+                   break
+                }
             }
-        }
-        if !flag{
+            if !flag{
+                containerView.addSubview(self)
+            }
+        }else{
             containerView.addSubview(self)
         }
         

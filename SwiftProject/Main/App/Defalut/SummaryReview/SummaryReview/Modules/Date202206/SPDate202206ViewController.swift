@@ -39,22 +39,16 @@ class SPDate202206ViewController: BaseUIViewController {
     
     var webView: WKWebView!
     // MARK: ------------------------- CycLife
-    
-    public func loadUrl(url:String,appId: String){
-        self.params.url = url
-        self.params.appId = appId
-        clearWebCache()
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        clearWebCache()
         self.view.backgroundColor = UIColor.randomColor
         setupSubViews()
-        
     }
     func setupSubViews(){
         let webConfig = WKWebViewConfiguration()
         webView = WKWebView(frame: CGRect.zero, configuration: webConfig)
-        webView.addObserver(self, forKeyPath: "title", options: .new, context: nil)
         webView.uiDelegate = self
         webView.navigationDelegate = self
         webView.cookieDelegate  = self
@@ -74,12 +68,33 @@ class SPDate202206ViewController: BaseUIViewController {
                 self?.webView.customUserAgent = userAgent
             }
         }
+        
+        view.addSubview(webView)
+        webView.snp.makeConstraints{
+            $0.left.right.bottom.equalToSuperview()
+            $0.top.equalTo(kNavBarHeight)
+            
+        }
+        loadRequestUrl()
     }
     
     
     // MARK: ------------------------- Events
     
     // MARK: ------------------------- Methods
+    func loadRequestUrl() {
+        
+        webView?.startCustomCookie()
+        
+        let url:NSURL = NSURL(string:self.params.url)!
+
+        let request : NSMutableURLRequest = NSMutableURLRequest(url: url as URL)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1) {
+            self.webView?.load(request as URLRequest)
+        }
+    }
+    
     func clearWebCache() {
         // MARK: - 清空缓存
         let dateFrom: NSDate = NSDate.init(timeIntervalSince1970: 0)
@@ -102,7 +117,7 @@ class SPDate202206ViewController: BaseUIViewController {
 extension SPDate202206ViewController: GGWkWebViewDelegate{
     //设置cookies
     func webviewSetAppCookieKeyAndValue() -> [AnyHashable : Any]! {
-        return ["app_token": "",
+        return ["app_token": "token_62a99c028136e3VXn5oPa5wWoFfixVLRx",
                 "with_app_id": self.params.appId,
                 "app-type":"merchant_assistant_app"
         ]

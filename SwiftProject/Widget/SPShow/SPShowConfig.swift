@@ -25,6 +25,13 @@ public class SPShowConfig{
     // 点击其他地方是否消失 默认true
     public var clickOtherHidden = true
     
+    /** 是否是自动触发，默认手动触发 。如果是自动触发需将其设为true 以防止不停的添加在window上
+     *   eg:
+     *   1、【手动触发】点击按钮触发的
+     *   2、【自动触发】定时器触发，通过接口触发
+     */
+    public var isAutoTrigger = false
+    
     // 弹出视图样式位置
     public var showAnimateType : PopViewShowType? = .center
     
