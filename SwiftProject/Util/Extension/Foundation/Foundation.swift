@@ -47,6 +47,19 @@ public func caculateTextSize(text:String?,font:UIFont?,maxWidth:CGFloat = CGFloa
                                             attributes: [NSAttributedString.Key.font: font!],
                                             context: nil).size
     }
+    
+}
+// 获取当前时间
+/// - Parameter timeFormat: 时间类型，TimeFormat为枚举
+public  func getCurrentTime(timeFormat:String = "YYYY-MM-dd HH:mm:ss") -> String{
+    
+    let formatter = DateFormatter()
+    formatter.dateFormat = timeFormat
+    let timezone = TimeZone.init(identifier: "Asia/Beijing")
+    formatter.timeZone = timezone
+    let dateTime = formatter.string(from: Date.init())
+    return dateTime
+    
 }
 
 

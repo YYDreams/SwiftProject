@@ -50,6 +50,9 @@ enum  SPInfoType:String {
     case libWebViewCookies = "第三方GGWKCookie注入js、css注入cookie"
     // 7月
     case scan = "扫一扫功能，以及从相册识别二维码和条形码"
+    
+    // 10月 ipad分屏
+    
 
 }
 extension SPSummaryReviewViewController {

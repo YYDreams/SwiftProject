@@ -37,11 +37,24 @@ class SPTestViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      
+        for i  in 0...1000 {
+            
+            print("----",i)
+            let view1 = UIView()
+            if i == 50{
+                self.view.addSubview(UIImageView())
+            }
+            self.view.addSubview(view1)
+        }
+        
         self.tableView.registerCell(ofType: UITableViewCell.self)
 
 //        Timer.scheduledTimer(withTimeInterval: TimeInterval(1), repeats: true, block: { timer in
 //            print("viewDidLoad ===")
-//            SPShowView.show(title: "领卡失败，请先绑定会籍卡", buttonTitles: ["取消","去绑卡"]) { index in
+//            let c = SPShowConfig()
+//            c.isAutoTrigger = true
+//            SPShowView.show(title: "领卡失败，请先绑定会籍卡",showConfig: c, buttonTitles: ["取消","去绑卡"]) { index in
 //                print("======index",index)
 //            }
 //        })
@@ -53,6 +66,34 @@ class SPTestViewController: BaseTableViewController {
      
         self.tableView.reloadData()
 
+    }
+    func test1(){
+        let startTime = CFAbsoluteTimeGetCurrent()
+        for v in self.view.subviews {
+            if v.isKind(of: UIImageView.self) {
+                let endTime = CFAbsoluteTimeGetCurrent()
+                print("----1代码执行时长毫秒:", (endTime - startTime)*1000)
+            }
+        }
+    }
+//    ----1代码执行时长毫秒: 0.07808208465576172
+//    ----1代码执行时长毫秒: 0.04601478576660156
+//    ----1代码执行时长毫秒: 0.048995018005371094
+//    ----1代码执行时长毫秒: 0.04696846008300781
+//    ----1代码执行时长毫秒: 0.034928321838378906
+//    ----1代码执行时长毫秒: 0.051021575927734375
+//    ----1代码执行时长毫秒: 0.031948089599609375
+//    ----1代码执行时长毫秒: 0.03504753112792969
+//    ----1代码执行时长毫秒: 0.034928321838378906
+//    ----1代码执行时长毫秒: 0.03802776336669922
+//    ----1代码执行时长毫秒: 0.04792213439941406
+
+    func test2(){
+        let startTime = CFAbsoluteTimeGetCurrent()
+        for v in self.view.subviews where v.isKind(of: UIImageView.self) {
+            let endTime = CFAbsoluteTimeGetCurrent()
+            print("----2代码执行时长毫秒:", (endTime - startTime)*1000)
+        }
     }
     
     
@@ -70,15 +111,15 @@ class SPTestViewController: BaseTableViewController {
         switch indexPath.row {
         case 0:
      
-            SPShowView.show(title: "删除商品",content: "确认从列表中删除所选商品", buttonTitles: ["取消","删除"]) { index in
-                print("======index",index)
-            }
+            test1()
+//            SPShowView.show(title: "删除商品",content: "确认从列表中删除所选商品", buttonTitles: ["取消","删除"]) { index in
+//                print("======index",index)
+//            }
         case 1:
-
-            SPShowView.show(title: "暂不支持退换",content: "取件费已超出订单费，请联系客服", buttonTitles: ["我知道了"]) { index in
-                print("======index",index)
-            }
-            print("222")
+            test2()
+//            SPShowView.show(title: "暂不支持退换",content: "取件费已超出订单费，请联系客服", buttonTitles: ["我知道了"]) { index in
+//                print("======index",index)
+//            }
         case 2:
             SPShowView.show(title: "领卡失败，请先绑定会籍卡", buttonTitles: ["取消","去绑卡"]) { index in
                 print("======index",index)

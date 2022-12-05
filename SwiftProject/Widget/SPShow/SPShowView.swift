@@ -145,7 +145,6 @@ public class SPShowView: UIView{
             }
     
             let scrollView  = UIScrollView()
-
             if let content = content,content.count > 0  {
                 contentView.addSubview(scrollView)
                 scrollView.backgroundColor = UIColor.orange
@@ -283,19 +282,14 @@ public class SPShowView: UIView{
         if isAnimating { return }
         let containerView = UIApplication.shared.keyWindow!
         
-        //是否是自动触发,没必要每次都遍历
-        if (config.isAutoTrigger){
-            var flag = false
-            for view in containerView.subviews {
-                if view.isKind(of: SPShowView.self){
+        var flag = false
+
+            for view in containerView.subviews where view.isKind(of: SPShowView.self) {
                    flag = true
                    break
-                }
             }
-            if !flag{
-                containerView.addSubview(self)
-            }
-        }else{
+        
+        if !flag{
             containerView.addSubview(self)
         }
         

@@ -32,6 +32,8 @@ extension BaseTabBarViewController{
             controllers =
                 [XMHomeViewController(),XMHomeViewController(),XMHomeViewController(),XMHomeViewController(),XMHomeViewController()]
             titles = ["首页","VIP","待定","动态","我的"]
+            normalImageNames = ["ldld_houseSrc_normal","ldld_order_normal","ldld_message_normal","cleaner_cmpOrd_normal","ldld_user_normal"]
+            selectImageNames = ["ldld_houseSrc_selected","ldld_order_selected","ldld_message_selected","cleaner_cmpOrd_selected","ldld_user_selected"]
         default:
             controllers  =
                 [SPHighImitationController(),SPSummaryReviewViewController(),SPTestViewController(),SPTestViewController(),SPUserCenterViewController()]
@@ -42,9 +44,9 @@ extension BaseTabBarViewController{
       
         
         for (index, vc) in controllers.enumerated() {
-            vc.tabBarItem.title = titles[index]
-            vc.tabBarItem.image = UIImage(named: normalImageNames[index])
-            vc.tabBarItem.selectedImage = UIImage(named: selectImageNames[index])
+            vc.tabBarItem.title = titles[safe:index]
+            vc.tabBarItem.image = UIImage(named: normalImageNames[safe:index] ?? "")
+            vc.tabBarItem.selectedImage = UIImage(named: selectImageNames[safe:index] ?? "")
 
             //设置选中图标的颜色
             self.tabBar.tintColor = UIColor.red

@@ -25,7 +25,7 @@ extension AppDelegate{
     func initNetworkConfig(){
         
         print("SPAppCore.shared.appType:",SPAppCore.shared.appType,SPAppCore.shared.environmentType)
-
+        SPAppCore.shared.appType = .defalut
         if SPAppCore.shared.appType == .none {
             SPAppCore.shared.appType  = .defalut
             SPAppCore.shared.environmentType = .pruductEnviroment
