@@ -36,9 +36,9 @@ public enum SPAudioPlaySortType {
     case singleSort       // 单曲播放
 }
 
-class SPAudioPlayer: NSObject{
+class SPAudioPlayerManager: NSObject{
     
-    public static let shared = SPAudioPlayer.init()
+    public static let shared = SPAudioPlayerManager.init()
     
     
     

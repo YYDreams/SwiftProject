@@ -104,7 +104,7 @@
 		51C83FA027F545D400E13670 /* XMAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C83F9F27F545D400E13670 /* XMAccountManager.m */; };
 		51C8F22C27EDB2FE0066E186 /* BaseEmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C8F22B27EDB2FE0066E186 /* BaseEmptyDataView.swift */; };
 		51DC39F7293DC91700024C5F /* SPAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC39F6293DC91700024C5F /* SPAudioViewController.swift */; };
-		51DC39F9293DC94D00024C5F /* SPAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC39F8293DC94D00024C5F /* SPAudioPlayer.swift */; };
+		51DC39F9293DC94D00024C5F /* SPAudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC39F8293DC94D00024C5F /* SPAudioPlayerManager.swift */; };
 		51DC39FC293DD2D100024C5F /* SPAudioPlayProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC39FB293DD2D100024C5F /* SPAudioPlayProgressView.swift */; };
 		51DC39FE293DD30900024C5F /* SPAudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DC39FD293DD30900024C5F /* SPAudioPlayerView.swift */; };
 		51F0D402293B4E720052043F /* SPAutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F0D401293B4E720052043F /* SPAutoViewController.swift */; };
@@ -265,7 +265,7 @@
 		51C83F9F27F545D400E13670 /* XMAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMAccountManager.m; sourceTree = "<group>"; };
 		51C8F22B27EDB2FE0066E186 /* BaseEmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEmptyDataView.swift; sourceTree = "<group>"; };
 		51DC39F6293DC91700024C5F /* SPAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioViewController.swift; sourceTree = "<group>"; };
-		51DC39F8293DC94D00024C5F /* SPAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioPlayer.swift; sourceTree = "<group>"; };
+		51DC39F8293DC94D00024C5F /* SPAudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioPlayerManager.swift; sourceTree = "<group>"; };
 		51DC39FB293DD2D100024C5F /* SPAudioPlayProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioPlayProgressView.swift; sourceTree = "<group>"; };
 		51DC39FD293DD30900024C5F /* SPAudioPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAudioPlayerView.swift; sourceTree = "<group>"; };
 		51F0D401293B4E720052043F /* SPAutoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAutoViewController.swift; sourceTree = "<group>"; };
@@ -950,7 +950,7 @@
 		51DC39FA293DD16100024C5F /* AudioManager */ = {
 			isa = PBXGroup;
 			children = (
-				51DC39F8293DC94D00024C5F /* SPAudioPlayer.swift */,
+				51DC39F8293DC94D00024C5F /* SPAudioPlayerManager.swift */,
 				51DC39FB293DD2D100024C5F /* SPAudioPlayProgressView.swift */,
 				51DC39FD293DD30900024C5F /* SPAudioPlayerView.swift */,
 			);
@@ -1667,7 +1667,7 @@
 				51AB58B327BCEDE700BD92DD /* SPHomeImageAdsModuleViewModel.swift in Sources */,
 				51C27EBB276CA81200ED7B99 /* AppDelegate+Config.swift in Sources */,
 				510F40FD285C0CC000C3F3A0 /* SPDate202206ViewController.swift in Sources */,
-				51DC39F9293DC94D00024C5F /* SPAudioPlayer.swift in Sources */,
+				51DC39F9293DC94D00024C5F /* SPAudioPlayerManager.swift in Sources */,
 				51AB58F327BCEE3900BD92DD /* SPSummaryReviewUI.swift in Sources */,
 				51FB7FF827BC88E50095567C /* UITableView+Extension.swift in Sources */,
 				51C27EA6276C9E5D00ED7B99 /* SPTestViewController.swift in Sources */,
