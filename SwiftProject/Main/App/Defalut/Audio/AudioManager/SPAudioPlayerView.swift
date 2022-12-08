@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public enum SPAudioPlayerViewType {
     
@@ -118,6 +119,7 @@ class SPAudioPlayerView: UIView {
         btn.setTitle("顺序播放", for: .normal)
         btn.setTitleColor(UIColor(hexInt: 0xFFFFFF), for: .normal)
         btn.titleLabel?.font =  UIFont.systemFont(ofSize: 12)
+        btn.setImage(UIImage(named: "audio_icon_sort_new"), for: .normal)
         return btn
     }()
     lazy var timeBtn: UIButton = {
@@ -125,6 +127,7 @@ class SPAudioPlayerView: UIView {
         btn.setTitle("定时关闭", for: .normal)
         btn.setTitleColor(UIColor(hexInt: 0xFFFFFF), for: .normal)
         btn.titleLabel?.font =  UIFont.systemFont(ofSize: 12)
+        btn.setImage(UIImage(named: "audio_icon_time_new"), for: .normal)
         return btn
     }()
     lazy var speedBtn: UIButton = {
@@ -132,6 +135,7 @@ class SPAudioPlayerView: UIView {
         btn.setTitle("倍速播放", for: .normal)
         btn.setTitleColor(UIColor(hexInt: 0xFFFFFF), for: .normal)
         btn.titleLabel?.font =  UIFont.systemFont(ofSize: 12)
+        btn.setImage(UIImage(named: "audio_icon_speed2"), for: .normal)
         return btn
     }()
     lazy var playListBtn: UIButton = {
@@ -139,6 +143,7 @@ class SPAudioPlayerView: UIView {
         btn.setTitle("播放列表", for: .normal)
         btn.setTitleColor(UIColor(hexInt: 0xFFFFFF), for: .normal)
         btn.titleLabel?.font =  UIFont.systemFont(ofSize: 12)
+        btn.setImage(UIImage(named: "btn_playlist_new"), for: .normal)
         return btn
     }()
     
