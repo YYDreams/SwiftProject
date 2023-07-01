@@ -20,6 +20,7 @@ public class SPShowView: UIView{
     
     var isAnimating = false
     
+    var showTag:Int = 0
     
     @discardableResult
     //弹出自定义View
@@ -308,6 +309,7 @@ public class SPShowView: UIView{
         
     }
     @objc func dismiss(){
+        self.tag = 0
         remove(animated: true, completion: nil)
     }
     

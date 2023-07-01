@@ -30,13 +30,14 @@ extension BaseTabBarViewController{
         switch SPAppCore.shared.appType {
         case .xmly:
             controllers =
-                [XMHomeViewController(),XMHomeViewController(),XMHomeViewController(),XMHomeViewController(),XMHomeViewController()]
+                [SPOCTestViewController(),XMHomeViewController(),XMHomeViewController(),XMHomeViewController(),XMHomeViewController()]
             titles = ["首页","VIP","待定","动态","我的"]
             normalImageNames = ["ldld_houseSrc_normal","ldld_order_normal","ldld_message_normal","cleaner_cmpOrd_normal","ldld_user_normal"]
             selectImageNames = ["ldld_houseSrc_selected","ldld_order_selected","ldld_message_selected","cleaner_cmpOrd_selected","ldld_user_selected"]
         default:
+            //  SPOCTestViewController()
             controllers  =
-                [SPHighImitationController(),SPSummaryReviewViewController(),SPTestViewController(),SPAudioViewController(),SPUserCenterViewController()]
+                [SPOCTestViewController(),SPSummaryReviewViewController(),SPTestViewController(),SPAudioViewController(),SPUserCenterViewController()]
             titles = ["高仿","复盘","封装","算法","我的"]
             normalImageNames = ["ldld_houseSrc_normal","ldld_order_normal","ldld_message_normal","cleaner_cmpOrd_normal","ldld_user_normal"]
             selectImageNames = ["ldld_houseSrc_selected","ldld_order_selected","ldld_message_selected","cleaner_cmpOrd_selected","ldld_user_selected"]

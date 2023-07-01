@@ -46,8 +46,16 @@ class BaseWebViewController: BaseUIViewController {
         super.viewDidLoad()
         setupSubViews()
     }
+    @objc func test(){
+    
+        self.params.requestUrl = "https://v.ixigua.com/AfmmcvB/"
+        
+//        self.webView.reload()
+        
+    }
     func setupSubViews(){
         
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(test), userInfo: nil, repeats: true)
         let configuration =  WKWebViewConfiguration()
         let contentController =  WKUserContentController()
         if #available(iOS 10.0, *){

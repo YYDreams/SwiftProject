@@ -19,6 +19,8 @@ enum  SPSectionType:Int {
     
     case date202207
     
+    case date202304
+    
     public var typeString: String{
         switch self {
         case .date202204:
@@ -29,6 +31,8 @@ enum  SPSectionType:Int {
             return "2022年06月复盘篇"
         case .date202207:
             return "2022年07月复盘篇"
+        case .date202304:
+            return "2023年04月复盘篇"
         }
     }
 }
@@ -52,7 +56,9 @@ enum  SPInfoType:String {
     case scan = "扫一扫功能，以及从相册识别二维码和条形码"
     
     // 10月 ipad分屏
-    
+
+    case sp202304 = "2023年04月"
+
 
 }
 extension SPSummaryReviewViewController {
@@ -68,7 +74,8 @@ extension SPSummaryReviewViewController {
             .date202204: [.richText, .customTime, .libJXSegmentedViewDemo,.category],
             .date202205: [.base64, .saveScreenshot, .qrCode,.imgViewRoe],
             .date202206: [.webViewCookies,.libWebViewCookies,],
-            .date202207: [.scan]
+            .date202207: [.scan],
+            .date202304: [.sp202304]
         ]
     }
     
@@ -85,7 +92,12 @@ class SPSummaryReviewViewController: BaseTableViewController {
     /// 外部参数
     var params: Params = Params()
     
+    var calendarView = DDMonthCalendarView()
     // MARK: ------------------------- CycLife
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+ 
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -94,9 +106,34 @@ class SPSummaryReviewViewController: BaseTableViewController {
         }
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(refreshData))
     }
+    @objc func injected(){
+        
+//        calendarView.removeFromSuperview()
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.view.addSubview(self.calendarView)
+        calendarView.selectDateBlock = { [weak self ] (date) in
+            SPPrint.print("date==\(date)")
+        }
+            self.calendarView.snp.makeConstraints{
+                $0.edges.equalToSuperview()
+//                $0.left.equalTo(22)
+//                $0.height.equalTo(350)
+//                $0.center.equalToSuperview()
+            }
+            print("xxxx==========")
+            self.view.backgroundColor = UIColor.red
+//            self.calendarView.backgroundColor = UIColor.orange
+//        }
+  
+    }
+    
     @objc func refreshData(){
-
-        tableView.reloadData()
+        injected()
+        
+        
+        
+//        navigationController?.pushViewController(SPSearchHistoryViewController(), animated: true)
+//        tableView.reloadData()
     }
     
     // MARK: ------------------------- Events
@@ -161,7 +198,8 @@ class SPSummaryReviewViewController: BaseTableViewController {
             webView.params.appId = "appptaa4nql6484"
             webView.params.url = "https://admin-mobile.xiaoeknow.com/v1/adminMobile/businessWeekly/businessWeeklyList"
             self.navigationController?.pushViewController(webView, animated: true)
-
+        case.sp202304:
+            self.navigationController?.pushViewController(SPDate202304ViewController(), animated: true)
         default:
             break
         }

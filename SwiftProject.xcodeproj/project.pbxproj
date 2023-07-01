@@ -35,11 +35,20 @@
 		5125006F27FD42CA00AC20E1 /* XMHomeRecommandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5125006E27FD42CA00AC20E1 /* XMHomeRecommandModel.swift */; };
 		5125007227FD776A00AC20E1 /* home_discovery-category-personal-growth.json in Resources */ = {isa = PBXBuildFile; fileRef = 5125007127FD776A00AC20E1 /* home_discovery-category-personal-growth.json */; };
 		5129D40C27F013D90067D511 /* XMHomeListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5129D40B27F013D90067D511 /* XMHomeListContainerView.swift */; };
+		512B4AC729CBDF00003BA9E3 /* SPLocalDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512B4AC629CBDF00003BA9E3 /* SPLocalDBManager.swift */; };
+		51358AEB2A451369008303A8 /* DDMonthCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51358AEA2A451369008303A8 /* DDMonthCalendarView.swift */; };
+		51358AED2A451567008303A8 /* DDMonthCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51358AEC2A451567008303A8 /* DDMonthCalendarCell.swift */; };
+		51358AEF2A458659008303A8 /* DDPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51358AEE2A458658008303A8 /* DDPopView.swift */; };
+		5144785829CC379A00AD1BF6 /* SPUserDefaluts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5144785729CC379A00AD1BF6 /* SPUserDefaluts.swift */; };
 		5155E599274C7BEB000B9D89 /* SPAlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */; };
 		5167079827EEFF89007CC65F /* XMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5167079727EEFF89007CC65F /* XMHomeViewController.swift */; };
 		516707A027EF2E82007CC65F /* SPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5167079F27EF2E82007CC65F /* SPModel.swift */; };
 		516707A227EF2FC6007CC65F /* NetworkHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516707A127EF2FC6007CC65F /* NetworkHome.swift */; };
 		516707A427EF4D6F007CC65F /* XMHomeSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516707A327EF4D6F007CC65F /* XMHomeSubViewController.swift */; };
+		516773B82A05F97D00DB1885 /* SPDate202304ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516773B72A05F97D00DB1885 /* SPDate202304ViewController.swift */; };
+		516773BB2A06034700DB1885 /* SPPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516773BA2A06034700DB1885 /* SPPrint.swift */; };
+		5170D6DF2A0A4CE10033CA4E /* SPSearchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5170D6DE2A0A4CE10033CA4E /* SPSearchHistoryViewController.swift */; };
+		5170D6E12A0B33310033CA4E /* SPArrayOperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5170D6E02A0B33310033CA4E /* SPArrayOperationViewController.swift */; };
 		517D296C276C6A960090437B /* shop.md in Resources */ = {isa = PBXBuildFile; fileRef = 517D296B276C6A960090437B /* shop.md */; };
 		51AB58A227BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587827BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift */; };
 		51AB58A327BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587927BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift */; };
@@ -191,11 +200,20 @@
 		5125006E27FD42CA00AC20E1 /* XMHomeRecommandModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMHomeRecommandModel.swift; sourceTree = "<group>"; };
 		5125007127FD776A00AC20E1 /* home_discovery-category-personal-growth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "home_discovery-category-personal-growth.json"; sourceTree = "<group>"; };
 		5129D40B27F013D90067D511 /* XMHomeListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMHomeListContainerView.swift; sourceTree = "<group>"; };
+		512B4AC629CBDF00003BA9E3 /* SPLocalDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLocalDBManager.swift; sourceTree = "<group>"; };
+		51358AEA2A451369008303A8 /* DDMonthCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDMonthCalendarView.swift; sourceTree = "<group>"; };
+		51358AEC2A451567008303A8 /* DDMonthCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDMonthCalendarCell.swift; sourceTree = "<group>"; };
+		51358AEE2A458658008303A8 /* DDPopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDPopView.swift; sourceTree = "<group>"; };
+		5144785729CC379A00AD1BF6 /* SPUserDefaluts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPUserDefaluts.swift; sourceTree = "<group>"; };
 		5155E598274C7BEB000B9D89 /* SPAlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPAlgorithmViewController.swift; sourceTree = "<group>"; };
 		5167079727EEFF89007CC65F /* XMHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMHomeViewController.swift; sourceTree = "<group>"; };
 		5167079F27EF2E82007CC65F /* SPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPModel.swift; sourceTree = "<group>"; };
 		516707A127EF2FC6007CC65F /* NetworkHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHome.swift; sourceTree = "<group>"; };
 		516707A327EF4D6F007CC65F /* XMHomeSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMHomeSubViewController.swift; sourceTree = "<group>"; };
+		516773B72A05F97D00DB1885 /* SPDate202304ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPDate202304ViewController.swift; sourceTree = "<group>"; };
+		516773BA2A06034700DB1885 /* SPPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPPrint.swift; sourceTree = "<group>"; };
+		5170D6DE2A0A4CE10033CA4E /* SPSearchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPSearchHistoryViewController.swift; sourceTree = "<group>"; };
+		5170D6E02A0B33310033CA4E /* SPArrayOperationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPArrayOperationViewController.swift; sourceTree = "<group>"; };
 		517D296B276C6A960090437B /* shop.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = shop.md; sourceTree = "<group>"; };
 		51AB587827BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeRichTextModuleViewModel.swift; sourceTree = "<group>"; };
 		51AB587927BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeHotZoneModuleViewModel.swift; sourceTree = "<group>"; };
@@ -450,6 +468,9 @@
 				51FB7FD727BC88650095567C /* Widget */,
 				517D296B276C6A960090437B /* shop.md */,
 				511384072711363000D98BC9 /* 记录.md */,
+				51358AEE2A458658008303A8 /* DDPopView.swift */,
+				51358AEA2A451369008303A8 /* DDMonthCalendarView.swift */,
+				51358AEC2A451567008303A8 /* DDMonthCalendarCell.swift */,
 				51AD064527F2A06800958A0D /* SwiftProject-Bridging-Header.h */,
 				51B42A03275CB0780017C49C /* SPTestCell.swift */,
 				51C27EA5276C9E5D00ED7B99 /* SPTestViewController.swift */,
@@ -500,6 +521,31 @@
 				357BCFC627F1FDC700CD83F6 /* XMhome.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		512B4AC529CBDE2A003BA9E3 /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				5144785629CC377F00AD1BF6 /* DB */,
+				5144785529CC374B00AD1BF6 /* UserDefaults */,
+			);
+			path = DataStorage;
+			sourceTree = "<group>";
+		};
+		5144785529CC374B00AD1BF6 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				5144785729CC379A00AD1BF6 /* SPUserDefaluts.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		5144785629CC377F00AD1BF6 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				512B4AC629CBDF00003BA9E3 /* SPLocalDBManager.swift */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		514B7E1727C3269000CDF619 /* Algorithm */ = {
@@ -593,6 +639,38 @@
 				516707A127EF2FC6007CC65F /* NetworkHome.swift */,
 			);
 			path = XMLY;
+			sourceTree = "<group>";
+		};
+		516773B62A05F96800DB1885 /* Date202304 */ = {
+			isa = PBXGroup;
+			children = (
+				516773B72A05F97D00DB1885 /* SPDate202304ViewController.swift */,
+			);
+			path = Date202304;
+			sourceTree = "<group>";
+		};
+		516773B92A06031D00DB1885 /* Print */ = {
+			isa = PBXGroup;
+			children = (
+				516773BA2A06034700DB1885 /* SPPrint.swift */,
+			);
+			path = Print;
+			sourceTree = "<group>";
+		};
+		5170D6DC2A0A4CAD0033CA4E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5170D6DE2A0A4CE10033CA4E /* SPSearchHistoryViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5170D6DD2A0A4CBE0033CA4E /* Func */ = {
+			isa = PBXGroup;
+			children = (
+				5170D6DC2A0A4CAD0033CA4E /* Search */,
+			);
+			path = Func;
 			sourceTree = "<group>";
 		};
 		5172DD67286D542A000E0756 /* QRCode */ = {
@@ -836,6 +914,7 @@
 			children = (
 				51AB58E027BCEE3900BD92DD /* Developer */,
 				51AB58E627BCEE3900BD92DD /* Controller */,
+				5170D6E02A0B33310033CA4E /* SPArrayOperationViewController.swift */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -930,6 +1009,7 @@
 		51C0013F28597CC500432B60 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				516773B62A05F96800DB1885 /* Date202304 */,
 				51E9710228714A0E003F1818 /* Date202207 */,
 				510F40F6285C0C5100C3F3A0 /* Date202204 */,
 				510F40F7285C0C5100C3F3A0 /* Date202205 */,
@@ -967,6 +1047,7 @@
 		51FB7FBB27BC88650095567C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5170D6DD2A0A4CBE0033CA4E /* Func */,
 				5167079427EEFDDE007CC65F /* App */,
 				51FB7FFB27BC8A560095567C /* Base */,
 				51FB7FBE27BC88650095567C /* Classes */,
@@ -1140,6 +1221,8 @@
 		51FB7FD627BC88650095567C /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				516773B92A06031D00DB1885 /* Print */,
+				512B4AC529CBDE2A003BA9E3 /* DataStorage */,
 				51AB58FC27BCF09A00BD92DD /* Network */,
 				51AB58F927BCF00C00BD92DD /* AppCore */,
 				51FB7FDE27BC88E50095567C /* Extension */,
@@ -1365,7 +1448,6 @@
 				511383A327112BCB00D98BC9 /* Frameworks */,
 				511383A427112BCB00D98BC9 /* Resources */,
 				C292AE9695C8A9469F86ECFE /* [CP] Embed Pods Frameworks */,
-				B56B1ECB9589B8B14B36DB79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1404,7 +1486,6 @@
 				511383C427112BCF00D98BC9 /* Frameworks */,
 				511383C527112BCF00D98BC9 /* Resources */,
 				DEDE6F2A833F5D7A4F99DA80 /* [CP] Embed Pods Frameworks */,
-				2BC98ECE303D12B4F8701694 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1518,23 +1599,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2BC98ECE303D12B4F8701694 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftProject-SwiftProjectUITests/Pods-SwiftProject-SwiftProjectUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		30DCD5A90984C4DC1163D6EB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1577,23 +1641,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B56B1ECB9589B8B14B36DB79 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftProject/Pods-SwiftProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C292AE9695C8A9469F86ECFE /* [CP] Embed Pods Frameworks */ = {
@@ -1645,6 +1692,7 @@
 				357BCFC027F1F79D00CD83F6 /* XMHomeBannerModel.swift in Sources */,
 				51FB7FF927BC88E50095567C /* SPConst.swift in Sources */,
 				510EE2FF293236E500B2C514 /* SPOCTestViewController.m in Sources */,
+				51358AEF2A458659008303A8 /* DDPopView.swift in Sources */,
 				51AB58F427BCEE3900BD92DD /* Target_SPUserCenterUI.swift in Sources */,
 				51AB58F527BCEE3900BD92DD /* SPDeveloperViewController.swift in Sources */,
 				51B42A04275CB0780017C49C /* SPTestCell.swift in Sources */,
@@ -1656,9 +1704,11 @@
 				51AB58BA27BCEDE700BD92DD /* SPHomeSubViewController.swift in Sources */,
 				51FB7FFA27BC88E50095567C /* SPMacros.swift in Sources */,
 				5155E599274C7BEB000B9D89 /* SPAlgorithmViewController.swift in Sources */,
+				512B4AC729CBDF00003BA9E3 /* SPLocalDBManager.swift in Sources */,
 				51AB590227BCF09A00BD92DD /* NetworkHelp.swift in Sources */,
 				51AB58FB27BCF00C00BD92DD /* SPAppCore.swift in Sources */,
 				510F40F9285C0C9100C3F3A0 /* SPDate202205ViewController.swift in Sources */,
+				516773B82A05F97D00DB1885 /* SPDate202304ViewController.swift in Sources */,
 				51AB58F727BCEE3900BD92DD /* SPDeveloperCell.swift in Sources */,
 				51FB7FF627BC88E50095567C /* UIView+Extension.swift in Sources */,
 				511FB00227F6F5BF005F659C /* XMSquareCell.swift in Sources */,
@@ -1679,6 +1729,8 @@
 				51AB58BC27BCEDE700BD92DD /* SPHomeModuleBaseCell.swift in Sources */,
 				51AB58C227BCEDE800BD92DD /* SPHomeBaseCollection.swift in Sources */,
 				51AB58F627BCEE3900BD92DD /* SPDeveloperTextCell.swift in Sources */,
+				51358AED2A451567008303A8 /* DDMonthCalendarCell.swift in Sources */,
+				5144785829CC379A00AD1BF6 /* SPUserDefaluts.swift in Sources */,
 				51AB58B727BCEDE700BD92DD /* SPHomeViewController+Network.swift in Sources */,
 				51FB801E27BC8A640095567C /* SPRefreshHeader.swift in Sources */,
 				35E9FCDF28046C57007539CC /* SPUserDetailViewController.swift in Sources */,
@@ -1695,14 +1747,17 @@
 				51DC39FE293DD30900024C5F /* SPAudioPlayerView.swift in Sources */,
 				51AB58A727BCEDE700BD92DD /* SPHomeSearchModuleViewModel.swift in Sources */,
 				51FB7FF527BC88E50095567C /* UIColor+Extension.swift in Sources */,
+				5170D6E12A0B33310033CA4E /* SPArrayOperationViewController.swift in Sources */,
 				516707A427EF4D6F007CC65F /* XMHomeSubViewController.swift in Sources */,
 				51FB801D27BC8A640095567C /* SPRefreshFooter.swift in Sources */,
 				51FB7FF427BC88E50095567C /* UIButton+XESpace.m in Sources */,
+				51358AEB2A451369008303A8 /* DDMonthCalendarView.swift in Sources */,
 				511383AA27112BCB00D98BC9 /* AppDelegate.swift in Sources */,
 				51AB58C027BCEDE800BD92DD /* SPHomeModel.swift in Sources */,
 				51FB7FF327BC88E50095567C /* UILabel+Extension.swift in Sources */,
 				51DC39F7293DC91700024C5F /* SPAudioViewController.swift in Sources */,
 				51AB58AB27BCEDE700BD92DD /* SPHomeSaveMoneyCounterModuleViewModel.swift in Sources */,
+				5170D6DF2A0A4CE10033CA4E /* SPSearchHistoryViewController.swift in Sources */,
 				51FB7FF227BC88E50095567C /* UIImage+Extension.swift in Sources */,
 				51AB58C127BCEDE800BD92DD /* SPHomeCategoryHeaderCellModel.swift in Sources */,
 				51AB58ED27BCEE3900BD92DD /* String+Extensions.swift in Sources */,
@@ -1732,6 +1787,7 @@
 				5129D40C27F013D90067D511 /* XMHomeListContainerView.swift in Sources */,
 				51AD064B27F2A38400958A0D /* Foundation+Category.m in Sources */,
 				51AB58EC27BCEE3900BD92DD /* RichEditorView.swift in Sources */,
+				516773BB2A06034700DB1885 /* SPPrint.swift in Sources */,
 				51AB58A427BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift in Sources */,
 				35113CF62852619D00565D01 /* SPHighImitationController.swift in Sources */,
 				51FB801727BC8A640095567C /* BaseNavgationView.swift in Sources */,
@@ -1923,6 +1979,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6BVBR4S533;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SwiftProject/Info.plist;
@@ -1946,6 +2003,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6BVBR4S533;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SwiftProject/Info.plist;

@@ -23,7 +23,9 @@ extension SPTestViewController {
     struct Params {}
     
 }
-
+class SPSwiftModel:NSObject{
+    var currnetIndex = 0
+}
 class SPTestViewController: BaseTableViewController {
     
     // MARK: ------------------------- Propertys
@@ -34,10 +36,97 @@ class SPTestViewController: BaseTableViewController {
     var params: Params = Params()
     
     // MARK: ------------------------- CycLife
+    
+    
+    func fetchWeatherHistory(completion: @escaping ([Double]) -> Void) {
+        // 用随机值来取代网络请求返回的数据
+        DispatchQueue.global().async {
+            let results = (1...100_000).map { _ in Double.random(in: -10...30) }
+            completion(results)
+        }
+    }
+
+    func calculateAverageTemperature(for records: [Double], completion: @escaping (Double) -> Void) {
+        // 先求和再计算平均值
+        DispatchQueue.global().async {
+            let total = records.reduce(0, +)
+            let average = total / Double(records.count)
+            completion(average)
+        }
+    }
+
+    func upload(result: Double, completion: @escaping (String) -> Void) {
+        // 省略上传的网络请求代码，均返回"OK"
+        DispatchQueue.global().async {
+            completion("OK")
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.propertys.dataArr.append("怎么回事")
+//        SPUserDefaluts.setObjects(key: "123", value: self.propertys.dataArr)
+        if let t =  SPUserDefaluts.getObjects(key: "123") as? [String]{
+            t.forEach { item in
+            SPPrint.print("viewWillAppear==\(item)")
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+//        SPUserDefaluts.setObjects(key: "123", value: self.propertys.dataArr)
+        //
+        let vc  =  BaseWebViewController()
+        vc.params.requestUrl = "https://v.ixigua.com/AfmmcvB/"
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        SPPrint.print("哈哈哈哈哈哈哈哈")
+        let g: CGFloat = 13.2
+        SPPrint.print(g)
+        let d: Double = 122.33
+        SPPrint.print(d)
+        
+        fetchWeatherHistory { [weak self] records in
+            self?.calculateAverageTemperature(for: records) { average in
+                self?.upload(result: average) { response in
+                    print("Server response: \(response)")
+                }
+            }
+        }
+        
+        
+        
+        
+        var arr = ["a","d","c","b","f","e"];
+
+//        arr.sort { obj1, obj2 in
+//            return obj1 > obj2
+//        }
+        
+        var array = [SPSwiftModel]()
+        let model = SPSwiftModel()
+        model.currnetIndex = 3
+        array.append(model)
+        
+        let model1 = SPSwiftModel()
+        model1.currnetIndex = 1;
+        array.append(model1)
+
+        
+        let  model2 = SPSwiftModel()
+        model2.currnetIndex = 2
+        array.append(model2)
+        
+    
+        array.sort(by: {$0.currnetIndex > $1.currnetIndex})
+        print("arr------Swift\(arr)")
+//        [arr sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+//               return [(NSString *)obj1 compare:(NSString *)obj2];
+//           }];
+//
+//        NSLog(@"%@",arr);
         
       
+        return
         for i  in 0...1000 {
             
             print("----",i)
@@ -123,6 +212,11 @@ class SPTestViewController: BaseTableViewController {
         case 2:
             SPShowView.show(title: "领卡失败，请先绑定会籍卡", buttonTitles: ["取消","去绑卡"]) { index in
                 print("======index",index)
+                
+                SPShowView.show(title: "-------", buttonTitles: ["取消","去绑卡"]) { index in
+                    
+                    
+                }
             }
         case 3:
 

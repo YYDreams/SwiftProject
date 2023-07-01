@@ -14,6 +14,7 @@ class SPHighImitationController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.randomColor
       setupSubViews()
+      self.navigationController?.pushViewController(SPArrayOperationViewController(), animated: true)
     }
     @objc func injected(){
         
@@ -21,6 +22,7 @@ class SPHighImitationController: UIViewController {
         self.view.backgroundColor = UIColor.red
         stackView.removeFromSuperview()
         setupSubViews()
+        
         
     }
     

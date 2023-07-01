@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import ZTLogManager
+//import ZTLogManager
 //
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

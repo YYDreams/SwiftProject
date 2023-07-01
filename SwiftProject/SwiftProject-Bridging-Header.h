@@ -17,7 +17,9 @@
 #import "XMAccountManager.h"
 
 #import "UIButton+XESpace.h"
+#import "SPOCTestViewController.h"
 
+//#import "TTGTagCollectionView.h"
 
 
 #endif /* SwiftProject_Bridging_Header_h */

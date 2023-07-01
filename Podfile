@@ -10,14 +10,16 @@ target 'SwiftProject' do
 
   # Pods for SwiftProject
 
-  pod 'PromiseKit', '6.2.8'
+  # 任务（并/串行）处理库
+  pod 'PromiseKit', :git => 'https://gitee.com/xiaoeappteam/PromiseKit.git', :tag => '6.18.0'
   pod 'MBProgressHUD'
     # 网络库
-  pod 'Alamofire', '5.4.4'
+pod 'Alamofire', :git => 'https://gitee.com/chuansong16/Alamofire.git', :tag => '4.8.2'
+
     # 约束库
   pod 'SnapKit' 
     # 动画
-  pod 'lottie-ios'
+  pod 'lottie-ios', '3.2.3'
     # 网络图片库
   pod 'Kingfisher', '6.3.1'
   
@@ -28,6 +30,7 @@ target 'SwiftProject' do
   pod 'LookinServer', :git => 'https://gitee.com/chuansong16/LookinServer.git', :configurations => ['Debug']
 
   
+  
   pod 'SwiftyJSON', :git => 'https://gitee.com/chuansong16/SwiftyJSON.git', :commit => 'bad5f2f'
   # Json转模型
   pod 'HandyJSON', :git => 'https://gitee.com/chuansong16/HandyJSON.git', :branch => 'develop'
@@ -36,12 +39,12 @@ target 'SwiftProject' do
   
   pod 'JXSegmentedView','1.2.7'
   
-  pod 'Moya','15.0.0'
+pod 'Moya', '13.0.1'
 
   pod 'PGPickerView', '1.3.8'
   
-  pod 'RxSwift'
-  pod 'RxCocoa'
+ # pod 'RxSwift'
+#  pod 'RxCocoa'
   
   pod 'SDCycleScrollView'
   
@@ -49,7 +52,20 @@ target 'SwiftProject' do
   
   pod 'GGWkCookie','0.1.2'
   
-  pod 'ZTLogManager'
+  pod 'TTGTagCollectionView'
+  
+#  pod 'SwifterSwift', '5.2.0'
+  pod 'JTAppleCalendar'
+#  #此处根据自己Flutter项目实际路径填写
+#  flutter_application_path = '../flutter_application_1'
+#  #此句不可缺少
+#  load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+#
+#  target 'SwiftProject' do
+#    install_all_flutter_pods(flutter_application_path)
+#  end
+  
+  #pod 'ZTLogManager'
   
 
 #============================== 基础组件 ==================================#

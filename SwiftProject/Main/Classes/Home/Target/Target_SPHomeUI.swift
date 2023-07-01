@@ -10,11 +10,11 @@ import UIKit
 
 @objc public class Target_SPHomeUI: NSObject {
     
-    @objc public func Action_homeViewController(_ param: NSDictionary) -> UIViewController {
-
-        let controller = SPHomeViewController()
-        return controller
-    }
+//    @objc public func Action_homeViewController(_ param: NSDictionary) -> UIViewController {
+//
+//        let controller = SPHomeViewController()
+//        return controller
+//    }
 
 }
 

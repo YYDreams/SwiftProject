@@ -18,6 +18,14 @@ enum NetworkStatus{
 
 class BaseEmptyDataView: UIView{
     
+//    
+//    var pageStatus: NetworkStatus{
+//        didSet{
+//         
+//          
+//            
+//        }
+//    }
     // 点击刷新数据
     var refrashDataBlock: (()->Void)?
     

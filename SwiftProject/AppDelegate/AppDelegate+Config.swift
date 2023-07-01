@@ -6,13 +6,13 @@
 //
 
 import Foundation
-import ZTLogManager
+//import ZTLogManager
 
 //
 //
 
 extension AppDelegate{
-    
+ 
     // 配置UI调试神器
     func initInjectionConfig(){
         #if DEBUG
