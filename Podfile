@@ -39,6 +39,11 @@ pod 'Alamofire', :git => 'https://gitee.com/chuansong16/Alamofire.git', :tag => 
   
   pod 'JXSegmentedView','1.2.7'
   
+  # 视频库
+  pod  'SJVideoPlayer',:git => 'https://gitee.com/xiaoeappteam/SJVideoPlayer.git', :tag => 'v3.4.4'
+  # 音频库
+  pod 'KDEAudioPlayer', :git => 'https://gitee.com/xiaoeappteam/AudioPlayer.git', :branch => 'origin/XiaoETong'
+  
 pod 'Moya', '13.0.1'
 
   pod 'PGPickerView', '1.3.8'
