@@ -13,17 +13,8 @@ public func kStringIsEmpty(string: String) -> (Bool) {
     let trimmedStr = string.trimmingCharacters(in: .whitespacesAndNewlines)
         return trimmedStr.isEmpty
 }
-///
-////数组是否为空
-//public func kArrayIsEmpty()
-//#define kArrayIsEmpty(array) (array == nil || (![array isKindOfClass:[NSArray class]]) || array.count == 0)
-//
-////字典是否为空
-//#define kDictIsEmpty(dic) (dic == nil || (![dic isKindOfClass:[NSDictionary class]]) || dic.allKeys == 0)
-//
-////是否是空对象
-//#define kObjectIsEmpty(_object) (_object == nil \
-//|| [_object isKindOfClass:[NSNull class]] \
-//|| ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
-//|| ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
-//
+/// 判断当前设备是否是iPAD设备
+public let kIS_IPAD:Bool  = (UIDevice.current.userInterfaceIdiom == .pad )
+
+/// 判断当前设备是否是iPhone设备
+public let kIS_PHONE:Bool  = (UIDevice.current.userInterfaceIdiom == .phone )

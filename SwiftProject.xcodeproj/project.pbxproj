@@ -50,6 +50,8 @@
 		5170D6DF2A0A4CE10033CA4E /* SPSearchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5170D6DE2A0A4CE10033CA4E /* SPSearchHistoryViewController.swift */; };
 		5170D6E12A0B33310033CA4E /* SPArrayOperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5170D6E02A0B33310033CA4E /* SPArrayOperationViewController.swift */; };
 		517D296C276C6A960090437B /* shop.md in Resources */ = {isa = PBXBuildFile; fileRef = 517D296B276C6A960090437B /* shop.md */; };
+		5197FE0D2A57EAF100512E1D /* SPVideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5197FE0C2A57EAF100512E1D /* SPVideoService.swift */; };
+		5197FE0F2A58138800512E1D /* SPVideoService+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5197FE0E2A58138800512E1D /* SPVideoService+Public.swift */; };
 		51AB58A227BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587827BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift */; };
 		51AB58A327BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587927BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift */; };
 		51AB58A427BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB587A27BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift */; };
@@ -215,6 +217,8 @@
 		5170D6DE2A0A4CE10033CA4E /* SPSearchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPSearchHistoryViewController.swift; sourceTree = "<group>"; };
 		5170D6E02A0B33310033CA4E /* SPArrayOperationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPArrayOperationViewController.swift; sourceTree = "<group>"; };
 		517D296B276C6A960090437B /* shop.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = shop.md; sourceTree = "<group>"; };
+		5197FE0C2A57EAF100512E1D /* SPVideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPVideoService.swift; sourceTree = "<group>"; };
+		5197FE0E2A58138800512E1D /* SPVideoService+Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SPVideoService+Public.swift"; sourceTree = "<group>"; };
 		51AB587827BCEDE700BD92DD /* SPHomeRichTextModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeRichTextModuleViewModel.swift; sourceTree = "<group>"; };
 		51AB587927BCEDE700BD92DD /* SPHomeHotZoneModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeHotZoneModuleViewModel.swift; sourceTree = "<group>"; };
 		51AB587A27BCEDE700BD92DD /* SPHomeBuyCardModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPHomeBuyCardModuleViewModel.swift; sourceTree = "<group>"; };
@@ -680,6 +684,15 @@
 			path = QRCode;
 			sourceTree = "<group>";
 		};
+		5197FE0B2A57EAD600512E1D /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				5197FE0C2A57EAF100512E1D /* SPVideoService.swift */,
+				5197FE0E2A58138800512E1D /* SPVideoService+Public.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		51AB587627BCEDE700BD92DD /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1058,6 +1071,7 @@
 		51FB7FBE27BC88650095567C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5197FE0B2A57EAD600512E1D /* Video */,
 				51AB58DB27BCEE3900BD92DD /* UserCenter */,
 				51AB587627BCEDE700BD92DD /* Home */,
 				51FB7FBF27BC88650095567C /* Public */,
@@ -1686,6 +1700,7 @@
 			files = (
 				51AB58B227BCEDE700BD92DD /* SPNewsExpressModuleViewModel.swift in Sources */,
 				51AB58AC27BCEDE700BD92DD /* SPHomeSliderModuleViewModel.swift in Sources */,
+				5197FE0F2A58138800512E1D /* SPVideoService+Public.swift in Sources */,
 				516707A227EF2FC6007CC65F /* NetworkHome.swift in Sources */,
 				51AB58F027BCEE3900BD92DD /* RichEditorOptionItem.swift in Sources */,
 				51FB801927BC8A640095567C /* BaseNavViewController.swift in Sources */,
@@ -1756,6 +1771,7 @@
 				51AB58C027BCEDE800BD92DD /* SPHomeModel.swift in Sources */,
 				51FB7FF327BC88E50095567C /* UILabel+Extension.swift in Sources */,
 				51DC39F7293DC91700024C5F /* SPAudioViewController.swift in Sources */,
+				5197FE0D2A57EAF100512E1D /* SPVideoService.swift in Sources */,
 				51AB58AB27BCEDE700BD92DD /* SPHomeSaveMoneyCounterModuleViewModel.swift in Sources */,
 				5170D6DF2A0A4CE10033CA4E /* SPSearchHistoryViewController.swift in Sources */,
 				51FB7FF227BC88E50095567C /* UIImage+Extension.swift in Sources */,
