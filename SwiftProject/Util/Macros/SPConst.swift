@@ -18,11 +18,6 @@ public let kScreenHeight = UIScreen.main.bounds.size.height
 /// 屏幕尺寸
 public let kScreenBound = UIScreen.main.bounds
 
-/// 状态栏的高度
-public let kStatusBarHeight = UIApplication.shared.statusBarFrame.height
-
-
-
 //适配比例
 public let kRatio = kScreenWidth / 750
 
@@ -37,10 +32,38 @@ public var kAppName: String {
     }
 }
 
-///导航栏高度
+///导航栏高度（状态栏+导航栏的高度）
 public var kNavBarHeight : CGFloat  {
     get {
-        return isIphoneX ? 88 : 64
+        return kStatusBarHeight + kNavHeight
+    }
+}
+///导航栏
+private var kNavHeight : CGFloat  {
+    get {
+        return 44
+    }
+}
+
+///导航栏高度（状态栏+导航栏的高度）
+//public var kNavBarHeight : CGFloat  {
+//    get {
+//        return kStatusBarHeight + 44
+//    }
+//}
+
+/// 状态栏的高度
+public var kStatusBarHeight : CGFloat  {
+    get {
+        var statusBarHeight: CGFloat = 0
+        if #available(iOS 13.0, *) {
+            let statusManager = UIApplication.shared.windows.first?.windowScene?.statusBarManager
+            statusBarHeight =  statusManager?.statusBarFrame.height ?? 20.0
+        } else {
+            statusBarHeight = UIApplication.shared.statusBarFrame.height
+        }
+        return statusBarHeight
+        
     }
 }
 
