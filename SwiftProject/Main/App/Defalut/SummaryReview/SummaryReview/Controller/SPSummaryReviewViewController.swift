@@ -92,11 +92,16 @@ class SPSummaryReviewViewController: BaseTableViewController {
     /// 外部参数
     var params: Params = Params()
     
-    var calendarView = DDMonthCalendarView()
     // MARK: ------------------------- CycLife
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
- 
+        xxxxxx()
+        //SPUploadVC
+        let v = SPAudioVC()
+        navigationController?.pushViewController(v, animated: true)
+    }
+    func xxxxxx(){
+        SPTXUploadManager.share.testRequest()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,23 +112,8 @@ class SPSummaryReviewViewController: BaseTableViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(refreshData))
     }
     @objc func injected(){
-        
-//        calendarView.removeFromSuperview()
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.view.addSubview(self.calendarView)
-        calendarView.selectDateBlock = { [weak self ] (date) in
-            SPPrint.print("date==\(date)")
-        }
-            self.calendarView.snp.makeConstraints{
-                $0.edges.equalToSuperview()
-//                $0.left.equalTo(22)
-//                $0.height.equalTo(350)
-//                $0.center.equalToSuperview()
-            }
-            print("xxxx==========")
-            self.view.backgroundColor = UIColor.red
-//            self.calendarView.backgroundColor = UIColor.orange
-//        }
+
+        print("=---------injected-----")
   
     }
     

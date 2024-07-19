@@ -47,6 +47,10 @@ public func caculateTextSize(text:String?,font:UIFont?,maxWidth:CGFloat = CGFloa
                                             attributes: [NSAttributedString.Key.font: font!],
                                             context: nil).size
     }
+    var lastPathComponent: String {
+        return (self as NSString).lastPathComponent
+    }
+    
     
 }
 // 获取当前时间

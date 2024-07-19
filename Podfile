@@ -1,6 +1,7 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '10.0'
-
+ platform :ios, '11.0'
+install! 'cocoapods', :disable_input_output_paths => true
+plugin 'cocoapods-pod-sign'
 
 target 'SwiftProject' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -30,7 +31,6 @@ pod 'Alamofire', :git => 'https://gitee.com/chuansong16/Alamofire.git', :tag => 
   pod 'LookinServer', :git => 'https://gitee.com/chuansong16/LookinServer.git', :configurations => ['Debug']
 
   
-  
   pod 'SwiftyJSON', :git => 'https://gitee.com/chuansong16/SwiftyJSON.git', :commit => 'bad5f2f'
   # Json转模型
   pod 'HandyJSON', :git => 'https://gitee.com/chuansong16/HandyJSON.git', :branch => 'develop'
@@ -44,12 +44,9 @@ pod 'Alamofire', :git => 'https://gitee.com/chuansong16/Alamofire.git', :tag => 
   # 音频库
   pod 'KDEAudioPlayer', :git => 'https://gitee.com/xiaoeappteam/AudioPlayer.git', :branch => 'origin/XiaoETong'
   
-pod 'Moya', '13.0.1'
 
   pod 'PGPickerView', '1.3.8'
-  
- # pod 'RxSwift'
-#  pod 'RxCocoa'
+ 
   
   pod 'SDCycleScrollView'
   
@@ -72,6 +69,11 @@ pod 'Moya', '13.0.1'
   
   #pod 'ZTLogManager'
   
+  pod 'ZLPhotoBrowser'
+  
+  pod 'QCloudCOSXML/Transfer'
+  pod 'TXUploadSDK', :path => '../TXUploadSDK'
+  
 
 #============================== 基础组件 ==================================#
 #pod 'SPBaseUI', :git => 'https://github.com/YYDreams/SPBaseUI.git'
@@ -85,9 +87,9 @@ pod 'Moya', '13.0.1'
 #  # 网络请求库
 #  pod 'SPNetwork', :git => 'git@github.com:YYDreams/SPNetwork.git'
 #  
-##  pod 'SPNetwork', :path => 'Lib/SPNetwork'
+  pod 'SPNetwork', :path => '../SPNetwork'
 #  # 核心库
-#  pod 'SPAppCore', :git => 'git@github.com:YYDreams/SPAppCore.git'
+  pod 'SPAppCore', :git => 'git@github.com:YYDreams/SPAppCore.git'
 #  #pod 'SPAppCore', :path => 'Lib/SPAppCore'
 #  
 #  pod 'SPDataCache', :git => 'git@github.com:YYDreams/SPDataCache.git'

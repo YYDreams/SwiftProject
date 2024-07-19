@@ -263,7 +263,7 @@ class SPDeveloperViewController: BaseTableViewController {
             SPAppCore.shared.environmentType  = SPEnvironmentType(rawValue: indexPath.row)
         }
         tableView.reloadData()
-        SPAppCore.shared.baseUrl  =  NetworkHelp.shared.baseUrl()
+//        SPAppCore.shared.baseUrl  =  NetworkHelp.shared.baseUrl()
         print("xxxx----",SPAppCore.shared.environmentType,SPAppCore.shared.appType,SPAppCore.shared.baseUrl)
     }
     

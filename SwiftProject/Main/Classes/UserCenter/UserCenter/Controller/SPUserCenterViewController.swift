@@ -47,6 +47,14 @@ class SPUserCenterViewController: BaseTableViewController {
         
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        xxxxxx()
+    }
+    
+    func xxxxxx(){
+        SPTXUploadManager.share.testRequest()
+    }
     func setupSubViews(){
         tableView.registerCell(ofType: UITableViewCell.self)
         

@@ -175,6 +175,37 @@ public extension UIImage {
         return UIImage(cgImage: image)
     }
     
+    public func xet_resizeImage(image: UIImage, to newSize: CGSize, quality: CGInterpolationQuality = .default) -> UIImage {
+//        // 开始绘制到新的位图上下文
+//        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+//
+//        // 获取当前的图形上下文
+//        guard let context = UIGraphicsGetCurrentContext() else { return self }
+//
+//        // 设置图像质量
+//        context.interpolationQuality = quality // 对于缩放，可以降低质量以减小资源消耗
+//
+//        // 将原始图像绘制到新的尺寸
+//        image.draw(in: CGRect(origin: .zero, size: newSize))
+//
+//        // 从当前位图上下文获取新的缩放后的UIImage
+//        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else { return self }
+//
+//        // 结束位图上下文
+//        UIGraphicsEndImageContext()
+//
+//        return newImage
+        
+        // 创建一个图像渲染器实例
+        let renderer = UIGraphicsImageRenderer(size: newSize)
+        
+        // 使用图像渲染器创建一个新的UIImage，绘制时设置插值质量
+        let newImage = renderer.image { _ in
+            // 在这里我们绘制原始图像
+            image.draw(in: CGRect(origin: .zero, size: newSize), blendMode: .normal, alpha: 1.0)
+        }
+        return newImage
+    }
     
     
 }
